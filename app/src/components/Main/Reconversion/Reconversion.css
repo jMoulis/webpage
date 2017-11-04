@@ -1,0 +1,39 @@
+#reconversion {
+  background-color: yellow;
+}
+#reconversion-description {
+  padding: 2em;
+  width: 70%;
+  margin: 0 auto;
+}
+#reconversion-reason-wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+#reconversion-intro {
+  padding: 1em;
+  line-height: 130%;
+  text-align: center;
+}
+.reconversion-reason {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+}
+.reconversion-reason span {
+  text-transform: uppercase;
+  font-family: 'Unica One', sans-serif;
+  font-size: 2em;
+  margin-bottom: .5em;
+}
+.reconversion-reason ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.reconversion-reason ul li {
+  font-family: 'Roboto', sans-serif;
+  padding: .2em;
+  color: black;
+}

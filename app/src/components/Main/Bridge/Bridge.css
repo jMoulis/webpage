@@ -1,0 +1,24 @@
+#bridge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em;
+  line-height: 150%;
+}
+#bridge i {
+  font-size: 2em;
+  color: yellow;
+}
+#bridge a {
+  margin-top: 1em;
+}
+#bridge p:nth-last-of-type(1) {
+  color: black;
+  font-family: 'Roboto', sans-serif;
+}
+#bridge-decoration {
+  height: 5px;
+  width: 50px;
+  background-color: yellow;
+  margin: 1em;
+}

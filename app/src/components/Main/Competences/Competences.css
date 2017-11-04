@@ -1,0 +1,26 @@
+#competences {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: yellow;
+  padding: 3em;
+}
+#competences-summary, #competences-description  {
+  text-align: center;
+  width: 50%;
+  font-size: 1.25em;
+}
+#competences-summary {
+  line-height: 150%;
+}
+#competences-description {
+  color: black;
+  font-size: 1em;
+  font-family: 'Roboto', sans-serif;
+}
+#competences-decoration {
+  height: 5px;
+  width: 50px;
+  background-color: white;
+  margin: 1em;
+}

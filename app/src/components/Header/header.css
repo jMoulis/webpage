@@ -1,0 +1,53 @@
+#contact-nav, #contact-nav-info {
+  display: flex;
+}
+#contact-nav {
+  justify-content: space-between;
+  align-items: center;
+  margin: 1em;
+}
+#contact-nav-info {
+  justify-content: space-around;
+  align-items: center;
+}
+#contact-nav-contact {
+  display: inline-block;
+}
+.contact-nav-info-item {
+  padding: 0em .5em;
+}
+#contact-nav-info-item-star {
+  color: #FFF000;
+  font-size: 2em;
+}
+#contact-nav-info-item-jobTitle {
+  padding-right: 0;
+}
+#contact-nav-info-item-location {
+  padding-left: .2em;
+}
+#contact-nav-info-item-name, #contact-nav-info-item-location {
+  border-right: 1px solid #FFF000;
+}
+.contact-mail-link {
+  font-family: 'Unica One', cursive;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 1px #0000FF solid;
+  border-radius: 0.2em;
+  padding: .3em 1em;
+}
+
+@media screen and (max-width: 640px) {
+  #contact-nav {
+    height: 50px;
+    margin: 0;
+    background-color: gray;
+  }
+  #contact-nav-info {
+    display: none;
+  }
+  #contact-nav-contact {
+    display: none;
+  }
+}

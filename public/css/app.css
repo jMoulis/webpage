@@ -19,6 +19,358 @@ $gray = #444
 	text-align: center;
 	margin: auto;
 }
+#footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 2em;
+  width: 70%;
+  margin: 0 auto;
+}
+#footer p {
+  line-height: 150%;
+  text-align: center;
+}
+#footer-decoration {
+  height: 5px;
+  width: 50px;
+  background-color: yellow;
+  margin-top: 1em;
+}
+#footer h1, #footer h2 {
+  text-align: center;
+}
+#contact-nav, #contact-nav-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+#contact-nav {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1em;
+}
+#contact-nav-info {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#contact-nav-contact {
+  display: inline-block;
+}
+.contact-nav-info-item {
+  padding: 0em .5em;
+}
+#contact-nav-info-item-star {
+  color: #FFF000;
+  font-size: 2em;
+}
+#contact-nav-info-item-jobTitle {
+  padding-right: 0;
+}
+#contact-nav-info-item-location {
+  padding-left: .2em;
+}
+#contact-nav-info-item-name, #contact-nav-info-item-location {
+  border-right: 1px solid #FFF000;
+}
+.contact-mail-link {
+  font-family: 'Unica One', cursive;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 1px #0000FF solid;
+  border-radius: 0.2em;
+  padding: .3em 1em;
+}
+
+@media screen and (max-width: 640px) {
+  #contact-nav {
+    height: 50px;
+    margin: 0;
+    background-color: gray;
+  }
+  #contact-nav-info {
+    display: none;
+  }
+  #contact-nav-contact {
+    display: none;
+  }
+}
+#header-img-container {
+  height: 500px;
+  position: relative;
+}
+#header-img {
+  height: 100%;
+  background-image: url('/img/jul.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+#header-img-titles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 30%;
+  left: 10%;
+}
+#header-img-titles-decoration {
+  height: 5px;
+  width: 50px;
+  background-color: #FFF000;
+  margin-top: 1em;
+}
+@media screen and (max-width: 770px) {
+  #header-img-titles {
+    left: 5%;
+  }
+}
+@media screen and (max-width: 640px) {
+  #header-img-container {
+    height: 200px;
+  }
+  #header-img-titles {
+    display: none;
+  }
+}
+#bridge {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2em;
+  line-height: 150%;
+}
+#bridge i {
+  font-size: 2em;
+  color: yellow;
+}
+#bridge a {
+  margin-top: 1em;
+}
+#bridge p:nth-last-of-type(1) {
+  color: black;
+  font-family: 'Roboto', sans-serif;
+}
+#bridge-decoration {
+  height: 5px;
+  width: 50px;
+  background-color: yellow;
+  margin: 1em;
+}
+#competences {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: yellow;
+  padding: 3em;
+}
+#competences-summary, #competences-description  {
+  text-align: center;
+  width: 50%;
+  font-size: 1.25em;
+}
+#competences-summary {
+  line-height: 150%;
+}
+#competences-description {
+  color: black;
+  font-size: 1em;
+  font-family: 'Roboto', sans-serif;
+}
+#competences-decoration {
+  height: 5px;
+  width: 50px;
+  background-color: white;
+  margin: 1em;
+}
+
+#realisations-wrapper {
+  padding: 2em;
+  background-color: gray;
+}
+#realisations {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+#reconversion {
+  background-color: yellow;
+}
+#reconversion-description {
+  padding: 2em;
+  width: 70%;
+  margin: 0 auto;
+}
+#reconversion-reason-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+#reconversion-intro {
+  padding: 1em;
+  line-height: 130%;
+  text-align: center;
+}
+.reconversion-reason {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1em;
+}
+.reconversion-reason span {
+  text-transform: uppercase;
+  font-family: 'Unica One', sans-serif;
+  font-size: 2em;
+  margin-bottom: .5em;
+}
+.reconversion-reason ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.reconversion-reason ul li {
+  font-family: 'Roboto', sans-serif;
+  padding: .2em;
+  color: black;
+}
+#reconversion-img-container {
+  height: 500px;
+  position: relative;
+}
+#reconversion-img {
+  height: 100%;
+  background-image: url('/img/cravate.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+#reconversion-img-titles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 40%;
+  left: 25%;
+}
+#reconversion-img-titles h1 {
+  color: yellow;
+}
+#reconversion-img-titles h3 {
+  color: white;
+  font-size: 1.5em;
+}
+#reconversion-img-titles-decoration {
+  height: 5px;
+  width: 50px;
+  background-color: #FFF;
+  margin-top: 1em;
+}
+@media screen and (max-width: 770px) {
+  #reconversion-img-titles {
+    left: 5%;
+  }
+}
+@media screen and (max-width: 640px) {
+  #reconversion-img-container {
+    height: 200px;
+  }
+  #reconversion-img-titles {
+    display: none;
+  }
+}
+#techno-card-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2em;
+}
+#techno {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 50%;
+}
+
+.techno-card {
+  text-align: center;
+}
+.techno-card-list {
+  color: black;
+  font-family: 'Roboto', sans-serif;
+  line-height: 150%;
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -66,5 +418,32 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}#app {
+  color: #0000FF;
+  font-family: 'Roboto Slab', serif;
 }
+h1 {
+  font-family: 'Unica One', cursive;
+  font-size: 3em;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  padding-top: .5em;
+}
+h2 {
+  font-size: 2em;
+  font-family: 'Roboto Slab', serif;
+}
+h3 {
+  text-transform: uppercase;
+  font-size: 2em;
+  font-family: 'Unica One', cursive;
+  text-align: center;
+  padding: 1em;
+}
+h4 {
+  text-transform: uppercase;
+  font-family: 'Unica One', sans-serif;
+  font-size: 1.5em;
+}
+
 /*# sourceMappingURL=app.css.map*/

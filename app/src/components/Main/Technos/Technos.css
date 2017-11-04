@@ -1,0 +1,20 @@
+#techno-card-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2em;
+}
+#techno {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+}
+
+.techno-card {
+  text-align: center;
+}
+.techno-card-list {
+  color: black;
+  font-family: 'Roboto', sans-serif;
+  line-height: 150%;
+}

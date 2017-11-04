@@ -32337,7 +32337,88 @@ function symbolObservablePonyfill(root) {
 };
   })();
 });
+require.register("data/data.js", function(exports, require, module) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var technos = [{
+  title: 'PHP',
+  details: ['Apache', 'MySql(MariaDb)', 'Php5-7 OOP', 'Symfony']
+}, {
+  title: 'JavaScript',
+  details: ['NodeJS', 'MongoDB', 'ReactJS', 'jQuery']
+}];
+
+exports.default = technos;
+});
+
 require.register("src/components/App/index.js", function(exports, require, module) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _Header = require('src/components/Header');
+
+var _Header2 = _interopRequireDefault(_Header);
+
+var _Main = require('src/components/Main');
+
+var _Main2 = _interopRequireDefault(_Main);
+
+var _Footer = require('src/components/Footer');
+
+var _Footer2 = _interopRequireDefault(_Footer);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/*
+ * Code
+ */
+
+var App = function App() {
+  return _react2.default.createElement(
+    'div',
+    { id: 'app' },
+    _react2.default.createElement(_Header2.default, null),
+    _react2.default.createElement(_Main2.default, null),
+    _react2.default.createElement(_Footer2.default, null)
+  );
+};
+
+/* Standard propTypes declaration structure
+ *
+ * App.propTypes = {
+ * item: PropTypes.string.isRequired,
+ * };
+ */
+
+/*
+ * Export Default
+ */
+
+
+/*
+ * Local import
+ */
+/*
+ * Npm import
+ */
+exports.default = App;
+});
+
+require.register("src/components/Contact/index.js", function(exports, require, module) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -32365,21 +32446,50 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 /*
  * Npm import
  */
-var App = function App() {
+var Contact = function Contact() {
   return _react2.default.createElement(
-    'div',
-    { id: 'app' },
+    'nav',
+    { id: 'contact-nav' },
     _react2.default.createElement(
-      'h1',
-      { id: 'app-hello' },
-      'Hello World'
+      'ul',
+      { id: 'contact-nav-info' },
+      _react2.default.createElement(
+        'li',
+        { id: 'contact-nav-info-item-star', className: 'contact-nav-info-item' },
+        _react2.default.createElement('i', { className: 'fa fa-star-o', 'aria-hidden': 'true' })
+      ),
+      _react2.default.createElement(
+        'li',
+        { id: 'contact-nav-info-item-name', className: 'contact-nav-info-item' },
+        'Julien Moulis'
+      ),
+      _react2.default.createElement(
+        'li',
+        { id: 'contact-nav-info-item-jobTitle', className: 'contact-nav-info-item' },
+        'D\xE9veloppeur Web'
+      ),
+      _react2.default.createElement(
+        'li',
+        { id: 'contact-nav-info-item-location', className: 'contact-nav-info-item' },
+        'r\xE9gion de Gen\xE8ve'
+      ),
+      _react2.default.createElement(
+        'li',
+        { id: 'contact-nav-info-item-phoneNumber', className: 'contact-nav-info-item' },
+        '+33 6 43 39 07 14'
+      )
+    ),
+    _react2.default.createElement(
+      'a',
+      { id: 'contact-nav-contact', className: 'contact-mail-link', href: '#' },
+      'contact'
     )
   );
 };
 
 /* Standard propTypes declaration structure
  *
- * App.propTypes = {
+ * Contact.propTypes = {
  * item: PropTypes.string.isRequired,
  * };
  */
@@ -32387,7 +32497,890 @@ var App = function App() {
 /*
  * Export Default
  */
-exports.default = App;
+exports.default = Contact;
+});
+
+require.register("src/components/Footer/index.js", function(exports, require, module) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/*
+ * Local import
+ */
+
+/*
+ * Code
+ */
+
+/*
+ * Npm import
+ */
+var Footer = function Footer() {
+  return _react2.default.createElement(
+    'div',
+    { id: 'footer' },
+    _react2.default.createElement(
+      'p',
+      null,
+      'C\'est ce parcours atypique qui m\'a enrichi de comp\xE9tences, transversales, et qui fait de moi aujourd\'hui quelqu\'un de rigoureux ayant une approche globale des choses'
+    ),
+    _react2.default.createElement(
+      'p',
+      null,
+      'Je reviens aujourd\'hui \xE0 mes premiers amours en consacrant mon temps de travail \xE0 une r\xE9elle passion.'
+    ),
+    _react2.default.createElement('div', { id: 'footer-decoration' }),
+    _react2.default.createElement(
+      'h1',
+      null,
+      'Julien Moulis'
+    ),
+    _react2.default.createElement(
+      'h2',
+      null,
+      'D\xE9veloppeur Web'
+    )
+  );
+};
+
+/* Standard propTypes declaration structure
+ *
+ * Footer.propTypes = {
+ * item: PropTypes.string.isRequired,
+ * };
+ */
+
+/*
+ * Export Default
+ */
+exports.default = Footer;
+});
+
+require.register("src/components/Header/index.js", function(exports, require, module) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _Contact = require('src/components/Contact');
+
+var _Contact2 = _interopRequireDefault(_Contact);
+
+var _Img = require('src/components/Img');
+
+var _Img2 = _interopRequireDefault(_Img);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/*
+ * Code
+ */
+
+/*
+ * Local import
+ */
+/*
+ * Npm import
+ */
+var Header = function Header() {
+  return _react2.default.createElement(
+    'header',
+    null,
+    _react2.default.createElement(_Contact2.default, null),
+    _react2.default.createElement(_Img2.default, null)
+  );
+};
+
+/* Standard propTypes declaration structure
+ *
+ * Header.propTypes = {
+ * item: PropTypes.string.isRequired,
+ * };
+ */
+
+/*
+ * Export Default
+ */
+exports.default = Header;
+});
+
+require.register("src/components/Img/index.js", function(exports, require, module) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/*
+ * Local import
+ */
+
+/*
+ * Code
+ */
+
+/*
+ * Npm import
+ */
+var Img = function Img() {
+  return _react2.default.createElement(
+    'div',
+    null,
+    _react2.default.createElement(
+      'div',
+      { id: 'header-img-container' },
+      _react2.default.createElement('div', { id: 'header-img' }),
+      _react2.default.createElement(
+        'div',
+        { id: 'header-img-titles' },
+        _react2.default.createElement(
+          'h1',
+          null,
+          'julien moulis'
+        ),
+        _react2.default.createElement(
+          'h2',
+          null,
+          'D\xE9veloppeur Web'
+        ),
+        _react2.default.createElement('div', { id: 'header-img-titles-decoration' })
+      )
+    )
+  );
+};
+
+/* Standard propTypes declaration structure
+ *
+ * Img.propTypes = {
+ * item: PropTypes.string.isRequired,
+ * };
+ */
+
+/*
+ * Export Default
+ */
+exports.default = Img;
+});
+
+require.register("src/components/Main/Bridge/index.js", function(exports, require, module) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/*
+ * Local import
+ */
+
+/*
+ * Code
+ */
+
+/*
+ * Npm import
+ */
+var Bridge = function Bridge() {
+  return _react2.default.createElement(
+    'div',
+    { id: 'bridge' },
+    _react2.default.createElement('i', { className: 'fa fa-star-o', 'aria-hidden': 'true' }),
+    _react2.default.createElement(
+      'p',
+      null,
+      'Vous voulez me parler de votre projet?'
+    ),
+    _react2.default.createElement(
+      'p',
+      null,
+      'Vous avez une mission \xE0 me confier?'
+    ),
+    _react2.default.createElement('div', { id: 'bridge-decoration' }),
+    _react2.default.createElement(
+      'p',
+      null,
+      'N\'h\xE9sitez pas \xE0 me contacter !'
+    ),
+    _react2.default.createElement(
+      'a',
+      { className: 'contact-mail-link', href: '#' },
+      'Contact'
+    )
+  );
+};
+
+/* Standard propTypes declaration structure
+ *
+ * Bridge.propTypes = {
+ * item: PropTypes.string.isRequired,
+ * };
+ */
+
+/*
+ * Export Default
+ */
+exports.default = Bridge;
+});
+
+require.register("src/components/Main/Competences/index.js", function(exports, require, module) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/*
+ * Local import
+ */
+
+/*
+ * Code
+ */
+
+/*
+ * Npm import
+ */
+var Competences = function Competences() {
+  return _react2.default.createElement(
+    'div',
+    { id: 'competences' },
+    _react2.default.createElement(
+      'p',
+      { id: 'competences-summary' },
+      'Une vision globale de la communication API Rest c\xF4t\xE9 Back (Node/Php) & c\xF4t\xE9 front pour une exp\xE9rience utilisateur plus intense'
+    ),
+    _react2.default.createElement('div', { id: 'competences-decoration' }),
+    _react2.default.createElement(
+      'p',
+      { id: 'competences-description' },
+      'Omitto iuris dictionem in libera civitate contra leges senatusque consulta; caedes relinquo; libidines praetereo, quarum acerbissimum extat indicium et ad insignem memoriam turpitudinis et paene ad iustum odium imperii nostri, quod constat nobilissimas virgines se in puteos abiecisse et morte voluntaria necessariam turpitudinem depulisse.'
+    )
+  );
+};
+
+/* Standard propTypes declaration structure
+ *
+ * Competences.propTypes = {
+ * item: PropTypes.string.isRequired,
+ * };
+ */
+
+/*
+ * Export Default
+ */
+exports.default = Competences;
+});
+
+require.register("src/components/Main/Realisations/index.js", function(exports, require, module) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _realisationCard = require('./realisationCard');
+
+var _realisationCard2 = _interopRequireDefault(_realisationCard);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/*
+ * Code
+ */
+
+var Realisations = function Realisations() {
+  return _react2.default.createElement(
+    'div',
+    { id: 'realisations-wrapper' },
+    _react2.default.createElement(
+      'h3',
+      { id: 'techno-title' },
+      '< derni\xE8res r\xE9alisations >'
+    ),
+    _react2.default.createElement(
+      'div',
+      { id: 'realisations' },
+      _react2.default.createElement(_realisationCard2.default, null)
+    )
+  );
+};
+
+/* Standard propTypes declaration structure
+ *
+ * Realisations.propTypes = {
+ * item: PropTypes.string.isRequired,
+ * };
+ */
+
+/*
+ * Export Default
+ */
+
+
+/*
+ * Local import
+ */
+/*
+ * Npm import
+ */
+exports.default = Realisations;
+});
+
+require.register("src/components/Main/Realisations/realisationCard.js", function(exports, require, module) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/*
+ * Local import
+ */
+
+/*
+ * Code
+ */
+
+/*
+ * Npm import
+ */
+var RealisationCard = function RealisationCard() {
+  return _react2.default.createElement(
+    'div',
+    { className: 'realisation-card' },
+    _react2.default.createElement(
+      'span',
+      null,
+      'Logo'
+    ),
+    _react2.default.createElement(
+      'h4',
+      null,
+      'Arkein'
+    ),
+    _react2.default.createElement(
+      'p',
+      null,
+      'Location'
+    ),
+    _react2.default.createElement(
+      'p',
+      null,
+      'Summary'
+    ),
+    _react2.default.createElement(
+      'div',
+      null,
+      'Seperator'
+    ),
+    _react2.default.createElement(
+      'p',
+      null,
+      'Description'
+    )
+  );
+};
+
+/* Standard propTypes declaration structure
+ *
+ * Realisations.propTypes = {
+ * item: PropTypes.string.isRequired,
+ * };
+ */
+
+/*
+ * Export Default
+ */
+exports.default = RealisationCard;
+});
+
+require.register("src/components/Main/Reconversion/image.js", function(exports, require, module) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/*
+ * Local import
+ */
+
+/*
+ * Code
+ */
+
+/*
+ * Npm import
+ */
+var Img = function Img() {
+  return _react2.default.createElement(
+    'div',
+    null,
+    _react2.default.createElement(
+      'div',
+      { id: 'reconversion-img-container' },
+      _react2.default.createElement('div', { id: 'reconversion-img' }),
+      _react2.default.createElement(
+        'div',
+        { id: 'reconversion-img-titles' },
+        _react2.default.createElement(
+          'h1',
+          null,
+          'une derni\xE8re confidence'
+        ),
+        _react2.default.createElement(
+          'h3',
+          { id: 'reconversion-title' },
+          '< avant d\'\xEAtre d\xE9veloppeur j\'ai eu une autre vie... >'
+        ),
+        _react2.default.createElement('div', { id: 'reconversion-img-titles-decoration' })
+      )
+    )
+  );
+};
+
+/* Standard propTypes declaration structure
+ *
+ * Img.propTypes = {
+ * item: PropTypes.string.isRequired,
+ * };
+ */
+
+/*
+ * Export Default
+ */
+exports.default = Img;
+});
+
+require.register("src/components/Main/Reconversion/index.js", function(exports, require, module) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _image = require('./image');
+
+var _image2 = _interopRequireDefault(_image);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/*
+ * Code
+ */
+
+var Reconversion = function Reconversion() {
+  return _react2.default.createElement(
+    'div',
+    { id: 'reconversion' },
+    _react2.default.createElement(_image2.default, null),
+    _react2.default.createElement(
+      'div',
+      { id: 'reconversion-description' },
+      _react2.default.createElement(
+        'h3',
+        { id: 'reconversion-title' },
+        '< une reconversion totale >'
+      ),
+      _react2.default.createElement(
+        'p',
+        { id: 'reconversion-intro' },
+        'Apr\xE8s de nombreuses ann\xE9es en tant qu\'entrepeneur, responsable national r\xE9seau, ou encore animateur des ventes, un changement s\xE9rieux de vie m\'est apparu \xE9vident !'
+      ),
+      _react2.default.createElement(
+        'div',
+        { id: 'reconversion-reason-wrapper' },
+        _react2.default.createElement(
+          'div',
+          { className: 'reconversion-reason' },
+          _react2.default.createElement(
+            'h4',
+            null,
+            'marre'
+          ),
+          _react2.default.createElement(
+            'span',
+            null,
+            '...'
+          ),
+          _react2.default.createElement(
+            'ul',
+            null,
+            _react2.default.createElement(
+              'li',
+              null,
+              'Des costumes-cravates'
+            ),
+            _react2.default.createElement(
+              'li',
+              null,
+              'De parcourir les routes'
+            ),
+            _react2.default.createElement(
+              'li',
+              null,
+              'De jouer un r\xF4le'
+            ),
+            _react2.default.createElement(
+              'li',
+              null,
+              'De ne pas voir le fruit de mon travail'
+            )
+          )
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'reconversion-reason' },
+          _react2.default.createElement(
+            'h4',
+            null,
+            'je suis'
+          ),
+          _react2.default.createElement(
+            'span',
+            null,
+            '...'
+          ),
+          _react2.default.createElement(
+            'ul',
+            null,
+            _react2.default.createElement(
+              'li',
+              null,
+              'Un solution provider'
+            ),
+            _react2.default.createElement(
+              'li',
+              null,
+              'Un passion\xE9'
+            ),
+            _react2.default.createElement(
+              'li',
+              null,
+              'Un autodidacte (mais dipl\xF4m\xE9)'
+            ),
+            _react2.default.createElement(
+              'li',
+              null,
+              'Un insatiable de connaissance'
+            )
+          )
+        )
+      )
+    )
+  );
+};
+
+/* Standard propTypes declaration structure
+ *
+ * Reconversion.propTypes = {
+ * item: PropTypes.string.isRequired,
+ * };
+ */
+
+/*
+ * Export Default
+ */
+
+
+/*
+ * Local import
+ */
+/*
+ * Npm import
+ */
+exports.default = Reconversion;
+});
+
+require.register("src/components/Main/Technos/TechnoCard.js", function(exports, require, module) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/*
+ * Local import
+ */
+
+/*
+ * Code
+ */
+
+/*
+ * Npm import
+ */
+var TechnoCard = function TechnoCard(_ref) {
+  var techno = _ref.techno;
+  return _react2.default.createElement(
+    'div',
+    { className: 'techno-card' },
+    _react2.default.createElement(
+      'h4',
+      { className: 'techno-card-title' },
+      techno.title
+    ),
+    _react2.default.createElement(
+      'ul',
+      { className: 'techno-card-list' },
+      techno.details.map(function (detail, index) {
+        return _react2.default.createElement(
+          'li',
+          { className: 'techno-card-item', key: index },
+          detail
+        );
+      })
+    )
+  );
+};
+
+TechnoCard.propTypes = {
+  techno: _propTypes2.default.object.isRequired
+};
+
+/*
+ * Export Default
+ */
+exports.default = TechnoCard;
+});
+
+require.register("src/components/Main/Technos/index.js", function(exports, require, module) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _TechnoCard = require('./TechnoCard');
+
+var _TechnoCard2 = _interopRequireDefault(_TechnoCard);
+
+var _data = require('data/data');
+
+var _data2 = _interopRequireDefault(_data);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/*
+ * Code
+ */
+
+/*
+ * Local import
+ */
+/*
+ * Npm import
+ */
+var Technos = function Technos() {
+  return _react2.default.createElement(
+    'div',
+    { id: 'techno-card-wrapper' },
+    _react2.default.createElement(
+      'h3',
+      { id: 'techno-title' },
+      '< deux environnements technologiques majeurs >'
+    ),
+    _react2.default.createElement(
+      'div',
+      { id: 'techno' },
+      _data2.default.map(function (techno, index) {
+        return _react2.default.createElement(_TechnoCard2.default, { key: index, techno: techno });
+      })
+    )
+  );
+};
+
+/* Standard propTypes declaration structure
+ *
+ * Technos.propTypes = {
+ * item: PropTypes.string.isRequired,
+ * };
+ */
+
+/*
+ * Export Default
+ */
+exports.default = Technos;
+});
+
+require.register("src/components/Main/index.js", function(exports, require, module) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _Technos = require('./Technos');
+
+var _Technos2 = _interopRequireDefault(_Technos);
+
+var _Competences = require('./Competences');
+
+var _Competences2 = _interopRequireDefault(_Competences);
+
+var _Realisations = require('./Realisations');
+
+var _Realisations2 = _interopRequireDefault(_Realisations);
+
+var _Bridge = require('./Bridge');
+
+var _Bridge2 = _interopRequireDefault(_Bridge);
+
+var _Reconversion = require('./Reconversion');
+
+var _Reconversion2 = _interopRequireDefault(_Reconversion);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/*
+ * Code
+ */
+
+var Main = function Main() {
+  return _react2.default.createElement(
+    'div',
+    { id: 'main' },
+    _react2.default.createElement(_Technos2.default, null),
+    _react2.default.createElement(_Competences2.default, null),
+    _react2.default.createElement(_Realisations2.default, null),
+    _react2.default.createElement(_Bridge2.default, null),
+    _react2.default.createElement(_Reconversion2.default, null)
+  );
+};
+
+/* Standard propTypes declaration structure
+ *
+ * Main.propTypes = {
+ * item: PropTypes.string.isRequired,
+ * };
+ */
+
+/*
+ * Export Default
+ */
+
+
+/*
+ * Local import
+ */
+/*
+ * Npm import
+ */
+exports.default = Main;
 });
 
 require.register("src/index.js", function(exports, require, module) {

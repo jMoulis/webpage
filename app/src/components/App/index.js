@@ -7,7 +7,9 @@ import PropTypes from 'prop-types';
 /*
  * Local import
  */
-
+import Header from 'src/components/Header';
+import Main from 'src/components/Main';
+import Footer from 'src/components/Footer';
 
 /*
  * Code
@@ -15,7 +17,9 @@ import PropTypes from 'prop-types';
 
 const App = () => (
   <div id="app">
-    <h1 id="app-hello">Hello World</h1>
+    <Header />
+    <Main />
+    <Footer />
   </div>
 );
 
@@ -31,4 +35,3 @@ const App = () => (
  * Export Default
  */
 export default App;
-
