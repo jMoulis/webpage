@@ -9,13 +9,14 @@
 /*
  * Types
  */
-const HELLO_WORLD = 'HELLO_WORLD';
+const DISPLAY_MODAL_CONTACT = 'DISPLAY_MODAL_CONTACT';
+const HIDE_MODAL_CONTACT = 'HIDE_MODAL_CONTACT';
 
 /*
  * State
 */
 const initialState = {
-  value: 'default',
+  modalContact: false,
 };
 
 /*
@@ -23,9 +24,18 @@ const initialState = {
  */
 const reducer = (state = initialState, action = {}) => {
   switch (action.type) {
-		case HELLO_WORLD:
-			console.log('Hello World');
-
+    case DISPLAY_MODAL_CONTACT: {
+      return {
+        ...state,
+        modalContact: true,
+      };
+    }
+    case HIDE_MODAL_CONTACT: {
+      return {
+        ...state,
+        modalContact: false,
+      };
+    }
     default:
       return state;
   }
@@ -34,12 +44,14 @@ const reducer = (state = initialState, action = {}) => {
 /*
  *Action creators
  */
-export const defaultAction = () => ({
-	type: HELLO_WORLD,
-})
+export const displayModalContact = () => ({
+  type: DISPLAY_MODAL_CONTACT,
+});
+export const hideModalContact = () => ({
+  type: HIDE_MODAL_CONTACT,
+});
 
 /*
  * Export default
 */
 export default reducer;
-

@@ -18,7 +18,7 @@ const Footer = () => (
     <p>
       C&apos;est ce parcours atypique qui m&apos;a enrichi de compétences,
       transversales, et qui fait de moi aujourd&apos;hui
-      quelqu&apos;un de rigoureux ayant une approche globale des choses
+      quelqu&apos;un de <em>rigoureux</em> ayant une <em>approche globale</em> des choses
     </p>
     <p>
       Je reviens aujourd&apos;hui à mes premiers amours en consacrant mon temps de travail

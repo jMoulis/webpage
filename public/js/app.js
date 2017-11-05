@@ -32381,123 +32381,44 @@ var _Footer = require('src/components/Footer');
 
 var _Footer2 = _interopRequireDefault(_Footer);
 
+var _Form = require('src/containers/Form');
+
+var _Form2 = _interopRequireDefault(_Form);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /*
  * Code
  */
 
-var App = function App() {
+/*
+ * Local import
+ */
+/*
+ * Npm import
+ */
+var App = function App(_ref) {
+  var modalContact = _ref.modalContact;
+
+  console.log(modalContact);
   return _react2.default.createElement(
     'div',
     { id: 'app' },
     _react2.default.createElement(_Header2.default, null),
     _react2.default.createElement(_Main2.default, null),
-    _react2.default.createElement(_Footer2.default, null)
+    _react2.default.createElement(_Footer2.default, null),
+    modalContact ? _react2.default.createElement(_Form2.default, null) : ''
   );
 };
 
-/* Standard propTypes declaration structure
- *
- * App.propTypes = {
- * item: PropTypes.string.isRequired,
- * };
- */
+App.propTypes = {
+  modalContact: _propTypes2.default.bool.isRequired
+};
 
 /*
  * Export Default
- */
-
-
-/*
- * Local import
- */
-/*
- * Npm import
  */
 exports.default = App;
-});
-
-require.register("src/components/Contact/index.js", function(exports, require, module) {
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _react = require('react');
-
-var _react2 = _interopRequireDefault(_react);
-
-var _propTypes = require('prop-types');
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/*
- * Local import
- */
-
-/*
- * Code
- */
-
-/*
- * Npm import
- */
-var Contact = function Contact() {
-  return _react2.default.createElement(
-    'nav',
-    { id: 'contact-nav' },
-    _react2.default.createElement(
-      'ul',
-      { id: 'contact-nav-info' },
-      _react2.default.createElement(
-        'li',
-        { id: 'contact-nav-info-item-star', className: 'contact-nav-info-item' },
-        _react2.default.createElement('i', { className: 'fa fa-star-o', 'aria-hidden': 'true' })
-      ),
-      _react2.default.createElement(
-        'li',
-        { id: 'contact-nav-info-item-name', className: 'contact-nav-info-item' },
-        'Julien Moulis'
-      ),
-      _react2.default.createElement(
-        'li',
-        { id: 'contact-nav-info-item-jobTitle', className: 'contact-nav-info-item' },
-        'D\xE9veloppeur Web'
-      ),
-      _react2.default.createElement(
-        'li',
-        { id: 'contact-nav-info-item-location', className: 'contact-nav-info-item' },
-        'r\xE9gion de Gen\xE8ve'
-      ),
-      _react2.default.createElement(
-        'li',
-        { id: 'contact-nav-info-item-phoneNumber', className: 'contact-nav-info-item' },
-        '+33 6 43 39 07 14'
-      )
-    ),
-    _react2.default.createElement(
-      'a',
-      { id: 'contact-nav-contact', className: 'contact-mail-link', href: '#' },
-      'contact'
-    )
-  );
-};
-
-/* Standard propTypes declaration structure
- *
- * Contact.propTypes = {
- * item: PropTypes.string.isRequired,
- * };
- */
-
-/*
- * Export Default
- */
-exports.default = Contact;
 });
 
 require.register("src/components/Footer/index.js", function(exports, require, module) {
@@ -32535,7 +32456,19 @@ var Footer = function Footer() {
     _react2.default.createElement(
       'p',
       null,
-      'C\'est ce parcours atypique qui m\'a enrichi de comp\xE9tences, transversales, et qui fait de moi aujourd\'hui quelqu\'un de rigoureux ayant une approche globale des choses'
+      'C\'est ce parcours atypique qui m\'a enrichi de comp\xE9tences, transversales, et qui fait de moi aujourd\'hui quelqu\'un de ',
+      _react2.default.createElement(
+        'em',
+        null,
+        'rigoureux'
+      ),
+      ' ayant une ',
+      _react2.default.createElement(
+        'em',
+        null,
+        'approche globale'
+      ),
+      ' des choses'
     ),
     _react2.default.createElement(
       'p',
@@ -32569,7 +32502,7 @@ var Footer = function Footer() {
 exports.default = Footer;
 });
 
-require.register("src/components/Header/index.js", function(exports, require, module) {
+require.register("src/components/Form/index.js", function(exports, require, module) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -32584,38 +32517,73 @@ var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _Contact = require('src/components/Contact');
-
-var _Contact2 = _interopRequireDefault(_Contact);
-
-var _Img = require('src/components/Img');
-
-var _Img2 = _interopRequireDefault(_Img);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/*
+ * Local import
+ */
 
 /*
  * Code
  */
 
 /*
- * Local import
- */
-/*
  * Npm import
  */
-var Header = function Header() {
+var Form = function Form(_ref) {
+  var hideModalContact = _ref.hideModalContact;
+
+
   return _react2.default.createElement(
-    'header',
-    null,
-    _react2.default.createElement(_Contact2.default, null),
-    _react2.default.createElement(_Img2.default, null)
+    'div',
+    { id: 'contact-form' },
+    _react2.default.createElement(
+      'div',
+      { id: 'gradient' },
+      _react2.default.createElement(
+        'div',
+        { id: 'contact-form-header' },
+        _react2.default.createElement(
+          'p',
+          null,
+          '< ! - -FULL - - >'
+        ),
+        _react2.default.createElement(
+          'h3',
+          null,
+          '< contact >'
+        )
+      ),
+      _react2.default.createElement(
+        'form',
+        { id: 'contact-form-field' },
+        _react2.default.createElement('input', { className: 'input-form', type: 'text', placeholder: 'Nom Pr\xE9nom*' }),
+        _react2.default.createElement('input', { className: 'input-form', type: 'text', placeholder: 'Soci\xE9t\xE9*' }),
+        _react2.default.createElement('input', { className: 'input-form', type: 'text', placeholder: 'Email*' }),
+        _react2.default.createElement('input', { className: 'input-form', type: 'text', placeholder: 'Tel*' }),
+        _react2.default.createElement('textarea', { className: 'textarea-form', placeholder: 'Message*' }),
+        _react2.default.createElement(
+          'div',
+          { id: 'btn-group' },
+          _react2.default.createElement(
+            'button',
+            { className: 'btn btn-cancel', type: 'button', onClick: hideModalContact },
+            'Annuler'
+          ),
+          _react2.default.createElement(
+            'button',
+            { className: 'btn btn-send', type: 'submit' },
+            'envoyer le message'
+          )
+        )
+      )
+    )
   );
 };
 
 /* Standard propTypes declaration structure
  *
- * Header.propTypes = {
+ * Form.propTypes = {
  * item: PropTypes.string.isRequired,
  * };
  */
@@ -32623,10 +32591,130 @@ var Header = function Header() {
 /*
  * Export Default
  */
-exports.default = Header;
+exports.default = Form;
 });
 
-require.register("src/components/Img/index.js", function(exports, require, module) {
+require.register("src/components/Header/Contact/index.js", function(exports, require, module) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /*
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Npm import
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+
+
+/*
+ * Local import
+ */
+
+/*
+ * Code
+ */
+
+var Contact = function (_React$Component) {
+  _inherits(Contact, _React$Component);
+
+  function Contact() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
+    _classCallCheck(this, Contact);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Contact.__proto__ || Object.getPrototypeOf(Contact)).call.apply(_ref, [this].concat(args))), _this), _this.handleClick = function () {
+      var displayModalContact = _this.props.displayModalContact;
+
+      displayModalContact();
+      console.log('click');
+    }, _temp), _possibleConstructorReturn(_this, _ret);
+  }
+
+  _createClass(Contact, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'nav',
+        { id: 'contact-nav' },
+        _react2.default.createElement(
+          'ul',
+          { id: 'contact-nav-info' },
+          _react2.default.createElement(
+            'li',
+            { id: 'contact-nav-info-item-star', className: 'contact-nav-info-item' },
+            _react2.default.createElement('i', { className: 'fa fa-star-o', 'aria-hidden': 'true' })
+          ),
+          _react2.default.createElement(
+            'li',
+            { id: 'contact-nav-info-item-name', className: 'contact-nav-info-item' },
+            'Julien Moulis'
+          ),
+          _react2.default.createElement(
+            'li',
+            { id: 'contact-nav-info-item-jobTitle', className: 'contact-nav-info-item' },
+            'D\xE9veloppeur Web'
+          ),
+          _react2.default.createElement(
+            'li',
+            { id: 'contact-nav-info-item-location', className: 'contact-nav-info-item' },
+            'r\xE9gion de Gen\xE8ve'
+          ),
+          _react2.default.createElement(
+            'li',
+            { id: 'contact-nav-info-item-phoneNumber', className: 'contact-nav-info-item' },
+            '+33 6 43 39 07 14'
+          )
+        ),
+        _react2.default.createElement(
+          'button',
+          { id: 'contact-nav-contact', className: 'contact-mail-link', onClick: this.handleClick },
+          'contact'
+        )
+      );
+    }
+  }]);
+
+  return Contact;
+}(_react2.default.Component);
+
+/* Standard propTypes declaration structure
+ *
+ * Contact.propTypes = {
+ * item: PropTypes.string.isRequired,
+ * };
+ */
+
+/*
+ * Export Default
+ */
+
+
+exports.default = Contact;
+});
+
+require.register("src/components/Header/Img/index.js", function(exports, require, module) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -32676,6 +32764,15 @@ var Img = function Img() {
           'D\xE9veloppeur Web'
         ),
         _react2.default.createElement('div', { id: 'header-img-titles-decoration' })
+      ),
+      _react2.default.createElement(
+        'div',
+        { id: 'half-circle' },
+        _react2.default.createElement('div', { id: 'header-first-circle', className: 'header-circle' }),
+        _react2.default.createElement('div', { id: 'header-second-circle', className: 'header-circle' }),
+        _react2.default.createElement('div', { id: 'header-third-circle', className: 'header-circle' }),
+        _react2.default.createElement('div', { id: 'header-fourth-circle', className: 'header-circle' }),
+        _react2.default.createElement('div', { id: 'header-fifth-circle', className: 'header-circle' })
       )
     )
   );
@@ -32692,6 +32789,63 @@ var Img = function Img() {
  * Export Default
  */
 exports.default = Img;
+});
+
+require.register("src/components/Header/index.js", function(exports, require, module) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _Contact = require('src/containers/Header/Contact');
+
+var _Contact2 = _interopRequireDefault(_Contact);
+
+var _Img = require('./Img');
+
+var _Img2 = _interopRequireDefault(_Img);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/*
+ * Code
+ */
+
+/*
+ * Local import
+ */
+/*
+ * Npm import
+ */
+var Header = function Header() {
+  return _react2.default.createElement(
+    'header',
+    null,
+    _react2.default.createElement(_Contact2.default, null),
+    _react2.default.createElement(_Img2.default, null)
+  );
+};
+
+/* Standard propTypes declaration structure
+ *
+ * Header.propTypes = {
+ * item: PropTypes.string.isRequired,
+ * };
+ */
+
+/*
+ * Export Default
+ */
+exports.default = Header;
 });
 
 require.register("src/components/Main/Bridge/index.js", function(exports, require, module) {
@@ -33399,6 +33553,162 @@ var Main = function Main() {
 exports.default = Main;
 });
 
+require.register("src/containers/App/index.js", function(exports, require, module) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _reactRedux = require('react-redux');
+
+var _App = require('src/components/App');
+
+var _App2 = _interopRequireDefault(_App);
+
+var _reducer = require('src/store/reducer');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/*
+ * Code
+ */
+// State
+
+
+/*
+ * Local import
+ */
+var mapStateToProps = function mapStateToProps(state) {
+  return {
+    modalContact: state.modalContact
+  };
+};
+
+// Actions
+/*
+ * Npm import
+ */
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+  return {
+    displayModalContact: function displayModalContact() {
+      dispatch((0, _reducer.displayModalContact)());
+    }
+  };
+};
+
+/*
+ * Export default
+ */
+var createContainer = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps);
+var AppContainer = createContainer(_App2.default);
+exports.default = AppContainer;
+});
+
+require.register("src/containers/Form/index.js", function(exports, require, module) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _reactRedux = require('react-redux');
+
+var _Form = require('src/components/Form');
+
+var _Form2 = _interopRequireDefault(_Form);
+
+var _reducer = require('src/store/reducer');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/*
+ * Code
+ */
+// State
+
+
+/*
+ * Local import
+ */
+var mapStateToProps = function mapStateToProps(state) {
+  return {
+    modalContact: state.modalContact
+  };
+};
+
+// Actions
+/*
+ * Npm import
+ */
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+  return {
+    hideModalContact: function hideModalContact() {
+      dispatch((0, _reducer.hideModalContact)());
+    }
+  };
+};
+
+/*
+ * Export default
+ */
+var createContainer = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps);
+var FormContainer = createContainer(_Form2.default);
+exports.default = FormContainer;
+});
+
+require.register("src/containers/Header/Contact/index.js", function(exports, require, module) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _reactRedux = require('react-redux');
+
+var _Contact = require('src/components/Header/Contact');
+
+var _Contact2 = _interopRequireDefault(_Contact);
+
+var _reducer = require('src/store/reducer');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/*
+ * Code
+ */
+// State
+
+
+/*
+ * Local import
+ */
+var mapStateToProps = function mapStateToProps(state) {
+  return {
+    modalContact: state.modalContact
+  };
+};
+
+// Actions
+/*
+ * Npm import
+ */
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+  return {
+    displayModalContact: function displayModalContact() {
+      dispatch((0, _reducer.displayModalContact)());
+    }
+  };
+};
+
+/*
+ * Export default
+ */
+var createContainer = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps);
+var ContactContainer = createContainer(_Contact2.default);
+exports.default = ContactContainer;
+});
+
 require.register("src/index.js", function(exports, require, module) {
 'use strict';
 
@@ -33412,7 +33722,7 @@ var _reactDom = require('react-dom');
 
 var _reactRedux = require('react-redux');
 
-var _App = require('src/components/App');
+var _App = require('src/containers/App');
 
 var _App2 = _interopRequireDefault(_App);
 
@@ -33488,6 +33798,9 @@ require.register("src/store/reducer.js", function(exports, require, module) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 /*
  * Npm Import
  */
@@ -33499,13 +33812,14 @@ Object.defineProperty(exports, "__esModule", {
 /*
  * Types
  */
-var HELLO_WORLD = 'HELLO_WORLD';
+var DISPLAY_MODAL_CONTACT = 'DISPLAY_MODAL_CONTACT';
+var HIDE_MODAL_CONTACT = 'HIDE_MODAL_CONTACT';
 
 /*
  * State
 */
 var initialState = {
-  value: 'default'
+  modalContact: false
 };
 
 /*
@@ -33516,9 +33830,18 @@ var reducer = function reducer() {
   var action = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 
   switch (action.type) {
-    case HELLO_WORLD:
-      console.log('Hello World');
-
+    case DISPLAY_MODAL_CONTACT:
+      {
+        return _extends({}, state, {
+          modalContact: true
+        });
+      }
+    case HIDE_MODAL_CONTACT:
+      {
+        return _extends({}, state, {
+          modalContact: false
+        });
+      }
     default:
       return state;
   }
@@ -33527,9 +33850,14 @@ var reducer = function reducer() {
 /*
  *Action creators
  */
-var defaultAction = exports.defaultAction = function defaultAction() {
+var displayModalContact = exports.displayModalContact = function displayModalContact() {
   return {
-    type: HELLO_WORLD
+    type: DISPLAY_MODAL_CONTACT
+  };
+};
+var hideModalContact = exports.hideModalContact = function hideModalContact() {
+  return {
+    type: HIDE_MODAL_CONTACT
   };
 };
 

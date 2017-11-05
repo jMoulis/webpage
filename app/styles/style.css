@@ -25,3 +25,6 @@ h4 {
   font-family: 'Unica One', sans-serif;
   font-size: 1.5em;
 }
+em {
+  font-weight: bolder;
+}
