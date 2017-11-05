@@ -7,7 +7,7 @@
 }
 #bridge i {
   font-size: 2em;
-  color: yellow;
+  color: #ffd500;
 }
 #bridge a {
   margin-top: 1em;
@@ -19,6 +19,6 @@
 #bridge-decoration {
   height: 5px;
   width: 50px;
-  background-color: yellow;
+  background-color: #ffd500;
   margin: 1em;
 }

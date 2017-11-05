@@ -14,34 +14,37 @@ import Img from './image';
  */
 
 const Reconversion = () => (
-  <div id="reconversion">
+  <div id="reconversion-wrapper">
     <Img />
-    <div id="reconversion-description">
+    <div id="reconversion">
       <h3 id="reconversion-title">&lt; une reconversion totale &gt;</h3>
-      <p id="reconversion-intro">
-        Après de nombreuses années en tant qu&apos;entrepeneur, responsable national réseau,
-        ou encore animateur des ventes, un changement sérieux de vie m&apos;est apparu évident !
-      </p>
-      <div id="reconversion-reason-wrapper">
-        <div className="reconversion-reason">
-          <h4>marre</h4>
-          <span>...</span>
-          <ul>
-            <li>Des costumes-cravates</li>
-            <li>De parcourir les routes</li>
-            <li>De jouer un rôle</li>
-            <li>De ne pas voir le fruit de mon travail</li>
-          </ul>
-        </div>
-        <div className="reconversion-reason">
-          <h4>je suis</h4>
-          <span>...</span>
-          <ul>
-            <li>Un solution provider</li>
-            <li>Un passioné</li>
-            <li>Un autodidacte (mais diplômé)</li>
-            <li>Un insatiable de connaissance</li>
-          </ul>
+      <div id="reconversion-description">
+        <p id="reconversion-intro">
+          Après de nombreuses années en tant qu&apos;entrepeneur, responsable national réseau,
+          ou encore animateur des ventes, un changement sérieux de vie m&apos;est apparu évident !
+        </p>
+        <div id="reconversion-reason-wrapper">
+          <div className="reconversion-reason">
+            <h4>marre</h4>
+            <span>...</span>
+            <ul>
+              <li>Des costumes-cravates</li>
+              <li>De parcourir les routes</li>
+              <li>De jouer un rôle</li>
+              <li>De ne pas voir le fruit de mon travail</li>
+            </ul>
+          </div>
+          <div id="reconversion-reason-decoration" />
+          <div className="reconversion-reason">
+            <h4>je suis</h4>
+            <span>...</span>
+            <ul>
+              <li>Un solution provider</li>
+              <li>Un passioné</li>
+              <li>Un autodidacte (mais diplômé)</li>
+              <li>Un insatiable de connaissance</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>

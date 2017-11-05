@@ -1,24 +1,10 @@
 /*
  * Colors
  */
-$gray = #444
 
 /*
  * App
  */
-#app {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	height: 100vh;
-}
-#app-hello {
-	color: $gray;
-	font-size: 4em;
-	font-weight: 700;
-	text-align: center;
-	margin: auto;
-}
 #footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -78,7 +64,7 @@ $gray = #444
   padding: 0em .5em;
 }
 #contact-nav-info-item-star {
-  color: #FFF000;
+  color: #ffd500;
   font-size: 2em;
 }
 #contact-nav-info-item-jobTitle {
@@ -88,13 +74,13 @@ $gray = #444
   padding-left: .2em;
 }
 #contact-nav-info-item-name, #contact-nav-info-item-location {
-  border-right: 1px solid #FFF000;
+  border-right: 1px solid #ffd500;
 }
 .contact-mail-link {
   font-family: 'Unica One', cursive;
   text-decoration: none;
   text-transform: uppercase;
-  border: 1px #0000FF solid;
+  border: 1px #0017ec solid;
   border-radius: 0.2em;
   padding: .3em 1em;
 }
@@ -103,7 +89,7 @@ $gray = #444
   #contact-nav {
     height: 50px;
     margin: 0;
-    background-color: gray;
+    background-color: #e0e0e0;
   }
   #contact-nav-info {
     display: none;
@@ -141,7 +127,7 @@ $gray = #444
 #header-img-titles-decoration {
   height: 5px;
   width: 50px;
-  background-color: #FFF000;
+  background-color: #ffd500;
   margin-top: 1em;
 }
 @media screen and (max-width: 770px) {
@@ -173,7 +159,7 @@ $gray = #444
 }
 #bridge i {
   font-size: 2em;
-  color: yellow;
+  color: #ffd500;
 }
 #bridge a {
   margin-top: 1em;
@@ -185,7 +171,7 @@ $gray = #444
 #bridge-decoration {
   height: 5px;
   width: 50px;
-  background-color: yellow;
+  background-color: #ffd500;
   margin: 1em;
 }
 #competences {
@@ -199,7 +185,7 @@ $gray = #444
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: yellow;
+  background-color: #ffd500;
   padding: 3em;
 }
 #competences-summary, #competences-description  {
@@ -223,8 +209,21 @@ $gray = #444
 }
 
 #realisations-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 2em;
-  background-color: gray;
+  background-color: #e0e0e0;
 }
 #realisations {
   display: -webkit-box;
@@ -233,20 +232,31 @@ $gray = #444
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
-#reconversion {
-  background-color: yellow;
-}
 #reconversion-description {
-  padding: 2em;
-  width: 70%;
   margin: 0 auto;
+  width: 70%;
+}
+#reconversion {
+  background-color: #ffd500;
+  padding: 2em;
 }
 #reconversion-reason-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+#reconversion-reason-decoration {
+  height: 5px;
+  width: 50px;
+  margin-top: 2em;
+  background-color: #FFF;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 #reconversion-intro {
   padding: 1em;
@@ -270,7 +280,7 @@ $gray = #444
   text-transform: uppercase;
   font-family: 'Unica One', sans-serif;
   font-size: 2em;
-  margin-bottom: .5em;
+  margin-bottom: .15em;
 }
 .reconversion-reason ul {
   display: -webkit-box;
@@ -301,6 +311,8 @@ $gray = #444
   background-size: 100% auto;
 }
 #reconversion-img-titles {
+  /*margin: 0 auto;*/
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -311,12 +323,14 @@ $gray = #444
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: absolute;
-  top: 40%;
-  left: 25%;
+  top: 30%;
 }
 #reconversion-img-titles h1 {
-  color: yellow;
+  color: #ffd500;
 }
 #reconversion-img-titles h3 {
   color: white;
@@ -326,7 +340,44 @@ $gray = #444
   height: 5px;
   width: 50px;
   background-color: #FFF;
-  margin-top: 1em;
+  margin-top: 2em;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+#reconversion-hashtag {
+  position: absolute;
+  text-transform: uppercase;
+  color: white;
+  font-family: 'Unica One', cursive;
+  bottom: 10%;
+  left: 15%;
+}
+.circle {
+  position: absolute;
+  border-top: 5px solid #ffd500;
+  border-right: 5px solid #ffd500;
+  border-top-right-radius: 250px;
+  bottom: 0;
+}
+#first-circle {
+  height: 10px;
+  width: 10px;
+}
+#second-circle {
+  height: 30px;
+  width: 30px;
+}
+#third-circle {
+  height: 50px;
+  width: 50px;
+}
+#fourth-circle {
+  height: 70px;
+  width: 70px;
+}
+#fifth-circle {
+  height: 90px;
+  width: 90px;
 }
 @media screen and (max-width: 770px) {
   #reconversion-img-titles {
@@ -360,9 +411,18 @@ $gray = #444
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  width: 50%;
+  width: 80%;
+  position: relative;
 }
-
+#techno-decoration {
+  position: absolute;
+  height: 5px;
+  width: 50px;
+  top: 40%;
+  background-color: #ffd500;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
 .techno-card {
   text-align: center;
 }
@@ -419,7 +479,7 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }#app {
-  color: #0000FF;
+  color: #0017ec;
   font-family: 'Roboto Slab', serif;
 }
 h1 {
@@ -445,3 +505,5 @@ h4 {
   font-family: 'Unica One', sans-serif;
   font-size: 1.5em;
 }
+
+/*# sourceMappingURL=app.css.map*/

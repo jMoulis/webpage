@@ -22,6 +22,12 @@ const Img = () => (
         <h3 id="reconversion-title">&lt; avant d&apos;être développeur j&apos;ai eu une autre vie... &gt;</h3>
         <div id="reconversion-img-titles-decoration" />
       </div>
+      <span id="reconversion-hashtag">#crisedela40aine</span>
+      <div id="first-circle" className="circle" />
+      <div id="second-circle" className="circle" />
+      <div id="third-circle" className="circle" />
+      <div id="fourth-circle" className="circle" />
+      <div id="fifth-circle" className="circle" />
     </div>
   </div>
 );

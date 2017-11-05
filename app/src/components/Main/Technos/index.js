@@ -21,6 +21,7 @@ const Technos = () => (
       {
         technos.map((techno, index) => <TechnoCard key={index} techno={techno} />)
       }
+      <div id="techno-decoration" />
     </div>
   </div>
 );

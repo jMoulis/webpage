@@ -1,14 +1,22 @@
-#reconversion {
-  background-color: yellow;
-}
 #reconversion-description {
-  padding: 2em;
-  width: 70%;
   margin: 0 auto;
+  width: 70%;
+}
+#reconversion {
+  background-color: #ffd500;
+  padding: 2em;
 }
 #reconversion-reason-wrapper {
   display: flex;
+  align-items: center;
   justify-content: space-around;
+}
+#reconversion-reason-decoration {
+  height: 5px;
+  width: 50px;
+  margin-top: 2em;
+  background-color: #FFF;
+  transform: rotate(45deg);
 }
 #reconversion-intro {
   padding: 1em;
@@ -25,7 +33,7 @@
   text-transform: uppercase;
   font-family: 'Unica One', sans-serif;
   font-size: 2em;
-  margin-bottom: .5em;
+  margin-bottom: .15em;
 }
 .reconversion-reason ul {
   display: flex;
