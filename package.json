@@ -52,6 +52,7 @@
     "lint": "eslint --fix app",
     "test": "mocha tests/.setup.js tests/**/*.test.js",
     "test:watch": "mocha --watch tests/.setup.js tests/**/*.test.js",
-    "test:one": "mocha --watch tests/.setup.js $1"
+    "test:one": "mocha --watch tests/.setup.js $1",
+    "prod": "brunch build --production"
   }
 }
