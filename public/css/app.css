@@ -37,12 +37,15 @@
   text-align: center;
 }
 #contact-form {
-  margin: 0 auto;
   background-image: url('/img/jul.jpg');
   background-position: 250% 30%;
   background-repeat: no-repeat;
   background-size: 800px auto;
-  width: 80%;
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  width: 50%;
+  margin-left: -25%;
 }
 #gradient {
   background: -webkit-gradient(linear, left top, right top, from(rgba(0,23,236,0.87)),color-stop(50%, rgba(0,23,236,1)),to(rgba(0,23,236,1)));
@@ -97,7 +100,7 @@
 .btn {
   text-transform: uppercase;
   padding: 0.5em 1em;
-  margin: 0 2em;
+  margin: 1em 2em;
   border: 1px white solid;
   background-color: transparent;
 }
@@ -244,6 +247,8 @@
   border-radius: 0.2em;
   padding: .3em 1em;
   background-color: transparent;
+  letter-spacing: .1em;
+  font-size: 1em;
 }
 
 @media screen and (max-width: 640px) {

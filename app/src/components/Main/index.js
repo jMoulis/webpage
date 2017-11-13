@@ -10,7 +10,7 @@ import PropTypes from 'prop-types';
 import Technos from './Technos';
 import Competences from './Competences';
 import Realisations from 'src/containers/Main/Realisations';
-import Bridge from './Bridge';
+import Bridge from 'src/containers/Main/Bridge';
 import Reconversion from './Reconversion';
 
 /*

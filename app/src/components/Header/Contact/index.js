@@ -17,7 +17,6 @@ class Contact extends React.Component {
   handleClick = () => {
     const { displayModalContact } = this.props;
     displayModalContact();
-    console.log('click')
   }
   render() {
     return (
@@ -31,18 +30,19 @@ class Contact extends React.Component {
           <li id="contact-nav-info-item-location" className="contact-nav-info-item">région de Genève</li>
           <li id="contact-nav-info-item-phoneNumber" className="contact-nav-info-item">+33 6 43 39 07 14</li>
         </ul>
-        <button className="contact-mail-link" onClick={this.handleClick}><span className="contact-nav-contact-icon"><i className="fa fa-envelope" aria-hidden="true"></i></span> contact</button>
+        <button className="contact-mail-link" onClick={this.handleClick}>
+          <span className="contact-nav-contact-icon">
+            <i className="fa fa-envelope" aria-hidden="true" />
+          </span> contact
+        </button>
       </nav>
     );
   }
 }
 
-/* Standard propTypes declaration structure
- *
- * Contact.propTypes = {
- * item: PropTypes.string.isRequired,
- * };
- */
+Contact.propTypes = {
+  displayModalContact: PropTypes.func.isRequired,
+};
 
 
 /*

@@ -32545,8 +32545,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  */
 var Form = function Form(_ref) {
   var hideModalContact = _ref.hideModalContact;
-
-
   return _react2.default.createElement(
     'div',
     { id: 'contact-form' },
@@ -32594,12 +32592,9 @@ var Form = function Form(_ref) {
   );
 };
 
-/* Standard propTypes declaration structure
- *
- * Form.propTypes = {
- * item: PropTypes.string.isRequired,
- * };
- */
+Form.propTypes = {
+  hideModalContact: _propTypes2.default.func.isRequired
+};
 
 /*
  * Export Default
@@ -32661,7 +32656,6 @@ var Contact = function (_React$Component) {
       var displayModalContact = _this.props.displayModalContact;
 
       displayModalContact();
-      console.log('click');
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
@@ -32717,18 +32711,13 @@ var Contact = function (_React$Component) {
   return Contact;
 }(_react2.default.Component);
 
-/* Standard propTypes declaration structure
- *
- * Contact.propTypes = {
- * item: PropTypes.string.isRequired,
- * };
- */
+Contact.propTypes = {
+  displayModalContact: _propTypes2.default.func.isRequired
+};
 
 /*
  * Export Default
  */
-
-
 exports.default = Contact;
 });
 
@@ -32873,6 +32862,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
@@ -32883,6 +32874,15 @@ var _propTypes2 = _interopRequireDefault(_propTypes);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /*
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Npm import
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+
+
 /*
  * Local import
  */
@@ -32891,49 +32891,70 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * Code
  */
 
-/*
- * Npm import
- */
-var Bridge = function Bridge() {
-  return _react2.default.createElement(
-    'div',
-    { id: 'bridge' },
-    _react2.default.createElement('i', { className: 'bridge-fa fa fa-star-o fa-3x', 'aria-hidden': 'true' }),
-    _react2.default.createElement(
-      'p',
-      null,
-      'Vous voulez me parler de votre projet?'
-    ),
-    _react2.default.createElement(
-      'p',
-      null,
-      'Vous avez une mission \xE0 me confier?'
-    ),
-    _react2.default.createElement('div', { id: 'bridge-decoration' }),
-    _react2.default.createElement(
-      'p',
-      null,
-      'N\'h\xE9sitez pas \xE0 me contacter !'
-    ),
-    _react2.default.createElement(
-      'button',
-      { className: 'contact-mail-link' },
-      _react2.default.createElement(
-        'span',
-        { className: 'contact-nav-contact-icon' },
-        _react2.default.createElement('i', { className: 'fa fa-envelope', 'aria-hidden': 'true' })
-      ),
-      ' contact'
-    )
-  );
-};
+var Bridge = function (_React$Component) {
+  _inherits(Bridge, _React$Component);
 
-/* Standard propTypes declaration structure
- *
- * Bridge.propTypes = {
- * item: PropTypes.string.isRequired,
- * };
- */
+  function Bridge() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
+    _classCallCheck(this, Bridge);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Bridge.__proto__ || Object.getPrototypeOf(Bridge)).call.apply(_ref, [this].concat(args))), _this), _this.handleClick = function () {
+      var displayModalContact = _this.props.displayModalContact;
+
+      displayModalContact();
+    }, _temp), _possibleConstructorReturn(_this, _ret);
+  }
+
+  _createClass(Bridge, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        { id: 'bridge' },
+        _react2.default.createElement('i', { className: 'bridge-fa fa fa-star-o fa-3x', 'aria-hidden': 'true' }),
+        _react2.default.createElement(
+          'p',
+          null,
+          'Vous voulez me parler de votre projet?'
+        ),
+        _react2.default.createElement(
+          'p',
+          null,
+          'Vous avez une mission \xE0 me confier?'
+        ),
+        _react2.default.createElement('div', { id: 'bridge-decoration' }),
+        _react2.default.createElement(
+          'p',
+          null,
+          'N\'h\xE9sitez pas \xE0 me contacter !'
+        ),
+        _react2.default.createElement(
+          'button',
+          { className: 'contact-mail-link', onClick: this.handleClick },
+          _react2.default.createElement(
+            'span',
+            { className: 'contact-nav-contact-icon' },
+            _react2.default.createElement('i', { className: 'fa fa-envelope', 'aria-hidden': 'true' })
+          ),
+          ' contact'
+        )
+      );
+    }
+  }]);
+
+  return Bridge;
+}(_react2.default.Component);
+
+Bridge.propTypes = {
+  displayModalContact: _propTypes2.default.func.isRequired
+};
 
 /*
  * Export Default
@@ -33555,7 +33576,7 @@ var _Realisations = require('src/containers/Main/Realisations');
 
 var _Realisations2 = _interopRequireDefault(_Realisations);
 
-var _Bridge = require('./Bridge');
+var _Bridge = require('src/containers/Main/Bridge');
 
 var _Bridge2 = _interopRequireDefault(_Bridge);
 
@@ -33756,6 +33777,58 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 var createContainer = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps);
 var ContactContainer = createContainer(_Contact2.default);
 exports.default = ContactContainer;
+});
+
+require.register("src/containers/Main/Bridge/index.js", function(exports, require, module) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _reactRedux = require('react-redux');
+
+var _Bridge = require('src/components/Main/Bridge');
+
+var _Bridge2 = _interopRequireDefault(_Bridge);
+
+var _reducer = require('src/store/reducer');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/*
+ * Code
+ */
+// State
+
+
+/*
+ * Local import
+ */
+var mapStateToProps = function mapStateToProps(state) {
+  return {
+    modalContact: state.modalContact
+  };
+};
+
+// Actions
+/*
+ * Npm import
+ */
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+  return {
+    displayModalContact: function displayModalContact() {
+      dispatch((0, _reducer.displayModalContact)());
+    }
+  };
+};
+
+/*
+ * Export default
+ */
+var createContainer = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps);
+var BridgeContainer = createContainer(_Bridge2.default);
+exports.default = BridgeContainer;
 });
 
 require.register("src/containers/Main/Realisations/index.js", function(exports, require, module) {
