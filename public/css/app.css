@@ -320,7 +320,7 @@
   margin: 1em;
 }
 
-#realisations-wrapper {
+#realisations {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -337,12 +337,27 @@
   padding: 2em;
   background-color: #e0e0e0;
 }
-#realisations {
+#realisations-card-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+.realisation-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.realisation-card-techno {
+  text-align: center;
 }
 #reconversion-description {
   margin: 0 auto;

@@ -1,4 +1,4 @@
-#realisations-wrapper {
+#realisations {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -6,7 +6,15 @@
   padding: 2em;
   background-color: #e0e0e0;
 }
-#realisations {
+#realisations-card-wrapper {
   display: flex;
   justify-content: space-around;
+}
+.realisation-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.realisation-card-techno {
+  text-align: center;
 }

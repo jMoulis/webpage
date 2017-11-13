@@ -32351,6 +32351,19 @@ var technos = [{
   details: ['NodeJS', 'MongoDB', 'ReactJS', 'jQuery']
 }];
 
+var realisations = exports.realisations = [{
+  company: 'arkein - le goëland',
+  location: 'Toulouse',
+  title: 'Développement de l\'application de gestion de la maison d\'accueil des jeunes.',
+  functionalities: ['Gestion de membres', 'Gestion d\'évènements', 'Gestion documentaire', 'Gestion de ticket'],
+  technos: ['php', 'Symfony', 'jQuery, underscore Js', 'Bootstrap 4']
+}, {
+  company: 'gaea21',
+  location: 'Genève',
+  title: 'Développement d\'une plateforme d\'échanges entre entreprise et association.',
+  functionalities: ['Gestion de membres', 'Gestion d\'évènements'],
+  technos: ['php', 'Symfony']
+}];
 exports.default = technos;
 });
 
@@ -33002,10 +33015,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * Code
  */
 
-var Realisations = function Realisations() {
+var Realisations = function Realisations(props) {
   return _react2.default.createElement(
     'div',
-    { id: 'realisations-wrapper' },
+    { id: 'realisations' },
     _react2.default.createElement(
       'h3',
       { id: 'techno-title' },
@@ -33013,8 +33026,10 @@ var Realisations = function Realisations() {
     ),
     _react2.default.createElement(
       'div',
-      { id: 'realisations' },
-      _react2.default.createElement(_realisationCard2.default, null)
+      { id: 'realisations-card-wrapper' },
+      props.realisations.map(function (realisation, index) {
+        return _react2.default.createElement(_realisationCard2.default, { key: index, data: realisation });
+      })
     )
   );
 };
@@ -33068,7 +33083,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 /*
  * Npm import
  */
-var RealisationCard = function RealisationCard() {
+var RealisationCard = function RealisationCard(_ref) {
+  var data = _ref.data;
+
   return _react2.default.createElement(
     'div',
     { className: 'realisation-card' },
@@ -33079,18 +33096,18 @@ var RealisationCard = function RealisationCard() {
     ),
     _react2.default.createElement(
       'h4',
-      null,
-      'Arkein'
+      { className: 'realisation-card-company' },
+      data.company
     ),
     _react2.default.createElement(
       'p',
-      null,
-      'Location'
+      { className: 'realisation-card-location' },
+      data.location
     ),
     _react2.default.createElement(
       'p',
-      null,
-      'Summary'
+      { className: 'realisation-card-title' },
+      data.title
     ),
     _react2.default.createElement(
       'div',
@@ -33098,9 +33115,26 @@ var RealisationCard = function RealisationCard() {
       'Seperator'
     ),
     _react2.default.createElement(
-      'p',
-      null,
-      'Description'
+      'ul',
+      { className: 'realisation-card-functionlity' },
+      data.functionalities.map(function (functionality, index) {
+        return _react2.default.createElement(
+          'li',
+          { key: index },
+          functionality
+        );
+      })
+    ),
+    _react2.default.createElement(
+      'ul',
+      { className: 'realisation-card-techno' },
+      data.technos.map(function (techno, index) {
+        return _react2.default.createElement(
+          'li',
+          { key: index },
+          techno
+        );
+      })
     )
   );
 };
@@ -33502,7 +33536,7 @@ var _Competences = require('./Competences');
 
 var _Competences2 = _interopRequireDefault(_Competences);
 
-var _Realisations = require('./Realisations');
+var _Realisations = require('src/containers/Main/Realisations');
 
 var _Realisations2 = _interopRequireDefault(_Realisations);
 
@@ -33709,6 +33743,52 @@ var ContactContainer = createContainer(_Contact2.default);
 exports.default = ContactContainer;
 });
 
+require.register("src/containers/Main/Realisations/index.js", function(exports, require, module) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _reactRedux = require('react-redux');
+
+var _Realisations = require('src/components/Main/Realisations');
+
+var _Realisations2 = _interopRequireDefault(_Realisations);
+
+var _reducer = require('src/store/reducer');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/*
+ * Code
+ */
+// State
+
+
+/*
+ * Local import
+ */
+var mapStateToProps = function mapStateToProps(state) {
+  return {
+    realisations: state.realisations
+  };
+};
+
+// Actions
+/*
+ * Npm import
+ */
+var mapDispatchToProps = {};
+
+/*
+ * Export default
+ */
+var createContainer = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps);
+var RealisationsContainer = createContainer(_Realisations2.default);
+exports.default = RealisationsContainer;
+});
+
 require.register("src/index.js", function(exports, require, module) {
 'use strict';
 
@@ -33798,16 +33878,18 @@ require.register("src/store/reducer.js", function(exports, require, module) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.hideModalContact = exports.displayModalContact = undefined;
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-/*
- * Npm Import
- */
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; /*
+                                                                                                                                                                                                                                                                   * Npm Import
+                                                                                                                                                                                                                                                                   */
 
 /*
  * Local Import
  */
+
+
+var _data = require('data/data');
 
 /*
  * Types
@@ -33819,7 +33901,8 @@ var HIDE_MODAL_CONTACT = 'HIDE_MODAL_CONTACT';
  * State
 */
 var initialState = {
-  modalContact: false
+  modalContact: false,
+  realisations: _data.realisations
 };
 
 /*

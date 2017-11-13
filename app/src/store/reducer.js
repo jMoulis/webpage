@@ -5,6 +5,7 @@
 /*
  * Local Import
  */
+ import { realisations }  from 'data/data';
 
 /*
  * Types
@@ -17,6 +18,7 @@ const HIDE_MODAL_CONTACT = 'HIDE_MODAL_CONTACT';
 */
 const initialState = {
   modalContact: false,
+  realisations
 };
 
 /*

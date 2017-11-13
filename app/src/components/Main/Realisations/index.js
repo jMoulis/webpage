@@ -13,11 +13,15 @@ import RealisationCard from './realisationCard';
  * Code
  */
 
-const Realisations = () => (
-  <div id="realisations-wrapper">
+const Realisations = (props) => (
+  <div id="realisations">
     <h3 id="techno-title">&lt; dernières réalisations &gt;</h3>
-    <div id="realisations">
-      <RealisationCard />
+    <div id="realisations-card-wrapper">
+      {
+        props.realisations.map((realisation, index) => (
+          <RealisationCard key={index} data={realisation}/>
+        ))
+      }
     </div>
   </div>
 );
