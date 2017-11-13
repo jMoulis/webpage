@@ -5,16 +5,16 @@
   padding: 2em;
   line-height: 150%;
 }
-#bridge i {
-  font-size: 2em;
+.bridge-fa {
   color: #ffd500;
+  margin-bottom: 0.3em;
 }
-#bridge a {
-  margin-top: 1em;
-}
+
 #bridge p:nth-last-of-type(1) {
   color: black;
   font-family: 'Roboto', sans-serif;
+  font-size: 0.75em;
+  margin-bottom: 1em;
 }
 #bridge-decoration {
   height: 5px;

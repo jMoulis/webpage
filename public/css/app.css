@@ -214,8 +214,8 @@
       -ms-flex-align: center;
           align-items: center;
 }
-#contact-nav-contact {
-  display: inline-block;
+.contact-nav-contact-icon {
+    color:  gray;
 }
 .contact-nav-info-item {
   padding: 0em .5em;
@@ -234,12 +234,16 @@
   border-right: 1px solid #ffd500;
 }
 .contact-mail-link {
+  display: inline-block;
+  color:  #0017ec;
+  background-color: transparent;
   font-family: 'Unica One', cursive;
   text-decoration: none;
   text-transform: uppercase;
   border: 1px #0017ec solid;
   border-radius: 0.2em;
   padding: .3em 1em;
+  background-color: transparent;
 }
 
 @media screen and (max-width: 640px) {
@@ -269,16 +273,16 @@
   padding: 2em;
   line-height: 150%;
 }
-#bridge i {
-  font-size: 2em;
+.bridge-fa {
   color: #ffd500;
+  margin-bottom: 0.3em;
 }
-#bridge a {
-  margin-top: 1em;
-}
+
 #bridge p:nth-last-of-type(1) {
   color: black;
   font-family: 'Roboto', sans-serif;
+  font-size: 0.75em;
+  margin-bottom: 1em;
 }
 #bridge-decoration {
   height: 5px;
@@ -343,6 +347,7 @@
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  width: 50%;
 }
 .realisation-card {
   display: -webkit-box;
@@ -356,8 +361,37 @@
       -ms-flex-align: center;
           align-items: center;
 }
+.realisation-card-logo {
+  color: gray;
+  margin: 0.5em;
+}
+.realisation-card-location,
+.realisation-card-functionality-label,
+.realisation-card-techno,
+.realisation-card-functionality-title
+ {
+  color: black;
+  font-family: 'Roboto', sans-serif;
+  font-size: .75em;
+}
+.realisation-card-functionality,
+.realisation-card-title {
+  margin: 1em;
+  text-align: center;
+  line-height: 1em;
+}
+.realisation-card-title {
+  color: black;
+  line-height: 1.25em;
+}
+#realisation-decoration {
+  height: 5px;
+  width: 50px;
+  background-color: #0017ec;
+}
 .realisation-card-techno {
   text-align: center;
+  line-height: 1.25em;
 }
 #reconversion-description {
   margin: 0 auto;

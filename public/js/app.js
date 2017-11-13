@@ -32344,10 +32344,10 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 var technos = [{
-  title: 'PHP',
+  title: 'LAMP',
   details: ['Apache', 'MySql(MariaDb)', 'Php5-7 OOP', 'Symfony']
 }, {
-  title: 'JavaScript',
+  title: 'Full Stack JS',
   details: ['NodeJS', 'MongoDB', 'ReactJS', 'jQuery']
 }];
 
@@ -32356,13 +32356,13 @@ var realisations = exports.realisations = [{
   location: 'Toulouse',
   title: 'Développement de l\'application de gestion de la maison d\'accueil des jeunes.',
   functionalities: ['Gestion de membres', 'Gestion d\'évènements', 'Gestion documentaire', 'Gestion de ticket'],
-  technos: ['php', 'Symfony', 'jQuery, underscore Js', 'Bootstrap 4']
+  technos: ['Php', 'Symfony', 'jQuery, underscore Js', 'Bootstrap 4']
 }, {
   company: 'gaea21',
   location: 'Genève',
   title: 'Développement d\'une plateforme d\'échanges entre entreprise et association.',
   functionalities: ['Gestion de membres', 'Gestion d\'évènements'],
-  technos: ['php', 'Symfony']
+  technos: ['Php', 'Symfony']
 }];
 exports.default = technos;
 });
@@ -32702,8 +32702,13 @@ var Contact = function (_React$Component) {
         ),
         _react2.default.createElement(
           'button',
-          { id: 'contact-nav-contact', className: 'contact-mail-link', onClick: this.handleClick },
-          'contact'
+          { className: 'contact-mail-link', onClick: this.handleClick },
+          _react2.default.createElement(
+            'span',
+            { className: 'contact-nav-contact-icon' },
+            _react2.default.createElement('i', { className: 'fa fa-envelope', 'aria-hidden': 'true' })
+          ),
+          ' contact'
         )
       );
     }
@@ -32893,7 +32898,7 @@ var Bridge = function Bridge() {
   return _react2.default.createElement(
     'div',
     { id: 'bridge' },
-    _react2.default.createElement('i', { className: 'fa fa-star-o', 'aria-hidden': 'true' }),
+    _react2.default.createElement('i', { className: 'bridge-fa fa fa-star-o fa-3x', 'aria-hidden': 'true' }),
     _react2.default.createElement(
       'p',
       null,
@@ -32911,9 +32916,14 @@ var Bridge = function Bridge() {
       'N\'h\xE9sitez pas \xE0 me contacter !'
     ),
     _react2.default.createElement(
-      'a',
-      { className: 'contact-mail-link', href: '#' },
-      'Contact'
+      'button',
+      { className: 'contact-mail-link' },
+      _react2.default.createElement(
+        'span',
+        { className: 'contact-nav-contact-icon' },
+        _react2.default.createElement('i', { className: 'fa fa-envelope', 'aria-hidden': 'true' })
+      ),
+      ' contact'
     )
   );
 };
@@ -33091,8 +33101,8 @@ var RealisationCard = function RealisationCard(_ref) {
     { className: 'realisation-card' },
     _react2.default.createElement(
       'span',
-      null,
-      'Logo'
+      { className: 'realisation-card-logo' },
+      _react2.default.createElement('i', { className: 'fa fa-desktop', 'aria-hidden': 'true' })
     ),
     _react2.default.createElement(
       'h4',
@@ -33100,7 +33110,7 @@ var RealisationCard = function RealisationCard(_ref) {
       data.company
     ),
     _react2.default.createElement(
-      'p',
+      'span',
       { className: 'realisation-card-location' },
       data.location
     ),
@@ -33109,21 +33119,26 @@ var RealisationCard = function RealisationCard(_ref) {
       { className: 'realisation-card-title' },
       data.title
     ),
+    _react2.default.createElement('div', { id: 'realisation-decoration' }),
     _react2.default.createElement(
       'div',
-      null,
-      'Seperator'
-    ),
-    _react2.default.createElement(
-      'ul',
-      { className: 'realisation-card-functionlity' },
-      data.functionalities.map(function (functionality, index) {
-        return _react2.default.createElement(
-          'li',
-          { key: index },
-          functionality
-        );
-      })
+      { className: 'realisation-card-functionality' },
+      _react2.default.createElement(
+        'span',
+        { className: 'realisation-card-functionality-title' },
+        'Fonctionalit\xE9s principales:'
+      ),
+      _react2.default.createElement(
+        'ul',
+        { className: 'realisation-card-functionality-label' },
+        data.functionalities.map(function (functionality, index) {
+          return _react2.default.createElement(
+            'li',
+            { key: index },
+            functionality
+          );
+        })
+      )
     ),
     _react2.default.createElement(
       'ul',

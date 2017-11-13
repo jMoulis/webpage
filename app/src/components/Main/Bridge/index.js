@@ -15,12 +15,12 @@ import PropTypes from 'prop-types';
 
 const Bridge = () => (
   <div id="bridge">
-    <i className="fa fa-star-o" aria-hidden="true" />
+    <i className="bridge-fa fa fa-star-o fa-3x" aria-hidden="true" />
     <p>Vous voulez me parler de votre projet?</p>
     <p>Vous avez une mission à me confier?</p>
     <div id="bridge-decoration" />
     <p>N&apos;hésitez pas à me contacter !</p>
-    <a className="contact-mail-link" href="#">Contact</a>
+    <button className="contact-mail-link"><span className="contact-nav-contact-icon"><i className="fa fa-envelope" aria-hidden="true"></i></span> contact</button>
   </div>
 );
 

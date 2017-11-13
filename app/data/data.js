@@ -1,6 +1,6 @@
 const technos = [
   {
-    title: 'PHP',
+    title: 'LAMP',
     details: [
       'Apache',
       'MySql(MariaDb)',
@@ -9,7 +9,7 @@ const technos = [
     ],
   },
   {
-    title: 'JavaScript',
+    title: 'Full Stack JS',
     details: [
       'NodeJS',
       'MongoDB',
@@ -31,7 +31,7 @@ export const realisations = [
       'Gestion de ticket'
     ],
     technos: [
-      'php', 'Symfony', 'jQuery, underscore Js', 'Bootstrap 4'
+      'Php', 'Symfony', 'jQuery, underscore Js', 'Bootstrap 4'
     ]
   },
   {
@@ -39,11 +39,11 @@ export const realisations = [
     location: 'Genève',
     title: 'Développement d\'une plateforme d\'échanges entre entreprise et association.',
     functionalities: [
-      'Gestion de membres', 
+      'Gestion de membres',
       'Gestion d\'évènements',
     ],
     technos: [
-      'php', 'Symfony'
+      'Php', 'Symfony'
     ]
   }
 ]
