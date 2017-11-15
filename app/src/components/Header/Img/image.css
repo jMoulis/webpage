@@ -1,6 +1,7 @@
 #header-img-container {
   height: 500px;
   position: relative;
+  margin-bottom: 2em;
 }
 #header-img {
   height: 100%;

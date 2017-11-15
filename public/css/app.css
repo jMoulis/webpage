@@ -19,37 +19,96 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 2em;
-  width: 70%;
-  margin: 0 auto;
 }
-#footer p {
+#footer-text {
+  width: 75%;
+  padding: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+#footer-text p {
   line-height: 150%;
   text-align: center;
 }
-#footer-decoration {
+.footer-decoration {
   height: 5px;
   width: 50px;
   background-color: yellow;
   margin-top: 1em;
 }
-#footer h1, #footer h2 {
+#footer-text h1, #footer-text h2 {
   text-align: center;
 }
+.footer-logo {
+  width: 80px;
+}
+#logo-wrapper ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+#logo-wrapper {
+  width: 100%;
+  margin: 1em;
+}
+.logo-list-item {
+  padding: 1em;
+}
+@-webkit-keyframes fadeIn {
+    from {
+      background: transparent;
+    }
+    to {
+      background: rgba(0,23,236,0.87);
+    }
+}
+@keyframes fadeIn {
+    from {
+      background: transparent;
+    }
+    to {
+      background: rgba(0,23,236,0.87);
+    }
+}
 #contact-form {
-  background-image: url('/img/jul.jpg');
-  background-position: 250% 30%;
-  background-repeat: no-repeat;
-  background-size: 800px auto;
-  position: absolute;
-  top: 70px;
-  left: 50%;
-  width: 50%;
-  margin-left: -25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position:fixed;
+  padding:0;
+  margin:0;
+  top:65px;
+  left:0;
+  width: 100%;
+  height: 100%;
+  -webkit-animation: fadeIn 100ms linear forwards;
+          animation: fadeIn 100ms linear forwards;
 }
 #gradient {
-  background: -webkit-gradient(linear, left top, right top, from(rgba(0,23,236,0.87)),color-stop(50%, rgba(0,23,236,1)),to(rgba(0,23,236,1)));
-  background: linear-gradient(to right, rgba(0,23,236,0.87) 0%,rgba(0,23,236,1) 50%,rgba(0,23,236,1) 100%);
+  position: absolute;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0,23,236,0.5)),color-stop(50%, rgba(0,23,236,1)),to(rgba(0,23,236,1)));
+  background: linear-gradient(to right, rgba(0,23,236,0.5) 0%,rgba(0,23,236,1) 50%,rgba(0,23,236,1) 100%);
+  top: 10%;
+  border-radius: .5em;
+  width: 50%;
+  height: 65%;
 }
 #contact-form-header {
   margin: 0 auto;
@@ -111,9 +170,44 @@
 .btn-cancel {
   color: white;
 }
+.contact-mail-link {
+  display: inline-block;
+  color:  #0017ec;
+  background-color: transparent;
+  font-family: 'Unica One', cursive;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 1px #0017ec solid;
+  border-radius: 0.2em;
+  padding: .3em 1em;
+  background-color: transparent;
+  letter-spacing: .1em;
+  font-size: 1em;
+  margin-right: 1em;
+  cursor: pointer;
+}
+.links ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 100%;
+}
+.links-list-item {
+  padding: .5em;
+}
+.links {
+  width: 100%;
+  margin-top: 2em;
+  padding: 1em;
+  background-color: #e0e0e0;
+}
 #header-img-container {
   height: 500px;
   position: relative;
+  margin-bottom: 2em;
 }
 #header-img {
   height: 100%;
@@ -208,7 +302,12 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 1em;
+  background-color: #fff;
+  height: 65px;
+  width: 100%;
+  position: fixed;
+  z-index: 2001;
+  top: 0;
 }
 #contact-nav-info {
   -ms-flex-pack: distribute;
@@ -235,20 +334,6 @@
 }
 #contact-nav-info-item-name, #contact-nav-info-item-location {
   border-right: 1px solid #ffd500;
-}
-.contact-mail-link {
-  display: inline-block;
-  color:  #0017ec;
-  background-color: transparent;
-  font-family: 'Unica One', cursive;
-  text-decoration: none;
-  text-transform: uppercase;
-  border: 1px #0017ec solid;
-  border-radius: 0.2em;
-  padding: .3em 1em;
-  background-color: transparent;
-  letter-spacing: .1em;
-  font-size: 1em;
 }
 
 @media screen and (max-width: 640px) {
@@ -286,7 +371,7 @@
 #bridge p:nth-last-of-type(1) {
   color: black;
   font-family: 'Roboto', sans-serif;
-  font-size: 0.75em;
+  font-size: 1em;
   margin-bottom: 1em;
 }
 #bridge-decoration {
@@ -321,6 +406,7 @@
   color: black;
   font-size: 1em;
   font-family: 'Roboto', sans-serif;
+  line-height: 1.5em;
 }
 #competences-decoration {
   height: 5px;
@@ -328,7 +414,6 @@
   background-color: white;
   margin: 1em;
 }
-
 #realisations {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -352,7 +437,7 @@
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  width: 50%;
+  width: 100%;
 }
 .realisation-card {
   display: -webkit-box;
@@ -365,6 +450,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 0 2em;
 }
 .realisation-card-logo {
   color: gray;
@@ -377,13 +463,13 @@
  {
   color: black;
   font-family: 'Roboto', sans-serif;
-  font-size: .75em;
+  font-size: 1em;
 }
 .realisation-card-functionality,
 .realisation-card-title {
   margin: 1em;
   text-align: center;
-  line-height: 1em;
+  line-height: 1.3em;
 }
 .realisation-card-title {
   color: black;
@@ -644,7 +730,10 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
-}#app {
+}body {
+  padding-top: 65px;
+}
+#app {
   color: #0017ec;
   font-family: 'Roboto Slab', serif;
 }
@@ -664,7 +753,7 @@ h3 {
   font-size: 2em;
   font-family: 'Unica One', cursive;
   text-align: center;
-  padding: 1em;
+  padding-bottom: 1em;
 }
 h4 {
   text-transform: uppercase;
@@ -674,3 +763,29 @@ h4 {
 em {
   font-weight: bolder;
 }
+input::-webkit-input-placeholder {
+  color: white;
+}
+input:-ms-input-placeholder {
+  color: white;
+}
+input::-ms-input-placeholder {
+  color: white;
+}
+input::placeholder {
+  color: white;
+}
+textarea::-webkit-input-placeholder {
+  color: white;
+}
+textarea:-ms-input-placeholder {
+  color: white;
+}
+textarea::-ms-input-placeholder {
+  color: white;
+}
+textarea::placeholder {
+  color: white;
+}
+
+/*# sourceMappingURL=app.css.map*/

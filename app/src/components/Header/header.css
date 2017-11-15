@@ -4,7 +4,12 @@
 #contact-nav {
   justify-content: space-between;
   align-items: center;
-  margin: 1em;
+  background-color: #fff;
+  height: 65px;
+  width: 100%;
+  position: fixed;
+  z-index: 2001;
+  top: 0;
 }
 #contact-nav-info {
   justify-content: space-around;
@@ -28,20 +33,6 @@
 }
 #contact-nav-info-item-name, #contact-nav-info-item-location {
   border-right: 1px solid #ffd500;
-}
-.contact-mail-link {
-  display: inline-block;
-  color:  #0017ec;
-  background-color: transparent;
-  font-family: 'Unica One', cursive;
-  text-decoration: none;
-  text-transform: uppercase;
-  border: 1px #0017ec solid;
-  border-radius: 0.2em;
-  padding: .3em 1em;
-  background-color: transparent;
-  letter-spacing: .1em;
-  font-size: 1em;
 }
 
 @media screen and (max-width: 640px) {

@@ -1,0 +1,16 @@
+.contact-mail-link {
+  display: inline-block;
+  color:  #0017ec;
+  background-color: transparent;
+  font-family: 'Unica One', cursive;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 1px #0017ec solid;
+  border-radius: 0.2em;
+  padding: .3em 1em;
+  background-color: transparent;
+  letter-spacing: .1em;
+  font-size: 1em;
+  margin-right: 1em;
+  cursor: pointer;
+}

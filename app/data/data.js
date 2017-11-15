@@ -21,6 +21,19 @@ const technos = [
 
 export const realisations = [
   {
+    company: 'O\'Clock',
+    location: 'A la maison',
+    title: 'Développement d\'une application de gestion d\'offre d\'emploi',
+    functionalities: [
+      'Gestion de membres',
+      'Création d\'offres',
+      'Scrapping',
+    ],
+    technos: [
+      'Node - Express', 'MongoDB - Mongoose', 'React-Redux-Axios', 'Materialize',
+    ],
+  },
+  {
     company: 'arkein - le goëland',
     location: 'Toulouse',
     title: 'Développement de l\'application de gestion de la maison d\'accueil des jeunes.',
@@ -28,11 +41,11 @@ export const realisations = [
       'Gestion de membres',
       'Gestion d\'évènements',
       'Gestion documentaire',
-      'Gestion de ticket'
+      'Gestion de ticket',
     ],
     technos: [
-      'Php', 'Symfony', 'jQuery, underscore Js', 'Bootstrap 4'
-    ]
+      'Php', 'Symfony', 'jQuery, underscore Js', 'Bootstrap 4',
+    ],
   },
   {
     company: 'gaea21',
@@ -43,8 +56,9 @@ export const realisations = [
       'Gestion d\'évènements',
     ],
     technos: [
-      'Php', 'Symfony'
-    ]
-  }
-]
+      'Php', 'Symfony',
+    ],
+  },
+];
+
 export default technos;

@@ -8293,7 +8293,7 @@ var EventListener = {
         }
       };
     } else {
-      if ('production' !== 'production') {
+      if ('development' !== 'production') {
         console.error('Attempted to listen to events during the capture phase on a ' + 'browser that does not support the capture phase. Your application ' + 'will not receive some events.');
       }
       return {
@@ -8526,7 +8526,7 @@ require.register("fbjs/lib/emptyObject.js", function(exports, require, module) {
 
 var emptyObject = {};
 
-if ('production' !== 'production') {
+if ('development' !== 'production') {
   Object.freeze(emptyObject);
 }
 
@@ -8710,7 +8710,7 @@ require.register("fbjs/lib/invariant.js", function(exports, require, module) {
 
 var validateFormat = function validateFormat(format) {};
 
-if ('production' !== 'production') {
+if ('development' !== 'production') {
   validateFormat = function validateFormat(format) {
     if (format === undefined) {
       throw new Error('invariant requires an error message argument');
@@ -8957,7 +8957,7 @@ var emptyFunction = require('./emptyFunction');
 
 var warning = emptyFunction;
 
-if ('production' !== 'production') {
+if ('development' !== 'production') {
   var printWarning = function printWarning(format) {
     for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
       args[_key - 1] = arguments[_key];
@@ -9098,7 +9098,7 @@ require.register("invariant/browser.js", function(exports, require, module) {
  */
 
 var invariant = function(condition, format, a, b, c, d, e, f) {
-  if ('production' !== 'production') {
+  if ('development' !== 'production') {
     if (format === undefined) {
       throw new Error('invariant requires an error message argument');
     }
@@ -9714,7 +9714,7 @@ require.register("prop-types/checkPropTypes.js", function(exports, require, modu
 
 'use strict';
 
-if ('production' !== 'production') {
+if ('development' !== 'production') {
   var invariant = require('fbjs/lib/invariant');
   var warning = require('fbjs/lib/warning');
   var ReactPropTypesSecret = require('./lib/ReactPropTypesSecret');
@@ -9733,7 +9733,7 @@ if ('production' !== 'production') {
  * @private
  */
 function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
-  if ('production' !== 'production') {
+  if ('development' !== 'production') {
     for (var typeSpecName in typeSpecs) {
       if (typeSpecs.hasOwnProperty(typeSpecName)) {
         var error;
@@ -9982,7 +9982,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
   PropTypeError.prototype = Error.prototype;
 
   function createChainableTypeChecker(validate) {
-    if ('production' !== 'production') {
+    if ('development' !== 'production') {
       var manualPropTypeCallCache = {};
       var manualPropTypeWarningCount = 0;
     }
@@ -9999,7 +9999,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
             'Use `PropTypes.checkPropTypes()` to call them. ' +
             'Read more at http://fb.me/use-check-prop-types'
           );
-        } else if ('production' !== 'production' && typeof console !== 'undefined') {
+        } else if ('development' !== 'production' && typeof console !== 'undefined') {
           // Old behavior for people using React.PropTypes
           var cacheKey = componentName + ':' + propName;
           if (
@@ -10109,7 +10109,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 
   function createEnumTypeChecker(expectedValues) {
     if (!Array.isArray(expectedValues)) {
-      'production' !== 'production' ? warning(false, 'Invalid argument supplied to oneOf, expected an instance of array.') : void 0;
+      'development' !== 'production' ? warning(false, 'Invalid argument supplied to oneOf, expected an instance of array.') : void 0;
       return emptyFunction.thatReturnsNull;
     }
 
@@ -10152,7 +10152,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 
   function createUnionTypeChecker(arrayOfTypeCheckers) {
     if (!Array.isArray(arrayOfTypeCheckers)) {
-      'production' !== 'production' ? warning(false, 'Invalid argument supplied to oneOfType, expected an instance of array.') : void 0;
+      'development' !== 'production' ? warning(false, 'Invalid argument supplied to oneOfType, expected an instance of array.') : void 0;
       return emptyFunction.thatReturnsNull;
     }
 
@@ -10389,7 +10389,7 @@ require.register("prop-types/index.js", function(exports, require, module) {
  * LICENSE file in the root directory of this source tree.
  */
 
-if ('production' !== 'production') {
+if ('development' !== 'production') {
   var REACT_ELEMENT_TYPE = (typeof Symbol === 'function' &&
     Symbol.for &&
     Symbol.for('react.element')) ||
@@ -10445,7 +10445,7 @@ require.register("react-dom/cjs/react-dom.development.js", function(exports, req
 'use strict';
 
 
-if ('production' !== "production") {
+if ('development' !== "production") {
 (function() {
 
 'use strict';
@@ -27933,7 +27933,7 @@ function checkDCE() {
   ) {
     return;
   }
-  if ('production' !== 'production') {
+  if ('development' !== 'production') {
     // This branch is unreachable because this function is only called
     // in production, but the condition is true only in development.
     // Therefore if the branch is still here, dead code elimination wasn't
@@ -27953,7 +27953,7 @@ function checkDCE() {
   }
 }
 
-if ('production' === 'production') {
+if ('development' === 'production') {
   // DCE check should happen before ReactDOM bundle executes so that
   // DevTools can report bad minification during injection.
   checkDCE();
@@ -28035,7 +28035,7 @@ function createProvider() {
     return Provider;
   }(_react.Component);
 
-  if ('production' !== 'production') {
+  if ('development' !== 'production') {
     Provider.prototype.componentWillReceiveProps = function (nextProps) {
       if (this[storeKey] !== nextProps.store) {
         warnAboutReceivingStore();
@@ -28331,7 +28331,7 @@ selectorFactory) {
     Connect.contextTypes = contextTypes;
     Connect.propTypes = contextTypes;
 
-    if ('production' !== 'production') {
+    if ('development' !== 'production') {
       Connect.prototype.componentWillUpdate = function componentWillUpdate() {
         var _this2 = this;
 
@@ -28603,7 +28603,7 @@ function wrapMergePropsFunc(mergeProps) {
         hasRunOnce = true;
         mergedProps = nextMergedProps;
 
-        if ('production' !== 'production') (0, _verifyPlainObject2.default)(mergedProps, displayName, 'mergeProps');
+        if ('development' !== 'production') (0, _verifyPlainObject2.default)(mergedProps, displayName, 'mergeProps');
       }
 
       return mergedProps;
@@ -28733,7 +28733,7 @@ function finalPropsSelectorFactory(dispatch, _ref2) {
   var mapDispatchToProps = initMapDispatchToProps(dispatch, options);
   var mergeProps = initMergeProps(dispatch, options);
 
-  if ('production' !== 'production') {
+  if ('development' !== 'production') {
     (0, _verifySubselectors2.default)(mapStateToProps, mapDispatchToProps, mergeProps, options.displayName);
   }
 
@@ -28849,7 +28849,7 @@ function wrapMapToPropsFunc(mapToProps, methodName) {
         props = proxy(stateOrDispatch, ownProps);
       }
 
-      if ('production' !== 'production') (0, _verifyPlainObject2.default)(props, displayName, methodName);
+      if ('development' !== 'production') (0, _verifyPlainObject2.default)(props, displayName, methodName);
 
       return props;
     };
@@ -29131,7 +29131,7 @@ require.register("react/cjs/react.development.js", function(exports, require, mo
 'use strict';
 
 
-if ('production' !== "production") {
+if ('development' !== "production") {
 (function() {
 
 'use strict';
@@ -30855,7 +30855,7 @@ require.register("react/index.js", function(exports, require, module) {
   (function() {
     'use strict';
 
-if ('production' === 'production') {
+if ('development' === 'production') {
   module.exports = require('./cjs/react.production.min.js');
 } else {
   module.exports = require('./cjs/react.development.js');
@@ -31074,7 +31074,7 @@ function combineReducers(reducers) {
   for (var i = 0; i < reducerKeys.length; i++) {
     var key = reducerKeys[i];
 
-    if ('production' !== 'production') {
+    if ('development' !== 'production') {
       if (typeof reducers[key] === 'undefined') {
         (0, _warning2['default'])('No reducer provided for key "' + key + '"');
       }
@@ -31087,7 +31087,7 @@ function combineReducers(reducers) {
   var finalReducerKeys = Object.keys(finalReducers);
 
   var unexpectedKeyCache = void 0;
-  if ('production' !== 'production') {
+  if ('development' !== 'production') {
     unexpectedKeyCache = {};
   }
 
@@ -31106,7 +31106,7 @@ function combineReducers(reducers) {
       throw shapeAssertionError;
     }
 
-    if ('production' !== 'production') {
+    if ('development' !== 'production') {
       var warningMessage = getUnexpectedStateShapeWarningMessage(state, finalReducers, action, unexpectedKeyCache);
       if (warningMessage) {
         (0, _warning2['default'])(warningMessage);
@@ -31482,7 +31482,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'd
 */
 function isCrushed() {}
 
-if ('production' !== 'production' && typeof isCrushed.name === 'string' && isCrushed.name !== 'isCrushed') {
+if ('development' !== 'production' && typeof isCrushed.name === 'string' && isCrushed.name !== 'isCrushed') {
   (0, _warning2['default'])('You are currently using minified code outside of NODE_ENV === \'production\'. ' + 'This means that you are running a slower development build of Redux. ' + 'You can use loose-envify (https://github.com/zertosh/loose-envify) for browserify ' + 'or DefinePlugin for webpack (http://stackoverflow.com/questions/30030031) ' + 'to ensure you have the correct code for your production build.');
 }
 
@@ -32352,6 +32352,12 @@ var technos = [{
 }];
 
 var realisations = exports.realisations = [{
+  company: 'O\'Clock',
+  location: 'A la maison',
+  title: 'Développement d\'une application de gestion d\'offre d\'emploi',
+  functionalities: ['Gestion de membres', 'Création d\'offres', 'Scrapping'],
+  technos: ['Node - Express', 'MongoDB - Mongoose', 'React-Redux-Axios', 'Materialize']
+}, {
   company: 'arkein - le goëland',
   location: 'Toulouse',
   title: 'Développement de l\'application de gestion de la maison d\'accueil des jeunes.',
@@ -32364,8 +32370,8 @@ var realisations = exports.realisations = [{
   functionalities: ['Gestion de membres', 'Gestion d\'évènements'],
   technos: ['Php', 'Symfony']
 }];
-exports.default = technos;
 
+exports.default = technos;
 });
 
 require.register("src/components/App/index.js", function(exports, require, module) {
@@ -32433,7 +32439,6 @@ App.propTypes = {
  * Export Default
  */
 exports.default = App;
-
 });
 
 require.register("src/components/Footer/index.js", function(exports, require, module) {
@@ -32451,56 +32456,113 @@ var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+var _LogoContact = require('src/components/GlobalComponents/LogoContact');
 
-/*
- * Local import
- */
+var _LogoContact2 = _interopRequireDefault(_LogoContact);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /*
  * Code
  */
 
-/*
- * Npm import
- */
 var Footer = function Footer() {
   return _react2.default.createElement(
     'div',
     { id: 'footer' },
     _react2.default.createElement(
-      'p',
-      null,
-      'C\'est ce parcours atypique qui m\'a enrichi de comp\xE9tences, transversales, et qui fait de moi aujourd\'hui quelqu\'un de ',
+      'div',
+      { id: 'footer-text' },
       _react2.default.createElement(
-        'em',
+        'p',
         null,
-        'rigoureux'
+        'C\'est ce parcours atypique qui m\'a enrichi de comp\xE9tences, transversales, et qui fait de moi aujourd\'hui quelqu\'un de ',
+        _react2.default.createElement(
+          'em',
+          null,
+          'rigoureux'
+        ),
+        ' ayant une ',
+        _react2.default.createElement(
+          'em',
+          null,
+          'approche globale'
+        ),
+        ' des choses'
       ),
-      ' ayant une ',
       _react2.default.createElement(
-        'em',
+        'p',
         null,
-        'approche globale'
+        'Je reviens aujourd\'hui \xE0 mes premiers amours en consacrant mon temps de travail \xE0 une r\xE9elle passion.'
       ),
-      ' des choses'
+      _react2.default.createElement('div', { className: 'footer-decoration' }),
+      _react2.default.createElement(
+        'h1',
+        null,
+        'Julien Moulis'
+      ),
+      _react2.default.createElement(
+        'h2',
+        null,
+        'D\xE9veloppeur Web'
+      ),
+      _react2.default.createElement('div', { className: 'footer-decoration' })
     ),
     _react2.default.createElement(
-      'p',
-      null,
-      'Je reviens aujourd\'hui \xE0 mes premiers amours en consacrant mon temps de travail \xE0 une r\xE9elle passion.'
+      'div',
+      { id: 'logo-wrapper' },
+      _react2.default.createElement(
+        'ul',
+        null,
+        _react2.default.createElement(
+          'li',
+          { className: 'logo-list-item' },
+          _react2.default.createElement(
+            'a',
+            { href: 'https://certificates.opquast.com/certificate/JHWF2D/', title: 'Certificat OpQuast' },
+            _react2.default.createElement('img', { className: 'footer-logo', alt: 'opQuast certification logo', src: '/img/opquastBadge.png' })
+          )
+        ),
+        _react2.default.createElement(
+          'li',
+          { className: 'logo-list-item' },
+          _react2.default.createElement(
+            'a',
+            { href: 'http://symfony.com/', title: 'Symfony website', hrefLang: 'en' },
+            _react2.default.createElement('img', { className: 'footer-logo', alt: 'Symfony', src: '/img/symfony.png' })
+          )
+        ),
+        _react2.default.createElement(
+          'li',
+          { className: 'logo-list-item' },
+          _react2.default.createElement(
+            'a',
+            { href: 'https://reactjs.org/', title: 'React website', hrefLang: 'en' },
+            _react2.default.createElement('img', { className: 'footer-logo', alt: 'React', src: '/img/react.png' })
+          )
+        ),
+        _react2.default.createElement(
+          'li',
+          { className: 'logo-list-item' },
+          _react2.default.createElement(
+            'a',
+            { href: 'https://oclock.io/', title: 'Ecole O\'Clock - website', hrefLang: 'fr' },
+            _react2.default.createElement(
+              'svg',
+              { xmlns: 'http://www.w3.org/2000/svg', width: '80', height: '80', viewBox: '-14.691 -14.656 188 188' },
+              _react2.default.createElement('path', { fill: '#0ac3a7', d: 'M144.73 51.788c-12.773 0-23.13-10.356-23.13-23.13 0-5.044 1.62-9.707 4.36-13.508C112.88 5.61 96.74-.013 79.2-.013 35.11-.013.062 35.477.062 79.564.062 123.65 35.11 158.7 79.2 158.7c44.086 0 79.355-35.05 79.355-79.136 0-10.367-1.95-20.258-5.507-29.324-2.582.996-5.384 1.548-8.318 1.548zM79.2 123.43c-24.03 0-43.868-19.84-43.868-43.865 0-24.25 19.84-44.308 43.867-44.308 24.245 0 44.084 20.06 44.084 44.308 0 24.026-19.84 43.867-44.088 43.867l.004-.002z' }),
+              _react2.default.createElement('path', { fill: '#0ac3a7', d: 'M144.692.168c-15.828 0-28.41 12.74-28.41 28.568 0 15.828 12.582 28.41 28.41 28.41s28.49-12.582 28.49-28.41S160.52.168 144.692.168zm-.014 49.575c-11.49 0-20.98-9.488-20.98-20.98 0-11.595 9.49-21.188 20.98-21.188 11.597 0 21.085 9.593 21.085 21.19 0 11.49-9.488 20.978-21.085 20.978z' })
+            )
+          )
+        )
+      )
     ),
-    _react2.default.createElement('div', { id: 'footer-decoration' }),
     _react2.default.createElement(
-      'h1',
-      null,
-      'Julien Moulis'
+      'div',
+      { id: 'credits' },
+      'Merci \xE0 la totale'
     ),
-    _react2.default.createElement(
-      'h2',
-      null,
-      'D\xE9veloppeur Web'
-    )
+    _react2.default.createElement(_LogoContact2.default, null)
   );
 };
 
@@ -32514,8 +32576,15 @@ var Footer = function Footer() {
 /*
  * Export Default
  */
-exports.default = Footer;
 
+
+/*
+ * Local import
+ */
+/*
+ * Npm import
+ */
+exports.default = Footer;
 });
 
 require.register("src/components/Form/index.js", function(exports, require, module) {
@@ -32570,11 +32639,11 @@ var Form = function Form(_ref) {
       ),
       _react2.default.createElement(
         'form',
-        { id: 'contact-form-field' },
-        _react2.default.createElement('input', { className: 'input-form', type: 'text', placeholder: 'Nom Pr\xE9nom*' }),
-        _react2.default.createElement('input', { className: 'input-form', type: 'text', placeholder: 'Soci\xE9t\xE9*' }),
-        _react2.default.createElement('input', { className: 'input-form', type: 'text', placeholder: 'Email*' }),
-        _react2.default.createElement('input', { className: 'input-form', type: 'text', placeholder: 'Tel*' }),
+        { id: 'contact-form-field', method: 'post' },
+        _react2.default.createElement('input', { className: 'input-form', type: 'text', placeholder: 'Nom Pr\xE9nom *' }),
+        _react2.default.createElement('input', { className: 'input-form', type: 'text', placeholder: 'Soci\xE9t\xE9 *' }),
+        _react2.default.createElement('input', { className: 'input-form', type: 'text', placeholder: 'Email *' }),
+        _react2.default.createElement('input', { className: 'input-form', type: 'text', placeholder: 'Tel *' }),
         _react2.default.createElement('textarea', { className: 'textarea-form', placeholder: 'Message*' }),
         _react2.default.createElement(
           'div',
@@ -32603,10 +32672,9 @@ Form.propTypes = {
  * Export Default
  */
 exports.default = Form;
-
 });
 
-require.register("src/components/Header/Contact/index.js", function(exports, require, module) {
+require.register("src/components/GlobalComponents/ButtonContact/index.js", function(exports, require, module) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -32642,88 +32710,229 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
  * Code
  */
 
-var Contact = function (_React$Component) {
-  _inherits(Contact, _React$Component);
+var ButtonContact = function (_React$Component) {
+  _inherits(ButtonContact, _React$Component);
 
-  function Contact() {
+  function ButtonContact() {
     var _ref;
 
     var _temp, _this, _ret;
 
-    _classCallCheck(this, Contact);
+    _classCallCheck(this, ButtonContact);
 
     for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Contact.__proto__ || Object.getPrototypeOf(Contact)).call.apply(_ref, [this].concat(args))), _this), _this.handleClick = function () {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = ButtonContact.__proto__ || Object.getPrototypeOf(ButtonContact)).call.apply(_ref, [this].concat(args))), _this), _this.handleClick = function () {
       var displayModalContact = _this.props.displayModalContact;
 
       displayModalContact();
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
-  _createClass(Contact, [{
+  _createClass(ButtonContact, [{
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        'nav',
-        { id: 'contact-nav' },
+        'button',
+        { className: 'contact-mail-link', onClick: this.handleClick },
         _react2.default.createElement(
-          'ul',
-          { id: 'contact-nav-info' },
-          _react2.default.createElement(
-            'li',
-            { id: 'contact-nav-info-item-star', className: 'contact-nav-info-item' },
-            _react2.default.createElement('i', { className: 'fa fa-star-o', 'aria-hidden': 'true' })
-          ),
-          _react2.default.createElement(
-            'li',
-            { id: 'contact-nav-info-item-name', className: 'contact-nav-info-item' },
-            'Julien Moulis'
-          ),
-          _react2.default.createElement(
-            'li',
-            { id: 'contact-nav-info-item-jobTitle', className: 'contact-nav-info-item' },
-            'D\xE9veloppeur Web'
-          ),
-          _react2.default.createElement(
-            'li',
-            { id: 'contact-nav-info-item-location', className: 'contact-nav-info-item' },
-            'r\xE9gion de Gen\xE8ve'
-          ),
-          _react2.default.createElement(
-            'li',
-            { id: 'contact-nav-info-item-phoneNumber', className: 'contact-nav-info-item' },
-            '+33 6 43 39 07 14'
-          )
+          'span',
+          { className: 'contact-nav-contact-icon' },
+          _react2.default.createElement('i', { className: 'fa fa-envelope', 'aria-hidden': 'true' })
         ),
-        _react2.default.createElement(
-          'button',
-          { className: 'contact-mail-link', onClick: this.handleClick },
-          _react2.default.createElement(
-            'span',
-            { className: 'contact-nav-contact-icon' },
-            _react2.default.createElement('i', { className: 'fa fa-envelope', 'aria-hidden': 'true' })
-          ),
-          ' contact'
-        )
+        ' contact'
       );
     }
   }]);
 
-  return Contact;
+  return ButtonContact;
 }(_react2.default.Component);
 
-Contact.propTypes = {
+ButtonContact.propTypes = {
   displayModalContact: _propTypes2.default.func.isRequired
 };
 
 /*
  * Export Default
  */
-exports.default = Contact;
+exports.default = ButtonContact;
+});
 
+require.register("src/components/GlobalComponents/LogoContact/index.js", function(exports, require, module) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _ButtonContact = require('src/containers/GlobalComponents/ButtonContact');
+
+var _ButtonContact2 = _interopRequireDefault(_ButtonContact);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/*
+ * Code
+ */
+
+var LogoContact = function LogoContact() {
+  return _react2.default.createElement(
+    'div',
+    { className: 'links' },
+    _react2.default.createElement(
+      'ul',
+      null,
+      _react2.default.createElement(
+        'li',
+        { className: 'links-list-item' },
+        _react2.default.createElement(_ButtonContact2.default, null)
+      ),
+      _react2.default.createElement(
+        'li',
+        { className: 'links-list-item' },
+        _react2.default.createElement(
+          'a',
+          { target: '_blank', rel: 'noopener noreferrer', href: 'https://www.linkedin.com/in/julien-moulis/', title: 'Profile LinkedIn - new page' },
+          _react2.default.createElement('i', { className: 'fa fa-linkedin fa-2x', 'aria-hidden': 'true' })
+        )
+      ),
+      _react2.default.createElement(
+        'li',
+        { className: 'links-list-item' },
+        _react2.default.createElement(
+          'a',
+          { target: '_blank', rel: 'noopener noreferrer', href: 'https://github.com/jMoulis', title: 'Profile GitHub - new page' },
+          _react2.default.createElement('i', { className: 'fa fa-github fa-2x', 'aria-hidden': 'true' })
+        )
+      ),
+      _react2.default.createElement(
+        'li',
+        { className: 'links-list-item' },
+        _react2.default.createElement(
+          'a',
+          { target: '_blank', rel: 'noopener noreferrer', href: 'https://www.malt.fr/profile/julienmoulis', title: 'Profile Malt (ex-hop work) - new page' },
+          _react2.default.createElement(
+            'svg',
+            { id: 'maltLogoPicto', className: 'main-header-logo__picto', xmlns: 'http://www.w3.org/2000/svg', width: '32', height: '32', viewBox: '0 0 92.3 92.3' },
+            _react2.default.createElement('path', { d: 'M79 14.2c-4.6-4.5-12-4.5-16.4 0L13.4 62.8C9 67.3 9 74.6 13.4 79c4.4 4.5 11.7 4.5 16.2 0l49-48.6c4.7-4.6 4.7-12 .3-16.4' }),
+            _react2.default.createElement('path', { d: 'M57.6 12.3C57.6 4.5 52.6 0 46 0 40 0 34.7 6 34.6 12.3L46 24l11.6-11.7z' }),
+            _react2.default.createElement('path', { d: 'M30.5 13.8c-2-2.2-5-3.5-8-3.5-3.2 0-6 1-8.3 3.2-4.6 4.4-4.7 11.7-.4 16.3l1.7 1.8h24.3l4-3.8-13.3-14z' }),
+            _react2.default.createElement('path', { d: 'M11.6 35c-3 0-6 1.3-8.2 3.4-2.2 2.2-3.4 5-3.4 8 0 3.2.6 11.7 13.2 11.7l23-22.8H11.7z' }),
+            _react2.default.createElement('path', { d: 'M34.6 80c0 7.8 5 12.3 11.5 12.3 6.4 0 11.6-6 11.7-12.3L46 68.3 34.6 80z' }),
+            _react2.default.createElement('path', { d: 'M78.4 63.7L76.7 62l-24.3-.2-4 4L62 79.5c4.4 4.6 11.7 4.7 16.3.4 4.6-4.4 4.7-11.7.4-16.3' }),
+            _react2.default.createElement('path', { d: 'M79.2 35.3L56 58.3h24.6c3.2 0 6-1 8.2-3.2 2.2-2 3.4-5 3.4-8 0-6.4-5-11.8-13-11.7' })
+          )
+        )
+      )
+    )
+  );
+};
+
+/* Standard propTypes declaration structure
+ *
+ * Img.propTypes = {
+ * item: PropTypes.string.isRequired,
+ * };
+ */
+
+/*
+ * Export Default
+ */
+
+
+/*
+ * Local import
+ */
+/*
+ * Npm import
+ */
+exports.default = LogoContact;
+});
+
+require.register("src/components/Header/Contact/index.js", function(exports, require, module) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _ButtonContact = require('src/containers/GlobalComponents/ButtonContact');
+
+var _ButtonContact2 = _interopRequireDefault(_ButtonContact);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/*
+ * Code
+ */
+
+var Contact = function Contact() {
+  return _react2.default.createElement(
+    'nav',
+    { id: 'contact-nav' },
+    _react2.default.createElement(
+      'ul',
+      { id: 'contact-nav-info' },
+      _react2.default.createElement(
+        'li',
+        { id: 'contact-nav-info-item-star', className: 'contact-nav-info-item' },
+        _react2.default.createElement('i', { className: 'fa fa-star-o', 'aria-hidden': 'true' })
+      ),
+      _react2.default.createElement(
+        'li',
+        { id: 'contact-nav-info-item-name', className: 'contact-nav-info-item' },
+        'Julien Moulis'
+      ),
+      _react2.default.createElement(
+        'li',
+        { id: 'contact-nav-info-item-jobTitle', className: 'contact-nav-info-item' },
+        'D\xE9veloppeur Web'
+      ),
+      _react2.default.createElement(
+        'li',
+        { id: 'contact-nav-info-item-location', className: 'contact-nav-info-item' },
+        'r\xE9gion de Gen\xE8ve'
+      ),
+      _react2.default.createElement(
+        'li',
+        { id: 'contact-nav-info-item-phoneNumber', className: 'contact-nav-info-item' },
+        '+33 6 43 39 07 14'
+      )
+    ),
+    _react2.default.createElement(_ButtonContact2.default, null)
+  );
+};
+
+/*
+ * Export Default
+ */
+
+
+/*
+ * Local import
+ */
+/*
+ * Npm import
+ */
+exports.default = Contact;
 });
 
 require.register("src/components/Header/Img/index.js", function(exports, require, module) {
@@ -32757,35 +32966,31 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var Img = function Img() {
   return _react2.default.createElement(
     'div',
-    null,
+    { id: 'header-img-container' },
+    _react2.default.createElement('div', { id: 'header-img' }),
     _react2.default.createElement(
       'div',
-      { id: 'header-img-container' },
-      _react2.default.createElement('div', { id: 'header-img' }),
+      { id: 'header-img-titles' },
       _react2.default.createElement(
-        'div',
-        { id: 'header-img-titles' },
-        _react2.default.createElement(
-          'h1',
-          null,
-          'julien moulis'
-        ),
-        _react2.default.createElement(
-          'h2',
-          null,
-          'D\xE9veloppeur Web'
-        ),
-        _react2.default.createElement('div', { id: 'header-img-titles-decoration' })
+        'h1',
+        null,
+        'julien moulis'
       ),
       _react2.default.createElement(
-        'div',
-        { id: 'half-circle' },
-        _react2.default.createElement('div', { id: 'header-first-circle', className: 'header-circle' }),
-        _react2.default.createElement('div', { id: 'header-second-circle', className: 'header-circle' }),
-        _react2.default.createElement('div', { id: 'header-third-circle', className: 'header-circle' }),
-        _react2.default.createElement('div', { id: 'header-fourth-circle', className: 'header-circle' }),
-        _react2.default.createElement('div', { id: 'header-fifth-circle', className: 'header-circle' })
-      )
+        'h2',
+        null,
+        'D\xE9veloppeur Web'
+      ),
+      _react2.default.createElement('div', { id: 'header-img-titles-decoration' })
+    ),
+    _react2.default.createElement(
+      'div',
+      { id: 'half-circle' },
+      _react2.default.createElement('div', { id: 'header-first-circle', className: 'header-circle' }),
+      _react2.default.createElement('div', { id: 'header-second-circle', className: 'header-circle' }),
+      _react2.default.createElement('div', { id: 'header-third-circle', className: 'header-circle' }),
+      _react2.default.createElement('div', { id: 'header-fourth-circle', className: 'header-circle' }),
+      _react2.default.createElement('div', { id: 'header-fifth-circle', className: 'header-circle' })
     )
   );
 };
@@ -32801,7 +33006,6 @@ var Img = function Img() {
  * Export Default
  */
 exports.default = Img;
-
 });
 
 require.register("src/components/Header/index.js", function(exports, require, module) {
@@ -32859,7 +33063,6 @@ var Header = function Header() {
  * Export Default
  */
 exports.default = Header;
-
 });
 
 require.register("src/components/Main/Bridge/index.js", function(exports, require, module) {
@@ -32869,8 +33072,6 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
@@ -32879,95 +33080,53 @@ var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
+var _ButtonContact = require('src/containers/GlobalComponents/ButtonContact');
+
+var _ButtonContact2 = _interopRequireDefault(_ButtonContact);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /*
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Npm import
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
-
-
-/*
- * Local import
- */
 
 /*
  * Code
  */
 
-var Bridge = function (_React$Component) {
-  _inherits(Bridge, _React$Component);
-
-  function Bridge() {
-    var _ref;
-
-    var _temp, _this, _ret;
-
-    _classCallCheck(this, Bridge);
-
-    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Bridge.__proto__ || Object.getPrototypeOf(Bridge)).call.apply(_ref, [this].concat(args))), _this), _this.handleClick = function () {
-      var displayModalContact = _this.props.displayModalContact;
-
-      displayModalContact();
-    }, _temp), _possibleConstructorReturn(_this, _ret);
-  }
-
-  _createClass(Bridge, [{
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        'div',
-        { id: 'bridge' },
-        _react2.default.createElement('i', { className: 'bridge-fa fa fa-star-o fa-3x', 'aria-hidden': 'true' }),
-        _react2.default.createElement(
-          'p',
-          null,
-          'Vous voulez me parler de votre projet?'
-        ),
-        _react2.default.createElement(
-          'p',
-          null,
-          'Vous avez une mission \xE0 me confier?'
-        ),
-        _react2.default.createElement('div', { id: 'bridge-decoration' }),
-        _react2.default.createElement(
-          'p',
-          null,
-          'N\'h\xE9sitez pas \xE0 me contacter !'
-        ),
-        _react2.default.createElement(
-          'button',
-          { className: 'contact-mail-link', onClick: this.handleClick },
-          _react2.default.createElement(
-            'span',
-            { className: 'contact-nav-contact-icon' },
-            _react2.default.createElement('i', { className: 'fa fa-envelope', 'aria-hidden': 'true' })
-          ),
-          ' contact'
-        )
-      );
-    }
-  }]);
-
-  return Bridge;
-}(_react2.default.Component);
-
-Bridge.propTypes = {
-  displayModalContact: _propTypes2.default.func.isRequired
+var Bridge = function Bridge() {
+  return _react2.default.createElement(
+    'div',
+    { id: 'bridge' },
+    _react2.default.createElement('i', { className: 'bridge-fa fa fa-star-o fa-3x', 'aria-hidden': 'true' }),
+    _react2.default.createElement(
+      'p',
+      null,
+      'Vous voulez me parler de votre projet?'
+    ),
+    _react2.default.createElement(
+      'p',
+      null,
+      'Vous avez une mission \xE0 me confier?'
+    ),
+    _react2.default.createElement('div', { id: 'bridge-decoration' }),
+    _react2.default.createElement(
+      'p',
+      null,
+      'N\'h\xE9sitez pas \xE0 me contacter !'
+    ),
+    _react2.default.createElement(_ButtonContact2.default, null)
+  );
 };
 
 /*
  * Export Default
  */
-exports.default = Bridge;
 
+
+/*
+ * Local import
+ */
+/*
+ * Npm import
+ */
+exports.default = Bridge;
 });
 
 require.register("src/components/Main/Competences/index.js", function(exports, require, module) {
@@ -33005,13 +33164,35 @@ var Competences = function Competences() {
     _react2.default.createElement(
       'p',
       { id: 'competences-summary' },
-      'Une vision globale de la communication API Rest c\xF4t\xE9 Back (Node/Php) & c\xF4t\xE9 front pour une exp\xE9rience utilisateur plus intense'
+      'Une approche API REST et Micro Service'
     ),
     _react2.default.createElement('div', { id: 'competences-decoration' }),
     _react2.default.createElement(
       'p',
       { id: 'competences-description' },
-      'Omitto iuris dictionem in libera civitate contra leges senatusque consulta; caedes relinquo; libidines praetereo, quarum acerbissimum extat indicium et ad insignem memoriam turpitudinis et paene ad iustum odium imperii nostri, quod constat nobilissimas virgines se in puteos abiecisse et morte voluntaria necessariam turpitudinem depulisse.'
+      'A travers les diff\xE9rents projets et travaux, je me suis concentr\xE9 sur une architecture tourn\xE9e API REST.',
+      _react2.default.createElement('br', null),
+      'L\'objectif \xE9tant de d\xE9couper le back du front et rendre par cons\xE9quent le code plus durable et facile \xE0 maintenir.',
+      _react2.default.createElement('br', null),
+      'J\'ai opt\xE9 pour la technologie',
+      _react2.default.createElement(
+        'a',
+        { href: 'https://reactjs.org/', title: 'React website', hrefLang: 'en' },
+        ' React '
+      ),
+      'en front et Php -',
+      _react2.default.createElement(
+        'a',
+        { href: 'http://symfony.com/', title: 'Symfony website', hrefLang: 'en' },
+        ' Symfony '
+      ),
+      ' ou',
+      _react2.default.createElement(
+        'a',
+        { href: 'https://nodejs.org/en/about/', title: 'Node website', hrefLang: 'en' },
+        ' Node '
+      ),
+      ' en back.'
     )
   );
 };
@@ -33027,7 +33208,6 @@ var Competences = function Competences() {
  * Export Default
  */
 exports.default = Competences;
-
 });
 
 require.register("src/components/Main/Realisations/index.js", function(exports, require, module) {
@@ -33093,7 +33273,6 @@ var Realisations = function Realisations(props) {
  * Npm import
  */
 exports.default = Realisations;
-
 });
 
 require.register("src/components/Main/Realisations/realisationCard.js", function(exports, require, module) {
@@ -33196,7 +33375,6 @@ var RealisationCard = function RealisationCard(_ref) {
  * Export Default
  */
 exports.default = RealisationCard;
-
 });
 
 require.register("src/components/Main/Reconversion/image.js", function(exports, require, module) {
@@ -33275,7 +33453,6 @@ var Img = function Img() {
  * Export Default
  */
 exports.default = Img;
-
 });
 
 require.register("src/components/Main/Reconversion/index.js", function(exports, require, module) {
@@ -33429,7 +33606,6 @@ var Reconversion = function Reconversion() {
  * Npm import
  */
 exports.default = Reconversion;
-
 });
 
 require.register("src/components/Main/Technos/TechnoCard.js", function(exports, require, module) {
@@ -33492,7 +33668,6 @@ TechnoCard.propTypes = {
  * Export Default
  */
 exports.default = TechnoCard;
-
 });
 
 require.register("src/components/Main/Technos/index.js", function(exports, require, module) {
@@ -33561,7 +33736,6 @@ var Technos = function Technos() {
  * Export Default
  */
 exports.default = Technos;
-
 });
 
 require.register("src/components/Main/index.js", function(exports, require, module) {
@@ -33636,7 +33810,6 @@ var Main = function Main() {
  * Npm import
  */
 exports.default = Main;
-
 });
 
 require.register("src/containers/App/index.js", function(exports, require, module) {
@@ -33689,7 +33862,6 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 var createContainer = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps);
 var AppContainer = createContainer(_App2.default);
 exports.default = AppContainer;
-
 });
 
 require.register("src/containers/Form/index.js", function(exports, require, module) {
@@ -33742,7 +33914,58 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 var createContainer = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps);
 var FormContainer = createContainer(_Form2.default);
 exports.default = FormContainer;
+});
 
+require.register("src/containers/GlobalComponents/ButtonContact/index.js", function(exports, require, module) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _reactRedux = require('react-redux');
+
+var _ButtonContact = require('src/components/GlobalComponents/ButtonContact');
+
+var _ButtonContact2 = _interopRequireDefault(_ButtonContact);
+
+var _reducer = require('src/store/reducer');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/*
+ * Code
+ */
+// State
+
+
+/*
+ * Local import
+ */
+var mapStateToProps = function mapStateToProps(state) {
+  return {
+    modalContact: state.modalContact
+  };
+};
+
+// Actions
+/*
+ * Npm import
+ */
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+  return {
+    displayModalContact: function displayModalContact() {
+      dispatch((0, _reducer.displayModalContact)());
+    }
+  };
+};
+
+/*
+ * Export default
+ */
+var createContainer = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps);
+var ButtonContactContainer = createContainer(_ButtonContact2.default);
+exports.default = ButtonContactContainer;
 });
 
 require.register("src/containers/Header/Contact/index.js", function(exports, require, module) {
@@ -33795,7 +34018,6 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 var createContainer = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps);
 var ContactContainer = createContainer(_Contact2.default);
 exports.default = ContactContainer;
-
 });
 
 require.register("src/containers/Main/Bridge/index.js", function(exports, require, module) {
@@ -33848,7 +34070,6 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 var createContainer = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps);
 var BridgeContainer = createContainer(_Bridge2.default);
 exports.default = BridgeContainer;
-
 });
 
 require.register("src/containers/Main/Realisations/index.js", function(exports, require, module) {
@@ -33895,7 +34116,6 @@ var mapDispatchToProps = {};
 var createContainer = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps);
 var RealisationsContainer = createContainer(_Realisations2.default);
 exports.default = RealisationsContainer;
-
 });
 
 require.register("src/index.js", function(exports, require, module) {
@@ -33940,7 +34160,6 @@ document.addEventListener('DOMContentLoaded', function () {
   );
   (0, _reactDom.render)(provider, document.getElementById('root'));
 });
-
 });
 
 require.register("src/store/index.js", function(exports, require, module) {
@@ -33980,7 +34199,6 @@ var store = (0, _redux.createStore)(_reducer2.default, devTools);
  * Export default
 */
 exports.default = store;
-
 });
 
 require.register("src/store/reducer.js", function(exports, require, module) {
@@ -34059,7 +34277,6 @@ var hideModalContact = exports.hideModalContact = function hideModalContact() {
  * Export default
 */
 exports.default = reducer;
-
 });
 
 require.alias("babel-polyfill/lib/index.js", "babel-polyfill");
@@ -34070,3 +34287,98 @@ require.alias("redux/lib/index.js", "redux");process = require('process');requir
   
 });})();require('___globals___');
 
+'use strict';
+
+/* jshint ignore:start */
+(function () {
+  var WebSocket = window.WebSocket || window.MozWebSocket;
+  var br = window.brunch = window.brunch || {};
+  var ar = br['auto-reload'] = br['auto-reload'] || {};
+  if (!WebSocket || ar.disabled) return;
+  if (window._ar) return;
+  window._ar = true;
+
+  var cacheBuster = function cacheBuster(url) {
+    var date = Math.round(Date.now() / 1000).toString();
+    url = url.replace(/(\&|\\?)cacheBuster=\d*/, '');
+    return url + (url.indexOf('?') >= 0 ? '&' : '?') + 'cacheBuster=' + date;
+  };
+
+  var browser = navigator.userAgent.toLowerCase();
+  var forceRepaint = ar.forceRepaint || browser.indexOf('chrome') > -1;
+
+  var reloaders = {
+    page: function page() {
+      window.location.reload(true);
+    },
+
+    stylesheet: function stylesheet() {
+      [].slice.call(document.querySelectorAll('link[rel=stylesheet]')).filter(function (link) {
+        var val = link.getAttribute('data-autoreload');
+        return link.href && val != 'false';
+      }).forEach(function (link) {
+        link.href = cacheBuster(link.href);
+      });
+
+      // Hack to force page repaint after 25ms.
+      if (forceRepaint) setTimeout(function () {
+        document.body.offsetHeight;
+      }, 25);
+    },
+
+    javascript: function javascript() {
+      var scripts = [].slice.call(document.querySelectorAll('script'));
+      var textScripts = scripts.map(function (script) {
+        return script.text;
+      }).filter(function (text) {
+        return text.length > 0;
+      });
+      var srcScripts = scripts.filter(function (script) {
+        return script.src;
+      });
+
+      var loaded = 0;
+      var all = srcScripts.length;
+      var onLoad = function onLoad() {
+        loaded = loaded + 1;
+        if (loaded === all) {
+          textScripts.forEach(function (script) {
+            eval(script);
+          });
+        }
+      };
+
+      srcScripts.forEach(function (script) {
+        var src = script.src;
+        script.remove();
+        var newScript = document.createElement('script');
+        newScript.src = cacheBuster(src);
+        newScript.async = true;
+        newScript.onload = onLoad;
+        document.head.appendChild(newScript);
+      });
+    }
+  };
+  var port = ar.port || 9485;
+  var host = br.server || window.location.hostname || 'localhost';
+
+  var connect = function connect() {
+    var connection = new WebSocket('ws://' + host + ':' + port);
+    connection.onmessage = function (event) {
+      if (ar.disabled) return;
+      var message = event.data;
+      var reloader = reloaders[message] || reloaders.page;
+      reloader();
+    };
+    connection.onerror = function () {
+      if (connection.readyState) connection.close();
+    };
+    connection.onclose = function () {
+      window.setTimeout(connect, 1000);
+    };
+  };
+  connect();
+})();
+/* jshint ignore:end */
+;
+//# sourceMappingURL=app.js.map

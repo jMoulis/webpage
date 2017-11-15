@@ -14,21 +14,19 @@ import PropTypes from 'prop-types';
  */
 
 const Img = () => (
-  <div>
-    <div id="header-img-container">
-      <div id="header-img" />
-      <div id="header-img-titles">
-        <h1>julien moulis</h1>
-        <h2>Développeur Web</h2>
-        <div id="header-img-titles-decoration" />
-      </div>
-      <div id="half-circle">
-        <div id="header-first-circle" className="header-circle" />
-        <div id="header-second-circle" className="header-circle" />
-        <div id="header-third-circle" className="header-circle" />
-        <div id="header-fourth-circle" className="header-circle" />
-        <div id="header-fifth-circle" className="header-circle" />
-      </div>
+  <div id="header-img-container">
+    <div id="header-img" />
+    <div id="header-img-titles">
+      <h1>julien moulis</h1>
+      <h2>Développeur Web</h2>
+      <div id="header-img-titles-decoration" />
+    </div>
+    <div id="half-circle">
+      <div id="header-first-circle" className="header-circle" />
+      <div id="header-second-circle" className="header-circle" />
+      <div id="header-third-circle" className="header-circle" />
+      <div id="header-fourth-circle" className="header-circle" />
+      <div id="header-fifth-circle" className="header-circle" />
     </div>
   </div>
 );

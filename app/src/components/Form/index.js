@@ -20,11 +20,11 @@ const Form = ({ hideModalContact }) => (
         <p>&lt; ! - -FULL - - &gt;</p>
         <h3>&lt; contact &gt;</h3>
       </div>
-      <form id="contact-form-field">
-        <input className="input-form" type="text" placeholder="Nom Prénom*" />
-        <input className="input-form" type="text" placeholder="Société*" />
-        <input className="input-form" type="text" placeholder="Email*" />
-        <input className="input-form" type="text" placeholder="Tel*" />
+      <form id="contact-form-field" method="post">
+        <input className="input-form" type="text" placeholder="Nom Prénom *" />
+        <input className="input-form" type="text" placeholder="Société *" />
+        <input className="input-form" type="text" placeholder="Email *" />
+        <input className="input-form" type="text" placeholder="Tel *" />
         <textarea className="textarea-form" placeholder="Message*" />
         <div id="btn-group">
           <button className="btn btn-cancel" type="button" onClick={hideModalContact}>Annuler</button>

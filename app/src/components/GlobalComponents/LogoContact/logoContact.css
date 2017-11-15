@@ -1,0 +1,14 @@
+.links ul {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+.links-list-item {
+  padding: .5em;
+}
+.links {
+  width: 100%;
+  margin-top: 2em;
+  padding: 1em;
+  background-color: #e0e0e0;
+}

@@ -13,7 +13,7 @@
 #bridge p:nth-last-of-type(1) {
   color: black;
   font-family: 'Roboto', sans-serif;
-  font-size: 0.75em;
+  font-size: 1em;
   margin-bottom: 1em;
 }
 #bridge-decoration {
