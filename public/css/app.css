@@ -171,9 +171,7 @@
   color: white;
 }
 .contact-mail-link {
-  display: inline-block;
   color:  #0017ec;
-  background-color: transparent;
   font-family: 'Unica One', cursive;
   text-decoration: none;
   text-transform: uppercase;
@@ -186,13 +184,24 @@
   margin-right: 1em;
   cursor: pointer;
 }
+.contact-mail-link-icon {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+.contact-mail-link-icon:hover {
+  color: #ffd500;
+}
 .links ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
 }
 .links-list-item {
@@ -203,6 +212,15 @@
   margin-top: 2em;
   padding: 1em;
   background-color: #e0e0e0;
+}
+.links-list-item a {
+  color: black;
+}
+.links-list-item a:hover {
+  color: #ffd500;
+}
+.main-header-logo__picto:hover {
+  fill: #ffd500;
 }
 #header-img-container {
   height: 500px;
@@ -371,7 +389,7 @@
 #bridge p:nth-last-of-type(1) {
   color: black;
   font-family: 'Roboto', sans-serif;
-  font-size: 1em;
+  font-size: 1.25em;
   margin-bottom: 1em;
 }
 #bridge-decoration {
@@ -413,6 +431,14 @@
   width: 50px;
   background-color: white;
   margin: 1em;
+}
+.competences-backlink {
+  color: black;
+  font-weight: bolder;
+}
+.competences-backlink:hover {
+  color: #0017ec;
+  font-weight: bolder;
 }
 #realisations {
   display: -webkit-box;
@@ -759,6 +785,10 @@ h4 {
   text-transform: uppercase;
   font-family: 'Unica One', sans-serif;
   font-size: 1.5em;
+}
+h5 {
+  font-size: 1.25em;
+  padding: .25em;
 }
 em {
   font-weight: bolder;

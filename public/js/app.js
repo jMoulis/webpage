@@ -32519,7 +32519,7 @@ var Footer = function Footer() {
           { className: 'logo-list-item' },
           _react2.default.createElement(
             'a',
-            { href: 'https://certificates.opquast.com/certificate/JHWF2D/', title: 'Certificat OpQuast' },
+            { target: '_blank', rel: 'noopener noreferrer', href: 'https://certificates.opquast.com/certificate/JHWF2D/', title: 'Certificat OpQuast - new page' },
             _react2.default.createElement('img', { className: 'footer-logo', alt: 'opQuast certification logo', src: '/img/opquastBadge.png' })
           )
         ),
@@ -32528,7 +32528,7 @@ var Footer = function Footer() {
           { className: 'logo-list-item' },
           _react2.default.createElement(
             'a',
-            { href: 'http://symfony.com/', title: 'Symfony website', hrefLang: 'en' },
+            { target: '_blank', rel: 'noopener noreferrer', href: 'http://symfony.com/', title: 'Symfony website - new page', hrefLang: 'en' },
             _react2.default.createElement('img', { className: 'footer-logo', alt: 'Symfony', src: '/img/symfony.png' })
           )
         ),
@@ -32537,7 +32537,7 @@ var Footer = function Footer() {
           { className: 'logo-list-item' },
           _react2.default.createElement(
             'a',
-            { href: 'https://reactjs.org/', title: 'React website', hrefLang: 'en' },
+            { target: '_blank', rel: 'noopener noreferrer', href: 'https://reactjs.org/', title: 'React website - new page', hrefLang: 'en' },
             _react2.default.createElement('img', { className: 'footer-logo', alt: 'React', src: '/img/react.png' })
           )
         ),
@@ -32546,7 +32546,7 @@ var Footer = function Footer() {
           { className: 'logo-list-item' },
           _react2.default.createElement(
             'a',
-            { href: 'https://oclock.io/', title: 'Ecole O\'Clock - website', hrefLang: 'fr' },
+            { target: '_blank', rel: 'noopener noreferrer', href: 'https://oclock.io/', title: 'Ecole O\'Clock - website - new page', hrefLang: 'fr' },
             _react2.default.createElement(
               'svg',
               { xmlns: 'http://www.w3.org/2000/svg', width: '80', height: '80', viewBox: '-14.691 -14.656 188 188' },
@@ -32734,15 +32734,24 @@ var ButtonContact = function (_React$Component) {
   _createClass(ButtonContact, [{
     key: 'render',
     value: function render() {
+      var type = this.props.type;
+
+      if (type !== 'icon') {
+        return _react2.default.createElement(
+          'button',
+          { className: 'contact-mail-link', onClick: this.handleClick },
+          _react2.default.createElement(
+            'span',
+            { className: 'contact-nav-contact-icon' },
+            _react2.default.createElement('i', { className: 'fa fa-envelope', 'aria-hidden': 'true' })
+          ),
+          ' contact'
+        );
+      }
       return _react2.default.createElement(
         'button',
-        { className: 'contact-mail-link', onClick: this.handleClick },
-        _react2.default.createElement(
-          'span',
-          { className: 'contact-nav-contact-icon' },
-          _react2.default.createElement('i', { className: 'fa fa-envelope', 'aria-hidden': 'true' })
-        ),
-        ' contact'
+        { className: 'contact-mail-link-icon', title: 'Mail me - modal-form', onClick: this.handleClick },
+        _react2.default.createElement('i', { className: 'fa fa-envelope-o fa-2x', 'aria-hidden': 'true' })
       );
     }
   }]);
@@ -32751,7 +32760,8 @@ var ButtonContact = function (_React$Component) {
 }(_react2.default.Component);
 
 ButtonContact.propTypes = {
-  displayModalContact: _propTypes2.default.func.isRequired
+  displayModalContact: _propTypes2.default.func.isRequired,
+  type: _propTypes2.default.string.isRequired
 };
 
 /*
@@ -32771,10 +32781,6 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = require('prop-types');
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
 var _ButtonContact = require('src/containers/GlobalComponents/ButtonContact');
 
 var _ButtonContact2 = _interopRequireDefault(_ButtonContact);
@@ -32785,6 +32791,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * Code
  */
 
+/*
+ * Npm import
+ */
 var LogoContact = function LogoContact() {
   return _react2.default.createElement(
     'div',
@@ -32795,7 +32804,7 @@ var LogoContact = function LogoContact() {
       _react2.default.createElement(
         'li',
         { className: 'links-list-item' },
-        _react2.default.createElement(_ButtonContact2.default, null)
+        _react2.default.createElement(_ButtonContact2.default, { type: 'icon' })
       ),
       _react2.default.createElement(
         'li',
@@ -32838,13 +32847,6 @@ var LogoContact = function LogoContact() {
   );
 };
 
-/* Standard propTypes declaration structure
- *
- * Img.propTypes = {
- * item: PropTypes.string.isRequired,
- * };
- */
-
 /*
  * Export Default
  */
@@ -32852,9 +32854,6 @@ var LogoContact = function LogoContact() {
 
 /*
  * Local import
- */
-/*
- * Npm import
  */
 exports.default = LogoContact;
 });
@@ -32917,7 +32916,7 @@ var Contact = function Contact() {
         '+33 6 43 39 07 14'
       )
     ),
-    _react2.default.createElement(_ButtonContact2.default, null)
+    _react2.default.createElement(_ButtonContact2.default, { type: 'btn' })
   );
 };
 
@@ -33096,12 +33095,12 @@ var Bridge = function Bridge() {
     { id: 'bridge' },
     _react2.default.createElement('i', { className: 'bridge-fa fa fa-star-o fa-3x', 'aria-hidden': 'true' }),
     _react2.default.createElement(
-      'p',
+      'h5',
       null,
       'Vous voulez me parler de votre projet?'
     ),
     _react2.default.createElement(
-      'p',
+      'h5',
       null,
       'Vous avez une mission \xE0 me confier?'
     ),
@@ -33111,7 +33110,7 @@ var Bridge = function Bridge() {
       null,
       'N\'h\xE9sitez pas \xE0 me contacter !'
     ),
-    _react2.default.createElement(_ButtonContact2.default, null)
+    _react2.default.createElement(_ButtonContact2.default, { type: 'btn' })
   );
 };
 
@@ -33130,19 +33129,15 @@ exports.default = Bridge;
 });
 
 require.register("src/components/Main/Competences/index.js", function(exports, require, module) {
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _react = require('react');
+var _react = require("react");
 
 var _react2 = _interopRequireDefault(_react);
-
-var _propTypes = require('prop-types');
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -33154,58 +33149,75 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * Code
  */
 
-/*
- * Npm import
- */
 var Competences = function Competences() {
   return _react2.default.createElement(
-    'div',
-    { id: 'competences' },
+    "div",
+    { id: "competences" },
     _react2.default.createElement(
-      'p',
-      { id: 'competences-summary' },
-      'Une approche API REST et Micro Service'
+      "h5",
+      { id: "competences-summary" },
+      "Une approche API REST et Micro Service"
     ),
-    _react2.default.createElement('div', { id: 'competences-decoration' }),
+    _react2.default.createElement("div", { id: "competences-decoration" }),
     _react2.default.createElement(
-      'p',
-      { id: 'competences-description' },
-      'A travers les diff\xE9rents projets et travaux, je me suis concentr\xE9 sur une architecture tourn\xE9e API REST.',
-      _react2.default.createElement('br', null),
-      'L\'objectif \xE9tant de d\xE9couper le back du front et rendre par cons\xE9quent le code plus durable et facile \xE0 maintenir.',
-      _react2.default.createElement('br', null),
-      'J\'ai opt\xE9 pour la technologie',
+      "p",
+      { id: "competences-description" },
       _react2.default.createElement(
-        'a',
-        { href: 'https://reactjs.org/', title: 'React website', hrefLang: 'en' },
-        ' React '
+        "span",
+        null,
+        "A travers les diff\xE9rents projets et travaux, je me suis concentr\xE9 sur une architecture tourn\xE9e API REST."
       ),
-      'en front et Php -',
+      _react2.default.createElement("br", null),
       _react2.default.createElement(
-        'a',
-        { href: 'http://symfony.com/', title: 'Symfony website', hrefLang: 'en' },
-        ' Symfony '
+        "span",
+        null,
+        "L'objectif \xE9tant de d\xE9couper le back du front et rendre par cons\xE9quent le code plus durable et facile \xE0 maintenir."
       ),
-      ' ou',
+      _react2.default.createElement("br", null),
       _react2.default.createElement(
-        'a',
-        { href: 'https://nodejs.org/en/about/', title: 'Node website', hrefLang: 'en' },
-        ' Node '
+        "span",
+        null,
+        "J'ai opt\xE9 pour la technologie "
       ),
-      ' en back.'
+      _react2.default.createElement(
+        "a",
+        { className: "competences-backlink", target: "_blank", rel: "noopener noreferrer", href: "https://reactjs.org/", title: "React website - new page", hrefLang: "en" },
+        "React"
+      ),
+      _react2.default.createElement(
+        "span",
+        null,
+        " en front et Php - "
+      ),
+      _react2.default.createElement(
+        "a",
+        { className: "competences-backlink", target: "_blank", rel: "noopener noreferrer", href: "http://symfony.com/", title: "Symfony website - new page", hrefLang: "en" },
+        "Symfony"
+      ),
+      _react2.default.createElement(
+        "span",
+        null,
+        " ou "
+      ),
+      _react2.default.createElement(
+        "a",
+        { className: "competences-backlink", target: "_blank", rel: "noopener noreferrer", href: "https://nodejs.org/en/about/", title: "Node website - new page", hrefLang: "en" },
+        "Node"
+      ),
+      _react2.default.createElement(
+        "span",
+        null,
+        " en back."
+      )
     )
   );
 };
 
-/* Standard propTypes declaration structure
- *
- * Competences.propTypes = {
- * item: PropTypes.string.isRequired,
- * };
- */
-
 /*
  * Export Default
+ */
+/*
+ * Npm import
  */
 exports.default = Competences;
 });

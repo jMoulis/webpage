@@ -2,7 +2,6 @@
  * Npm import
  */
 import React from 'react';
-import PropTypes from 'prop-types';
 
 /*
  * Local import
@@ -17,7 +16,7 @@ const LogoContact = () => (
   <div className="links">
     <ul>
       <li className="links-list-item">
-        <ButtonContact />
+        <ButtonContact type="icon" />
       </li>
       <li className="links-list-item">
         <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/julien-moulis/" title="Profile LinkedIn - new page">
@@ -45,13 +44,6 @@ const LogoContact = () => (
     </ul>
   </div>
 );
-
-/* Standard propTypes declaration structure
- *
- * Img.propTypes = {
- * item: PropTypes.string.isRequired,
- * };
- */
 
 
 /*

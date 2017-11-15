@@ -25,3 +25,11 @@
   background-color: white;
   margin: 1em;
 }
+.competences-backlink {
+  color: black;
+  font-weight: bolder;
+}
+.competences-backlink:hover {
+  color: #0017ec;
+  font-weight: bolder;
+}

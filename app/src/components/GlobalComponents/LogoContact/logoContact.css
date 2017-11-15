@@ -1,6 +1,7 @@
 .links ul {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  align-items: center;
   width: 100%;
 }
 .links-list-item {
@@ -11,4 +12,13 @@
   margin-top: 2em;
   padding: 1em;
   background-color: #e0e0e0;
+}
+.links-list-item a {
+  color: black;
+}
+.links-list-item a:hover {
+  color: #ffd500;
+}
+.main-header-logo__picto:hover {
+  fill: #ffd500;
 }

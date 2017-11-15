@@ -28,6 +28,10 @@ h4 {
   font-family: 'Unica One', sans-serif;
   font-size: 1.5em;
 }
+h5 {
+  font-size: 1.25em;
+  padding: .25em;
+}
 em {
   font-weight: bolder;
 }

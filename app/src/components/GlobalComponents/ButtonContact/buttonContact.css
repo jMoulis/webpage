@@ -1,7 +1,5 @@
 .contact-mail-link {
-  display: inline-block;
   color:  #0017ec;
-  background-color: transparent;
   font-family: 'Unica One', cursive;
   text-decoration: none;
   text-transform: uppercase;
@@ -13,4 +11,12 @@
   font-size: 1em;
   margin-right: 1em;
   cursor: pointer;
+}
+.contact-mail-link-icon {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+.contact-mail-link-icon:hover {
+  color: #ffd500;
 }

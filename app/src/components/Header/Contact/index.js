@@ -24,7 +24,7 @@ const Contact = () => (
       <li id="contact-nav-info-item-location" className="contact-nav-info-item">région de Genève</li>
       <li id="contact-nav-info-item-phoneNumber" className="contact-nav-info-item">+33 6 43 39 07 14</li>
     </ul>
-    <ButtonContact />
+    <ButtonContact type="btn" />
   </nav>
 );
 
