@@ -15,15 +15,15 @@ import technos from 'data/data';
  */
 
 const Technos = () => (
-  <div id="techno-card-wrapper">
+  <section id="techno-card-wrapper">
     <h3 id="techno-title">&lt; deux environnements technologiques majeurs &gt;</h3>
     <div id="techno">
       {
         technos.map((techno, index) => <TechnoCard key={index} techno={techno} />)
       }
-      <div id="techno-decoration" />
+      <div id="techno-decoration" className="shake" />
     </div>
-  </div>
+  </section>
 );
 
 /* Standard propTypes declaration structure

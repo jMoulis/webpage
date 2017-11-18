@@ -22,15 +22,14 @@ class ButtonContact extends React.Component {
     const { type } = this.props;
     if (type !== 'icon') {
       return (
-        <button className="contact-mail-link" onClick={this.handleClick}>
-          <span className="contact-nav-contact-icon">
-            <i className="fa fa-envelope" aria-hidden="true" />
-          </span> contact
+        <button className="contact-mail-link" title="Mail julien.moulis@moulis.me - modal-form" onClick={this.handleClick}>
+          <i className="fa fa-envelope" aria-hidden="true" />
+          <span id="contact-mail-link-text"> contact</span>
         </button>
       );
     }
     return (
-      <button className="contact-mail-link-icon" title="Mail me - modal-form" onClick={this.handleClick}>
+      <button className="contact-mail-link-icon" title="Mail julien.moulis@moulis.me - modal-form" onClick={this.handleClick}>
         <i className="fa fa-envelope-o fa-2x" aria-hidden="true" />
       </button>
     );

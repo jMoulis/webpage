@@ -12,11 +12,17 @@
   margin-right: 1em;
   cursor: pointer;
 }
+.contact-mail-link:hover {
+  color: white;
+  background-color: #0017ec;
+}
 .contact-mail-link-icon {
   background-color: transparent;
   cursor: pointer;
   border: none;
 }
-.contact-mail-link-icon:hover {
-  color: #ffd500;
+@media screen and (max-width: 768px) {
+  #contact-mail-link-text {
+    display: none;
+  }
 }

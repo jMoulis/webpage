@@ -17,7 +17,7 @@ import Form from 'src/containers/Form';
  */
 
 const App = ({ modalContact }) => {
-  console.log(modalContact)
+  console.log('Hello, je vois que le code est important pour toi. Alors aussi improbable que celà puisse paraître, ce site est entière développé en React... Pourquoi? pour l\'instant le site est statique mis à part deux trois petits composant redux... Mais j\'ai deux trois petites idées derrière la tête... A suivre');
   return (
     <div id="app">
       <Header />

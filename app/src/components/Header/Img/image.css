@@ -16,7 +16,7 @@
   align-items: center;
   position: absolute;
   top: 30%;
-  left: 10%;
+  left: 5%;
 }
 #header-img-titles-decoration {
   height: 5px;
@@ -74,6 +74,12 @@
     height: 200px;
   }
   #header-img-titles {
+    display: none;
+  }
+  #half-circle {
+    left: 0;
+  }
+  #header-fifth-circle, #header-fourth-circle {
     display: none;
   }
 }

@@ -14,12 +14,12 @@ import PropTypes from 'prop-types';
  */
 
 const TechnoCard = ({ techno }) => (
-  <div className="techno-card">
+  <article className="techno-card">
     <h4 className="techno-card-title">{techno.title}</h4>
     <ul className="techno-card-list">
       {techno.details.map((detail, index) => <li className="techno-card-item" key={index}>{detail}</li>)}
     </ul>
-  </div>
+  </article>
 );
 
 TechnoCard.propTypes = {

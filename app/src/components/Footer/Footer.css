@@ -39,3 +39,21 @@
 .logo-list-item {
   padding: 1em;
 }
+#footer-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 2em;
+  padding: 1em 0;
+  background-color: #e0e0e0;
+}
+#credits {
+  font-family: 'Roboto', sans-serif;
+  font-size: .8em;
+  color: black;
+  line-height: normal;
+}
+@media screen and (max-width: 768px) {
+
+}

@@ -27,9 +27,10 @@ h4 {
   text-transform: uppercase;
   font-family: 'Unica One', sans-serif;
   font-size: 1.5em;
+  padding: 1em 0;
 }
 h5 {
-  font-size: 1.25em;
+  font-size: 1.5em;
   padding: .25em;
 }
 em {
@@ -40,4 +41,33 @@ input::placeholder {
 }
 textarea::placeholder {
   color: white;
+}
+.a-reset {
+  text-decoration: none;
+}
+figure {
+  text-align: center;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+figcaption {
+  color: black;
+  font-family: 'Unica One', sans-serif;
+}
+.shake:hover {
+  animation: shake 1s linear;
+}
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
 }

@@ -6,6 +6,9 @@
   background-color: #ffd500;
   padding: 2em;
 }
+.reconversion-reason h4 {
+  padding-bottom: 0;
+}
 #reconversion-reason-wrapper {
   display: flex;
   align-items: center;
@@ -39,9 +42,27 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  line-height: 1.25em;
 }
 .reconversion-reason ul li {
   font-family: 'Roboto', sans-serif;
   padding: .2em;
   color: black;
+}
+@media screen and (max-width: 768px) {
+  #reconversion {
+    padding: 2em 0;
+  }
+  #reconversion-description {
+    width: 100%;
+  }
+  #reconversion-reason-wrapper {
+    flex-direction: column;
+  }
+  #reconversion-reason-decoration {
+    transform: rotate(0);
+  }
+  #fifth-circle, #fourth-circle {
+    display: none;
+  }
 }

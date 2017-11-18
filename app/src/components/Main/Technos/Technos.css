@@ -14,7 +14,7 @@
   position: absolute;
   height: 5px;
   width: 50px;
-  top: 40%;
+  top: 50%;
   background-color: #ffd500;
   transform: rotate(135deg);
 }
@@ -24,5 +24,16 @@
 .techno-card-list {
   color: black;
   font-family: 'Roboto', sans-serif;
-  line-height: 150%;
+  line-height: 200%;
+}
+@media screen and (max-width: 768px) {
+  #techno-card-wrapper {
+    margin: 2em 0;
+  }
+  #techno {
+    width: 100%;
+  }
+  #techno-decoration {
+    transform: rotate(90deg);
+  }
 }

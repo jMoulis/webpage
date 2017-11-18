@@ -17,7 +17,7 @@ const Competences = () => (
     <h5 id="competences-summary">
       Une approche API REST et Micro Service
     </h5>
-    <div id="competences-decoration" />
+    <div id="competences-decoration" className="shake" />
     <p id="competences-description">
       <span>
         A travers les différents projets et travaux,

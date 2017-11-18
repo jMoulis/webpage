@@ -10,15 +10,16 @@
 /*
  * Types
  */
-const DISPLAY_MODAL_CONTACT = 'DISPLAY_MODAL_CONTACT';
-const HIDE_MODAL_CONTACT = 'HIDE_MODAL_CONTACT';
-
+export const DISPLAY_MODAL_CONTACT = 'DISPLAY_MODAL_CONTACT';
+export const HIDE_MODAL_CONTACT = 'HIDE_MODAL_CONTACT';
+export const SEND_MAIL = 'SEND_MAIL';
+export const INPUT_CHANGE = 'INPUT_CHANGE';
 /*
  * State
 */
 const initialState = {
   modalContact: false,
-  realisations
+  realisations,
 };
 
 /*
@@ -38,6 +39,17 @@ const reducer = (state = initialState, action = {}) => {
         modalContact: false,
       };
     }
+    case SEND_MAIL: {
+      return {
+        ...state,
+      };
+    }
+    case INPUT_CHANGE: {
+      return {
+        ...state,
+        [action.name]: action.value,
+      };
+    }
     default:
       return state;
   }
@@ -52,7 +64,14 @@ export const displayModalContact = () => ({
 export const hideModalContact = () => ({
   type: HIDE_MODAL_CONTACT,
 });
-
+export const changeInput = ({ name, value }) => ({
+  type: INPUT_CHANGE,
+  value,
+  name,
+});
+export const sendMail = () => ({
+  type: SEND_MAIL,
+});
 /*
  * Export default
 */

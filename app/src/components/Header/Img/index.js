@@ -18,8 +18,8 @@ const Img = () => (
     <div id="header-img" />
     <div id="header-img-titles">
       <h1>julien moulis</h1>
-      <h2>Développeur Web</h2>
-      <div id="header-img-titles-decoration" />
+      <h2>Développeur Web Symfony - React</h2>
+      <div id="header-img-titles-decoration" className="shake" />
     </div>
     <div id="half-circle">
       <div id="header-first-circle" className="header-circle" />

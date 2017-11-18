@@ -34,7 +34,7 @@ const Reconversion = () => (
               <li>De ne pas voir le fruit de mon travail</li>
             </ul>
           </div>
-          <div id="reconversion-reason-decoration" />
+          <div id="reconversion-reason-decoration" className="shake" />
           <div className="reconversion-reason">
             <h4>je suis</h4>
             <span>...</span>

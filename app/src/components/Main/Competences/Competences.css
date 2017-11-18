@@ -7,7 +7,7 @@
 }
 #competences-summary, #competences-description  {
   text-align: center;
-  width: 50%;
+  width: 70%;
   font-size: 1.25em;
 }
 #competences-summary {
@@ -15,9 +15,9 @@
 }
 #competences-description {
   color: black;
-  font-size: 1em;
+  font-size: 1.1em;
   font-family: 'Roboto', sans-serif;
-  line-height: 1.5em;
+  line-height: 1.35em;
 }
 #competences-decoration {
   height: 5px;
@@ -32,4 +32,9 @@
 .competences-backlink:hover {
   color: #0017ec;
   font-weight: bolder;
+}
+@media screen and (max-width: 768px) {
+  #competences-summary, #competences-description  {
+    width: 100%;
+  }
 }

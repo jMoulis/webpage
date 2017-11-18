@@ -2,7 +2,6 @@
  * Npm import
  */
 import React from 'react';
-import PropTypes from 'prop-types';
 
 /*
  * Local import
@@ -18,7 +17,7 @@ const Bridge = () => (
     <i className="bridge-fa fa fa-star-o fa-3x" aria-hidden="true" />
     <h5>Vous voulez me parler de votre projet?</h5>
     <h5>Vous avez une mission à me confier?</h5>
-    <div id="bridge-decoration" />
+    <div id="bridge-decoration" className="shake" />
     <p>N&apos;hésitez pas à me contacter !</p>
     <ButtonContact type="btn" />
   </div>

@@ -8,20 +8,27 @@ import { connect } from 'react-redux';
  * Local import
  */
 import Form from 'src/components/Form';
-import { hideModalContact } from 'src/store/reducer';
+import { hideModalContact, changeInput, sendMail } from 'src/store/reducer';
 
 /*
  * Code
  */
 // State
-const mapStateToProps = state => ({
+const mapStateToProps = (state, name) => ({
   modalContact: state.modalContact,
+  value: state[name],
 });
 
 // Actions
 const mapDispatchToProps = dispatch => ({
   hideModalContact: () => {
     dispatch(hideModalContact());
+  },
+  changeInput: (value, name) => {
+    dispatch(changeInput({ value, name }));
+  },
+  sendMail: () => {
+    dispatch(sendMail());
   },
 });
 

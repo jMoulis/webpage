@@ -27,7 +27,8 @@
     "mocha": "^4.0.1",
     "postcss-brunch": "^2.1.0",
     "react-test-renderer": "^16.0.0",
-    "stylus-brunch": "^2.10.0"
+    "stylus-brunch": "^2.10.0",
+    "uglify-js-brunch": "^2.10.0"
   },
   "dependencies": {
     "array-shuffle": "^1.0.1",
