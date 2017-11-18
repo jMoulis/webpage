@@ -45,6 +45,10 @@
   border: 0;
   border-bottom: 1px white solid;
   background-color: transparent;
+  color: #fff;
+}
+.input-form:focus {
+  outline: 0;
 }
 .textarea-form {
   width: 70%;
@@ -54,6 +58,7 @@
   border: 1px white solid;
   background-color: transparent;
   resize: none;
+  color: #fff;
 }
 #btn-group {
   margin-top: 1em;
@@ -68,7 +73,9 @@
   cursor: pointer;
   color: white;
 }
-.btn:hover {
+.btn:hover,
+.btn:active,
+.btn:focus {
   background-color: white;
   color: #0017EC;
 }
@@ -111,7 +118,8 @@
     width: 100%;
     border-radius: 0;
     margin: 0;
-    box-shadow: 0;
+    box-shadow: none;
+    height: 75%;
   }
   .input-form, .textarea-form {
     width: 85%;

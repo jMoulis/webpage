@@ -13,13 +13,17 @@
 export const DISPLAY_MODAL_CONTACT = 'DISPLAY_MODAL_CONTACT';
 export const HIDE_MODAL_CONTACT = 'HIDE_MODAL_CONTACT';
 export const SEND_MAIL = 'SEND_MAIL';
+export const SEND_MAIL_SUCCESS = 'SEND_MAIL_SUCCESS';
 export const INPUT_CHANGE = 'INPUT_CHANGE';
+export const DISPLAY_ALERT = 'DISPLAY_ALERT';
+export const HIDE_ALERT = 'HIDE_ALERT';
 /*
  * State
 */
 const initialState = {
   modalContact: false,
   realisations,
+  alert: false,
 };
 
 /*
@@ -42,6 +46,25 @@ const reducer = (state = initialState, action = {}) => {
     case SEND_MAIL: {
       return {
         ...state,
+      };
+    }
+    case SEND_MAIL_SUCCESS: {
+      return {
+        ...state,
+        modalContact: false,
+        alert: true,
+      };
+    }
+    case DISPLAY_ALERT: {
+      return {
+        ...state,
+        alert: true,
+      };
+    }
+    case HIDE_ALERT: {
+      return {
+        ...state,
+        alert: false,
       };
     }
     case INPUT_CHANGE: {
@@ -71,6 +94,15 @@ export const changeInput = ({ name, value }) => ({
 });
 export const sendMail = () => ({
   type: SEND_MAIL,
+});
+export const sendMailSuccess = () => ({
+  type: SEND_MAIL_SUCCESS,
+});
+export const displayAlert = () => ({
+  type: DISPLAY_ALERT,
+});
+export const hideAlert = () => ({
+  type: HIDE_ALERT,
 });
 /*
  * Export default

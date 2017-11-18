@@ -55,5 +55,8 @@
   line-height: normal;
 }
 @media screen and (max-width: 768px) {
-
+  #credits {
+    margin-left: 1em;
+    line-height: 1.75em;
+  }
 }

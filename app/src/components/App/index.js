@@ -11,29 +11,32 @@ import Header from 'src/components/Header';
 import Main from 'src/components/Main';
 import Footer from 'src/components/Footer';
 import Form from 'src/containers/Form';
+import Alert from 'src/containers/Alert';
 
 /*
  * Code
  */
 
-const App = ({ modalContact }) => {
-  console.log('Hello, je vois que le code est important pour toi. Alors aussi improbable que celà puisse paraître, ce site est entière développé en React... Pourquoi? pour l\'instant le site est statique mis à part deux trois petits composant redux... Mais j\'ai deux trois petites idées derrière la tête... A suivre');
-  return (
-    <div id="app">
-      <Header />
-      <Main />
-      <Footer />
-      {modalContact ?
-        <Form />
-        : ''
-      }
-    </div>
-  );
-};
+const App = ({ modalContact, alert }) => (
+  <div id="app">
+    <Header />
+    <Main />
+    <Footer />
+    {modalContact ?
+      <Form />
+      : ''
+    }
+    {alert ?
+      <Alert />
+      : ''
+    }
+  </div>
+);
 
 
 App.propTypes = {
   modalContact: PropTypes.bool.isRequired,
+  alert: PropTypes.bool.isRequired,
 };
 
 

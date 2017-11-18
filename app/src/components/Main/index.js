@@ -2,7 +2,6 @@
  * Npm import
  */
 import React from 'react';
-import PropTypes from 'prop-types';
 
 /*
  * Local import
@@ -26,13 +25,6 @@ const Main = () => (
     <Reconversion />
   </div>
 );
-
-/* Standard propTypes declaration structure
- *
- * Main.propTypes = {
- * item: PropTypes.string.isRequired,
- * };
- */
 
 
 /*

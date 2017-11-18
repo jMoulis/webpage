@@ -6,7 +6,7 @@ import axios from 'axios';
 /*
  * Local import
  */
-import { SEND_MAIL } from 'src/store/reducer';
+import { SEND_MAIL, sendMailSuccess } from 'src/store/reducer';
 
 /*
  * Code
@@ -21,26 +21,27 @@ export default store => next => (action) => {
   switch (action.type) {
     case SEND_MAIL: {
       const {
-        firstname, company, email, tel, comment,
+        firstname, lastname, company, email, phone, message,
       } = store.getState();
 
       const formData = {
         firstname,
+        lastname,
         company,
         email,
-        tel,
-        comment,
+        phone,
+        message,
       };
       axios({
         method: 'post',
         data: formData,
-        url: 'http://localhost:8000/api/contact',
+        url: 'http://localhost:8000/api/contacts',
         headers: {
           'Content-type': 'application/x-www-form-urlencoded',
         },
       })
-        .then(({ data }) => {
-          console.log(data);
+        .then(() => {
+          store.dispatch(sendMailSuccess());
         })
         .catch((error) => {
           console.log(error);

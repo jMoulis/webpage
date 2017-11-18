@@ -7,22 +7,24 @@ import { connect } from 'react-redux';
 /*
  * Local import
  */
-import App from 'src/components/App';
-import { displayModalContact } from 'src/store/reducer';
+import Alert from 'src/components/Alert';
+import { displayAlert, hideAlert } from 'src/store/reducer';
 
 /*
  * Code
  */
 // State
 const mapStateToProps = state => ({
-  modalContact: state.modalContact,
-  alert: state.alert,
+
 });
 
 // Actions
 const mapDispatchToProps = dispatch => ({
-  displayModalContact: () => {
-    dispatch(displayModalContact());
+  displayAlert: () => {
+    dispatch(displayAlert());
+  },
+  hideAlert: () => {
+    dispatch(hideAlert());
   },
 });
 
@@ -31,5 +33,5 @@ const mapDispatchToProps = dispatch => ({
  * Export default
  */
 const createContainer = connect(mapStateToProps, mapDispatchToProps);
-const AppContainer = createContainer(App);
-export default AppContainer;
+const AlertContainer = createContainer(Alert);
+export default AlertContainer;

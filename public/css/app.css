@@ -1,3 +1,63 @@
+#alert {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 80px;
+  width: 100%;
+}
+#alert-wrapper{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 3px #d6e9c6 solid;
+  border-radius: .25em;
+  color: #3c763d;
+  background-color: #dff0d8;
+  padding: 1em;
+  position: relative;
+  -webkit-box-shadow: 1px 1px 5px 0px #31708f;
+          box-shadow: 1px 1px 5px 0px #31708f;
+}
+#alert-title {
+  padding: 0;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: .5em;
+}
+.btn-close-alert:active,
+.btn-close-alert:focus {
+  outline: 0;
+  border: none;
+  -moz-outline-style: none;
+}
+.btn-close-alert {
+  background-color: transparent;
+  position: absolute;
+  border: none;
+  color: #3c763d;
+  top: .25em;
+  right: 0;
+}
+.btn-close-alert:hover {
+  -webkit-animation: spin 1s linear;
+          animation: spin 1s linear;
+  cursor: pointer;
+}
 /*
  * Colors
  */
@@ -89,7 +149,10 @@
   line-height: normal;
 }
 @media screen and (max-width: 768px) {
-
+  #credits {
+    margin-left: 1em;
+    line-height: 1.75em;
+  }
 }
 #contact-form-wrapper {
   display: -webkit-box;
@@ -158,6 +221,10 @@
   border: 0;
   border-bottom: 1px white solid;
   background-color: transparent;
+  color: #fff;
+}
+.input-form:focus {
+  outline: 0;
 }
 .textarea-form {
   width: 70%;
@@ -167,6 +234,7 @@
   border: 1px white solid;
   background-color: transparent;
   resize: none;
+  color: #fff;
 }
 #btn-group {
   margin-top: 1em;
@@ -183,7 +251,9 @@
   cursor: pointer;
   color: white;
 }
-.btn:hover {
+.btn:hover,
+.btn:active,
+.btn:focus {
   background-color: white;
   color: #0017EC;
 }
@@ -242,8 +312,9 @@
     width: 100%;
     border-radius: 0;
     margin: 0;
-    -webkit-box-shadow: 0;
-            box-shadow: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    height: 75%;
   }
   .input-form, .textarea-form {
     width: 85%;
@@ -1026,3 +1097,5 @@ figcaption {
             transform: translate3d(4px, 0, 0);
   }
 }
+
+/*# sourceMappingURL=app.css.map*/

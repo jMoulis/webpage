@@ -41,11 +41,12 @@ class Form extends React.Component {
             </button>
           </div>
           <form id="contact-form" method="post" onSubmit={this.handleSubmit}>
-            <input onChange={this.handleChange} className="input-form" type="text" placeholder="Nom Prénom *" id="firstname" name="firstname" />
+            <input onChange={this.handleChange} className="input-form" type="text" placeholder="Prénom *" id="firstname" name="firstname" />
+            <input onChange={this.handleChange} className="input-form" type="text" placeholder="Nom *" id="lastname" name="lastname" />
             <input onChange={this.handleChange} className="input-form" type="text" placeholder="Société *" id="company" name="company" />
             <input onChange={this.handleChange} className="input-form" type="text" placeholder="Email *" id="email" name="email" />
-            <input onChange={this.handleChange} className="input-form" type="text" placeholder="Tel *" id="tel" name="tel" />
-            <textarea onChange={this.handleChange} className="textarea-form" placeholder="Message*" id="comment" name="comment" />
+            <input onChange={this.handleChange} className="input-form" type="text" placeholder="Tel *" id="phone" name="phone" />
+            <textarea onChange={this.handleChange} className="textarea-form" placeholder="Message*" id="message" name="message" />
             <div id="btn-group">
               <button className="btn btn-cancel" type="button" onClick={hideModalContact} title="Cancel - close the modal">Annuler</button>
               <button className="btn btn-send" type="submit" title="Envoyer le message">envoyer le message</button>
