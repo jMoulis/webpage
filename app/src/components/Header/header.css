@@ -51,3 +51,18 @@
     padding: 0 .25em;
   }
 }
+
+@media screen and (max-width: 320px) {
+  #contact-nav-info {
+    font-size: 0.80em;
+  }
+  #contact-nav-info-item-location, #contact-nav-info-item-jobTitle {
+    display: none;
+  }
+  #contact-nav-contact {
+    display: none;
+  }
+  .contact-nav-info-item {
+    padding: 0 .3em;
+  }
+}

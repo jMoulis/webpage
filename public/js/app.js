@@ -36015,7 +36015,7 @@ exports.default = function (store) {
             (0, _axios2.default)({
               method: 'post',
               data: formData,
-              url: 'http://localhost:8000/api/contacts',
+              url: '/contact_management/web/api/contacts',
               headers: {
                 'Content-type': 'application/x-www-form-urlencoded'
               }

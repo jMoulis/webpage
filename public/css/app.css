@@ -546,6 +546,21 @@
     padding: 0 .25em;
   }
 }
+
+@media screen and (max-width: 320px) {
+  #contact-nav-info {
+    font-size: 0.80em;
+  }
+  #contact-nav-info-item-location, #contact-nav-info-item-jobTitle {
+    display: none;
+  }
+  #contact-nav-contact {
+    display: none;
+  }
+  .contact-nav-info-item {
+    padding: 0 .3em;
+  }
+}
 #bridge {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -570,6 +585,7 @@
   font-family: 'Roboto', sans-serif;
   font-size: 1.25em;
   margin-bottom: 1em;
+  text-align: center;
 }
 #bridge-decoration {
   height: 5px;
@@ -1015,6 +1031,7 @@ h4 {
   padding: 1em 0;
 }
 h5 {
+  text-align: center;
   font-size: 1.5em;
   padding: .25em;
 }

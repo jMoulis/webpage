@@ -35,7 +35,7 @@ export default store => next => (action) => {
       axios({
         method: 'post',
         data: formData,
-        url: 'http://localhost:8000/api/contacts',
+        url: '/contact_management/web/api/contacts',
         headers: {
           'Content-type': 'application/x-www-form-urlencoded',
         },
