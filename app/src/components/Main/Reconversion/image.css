@@ -24,7 +24,6 @@
 }
 #reconversion-img-titles h3 {
   color: white;
-  font-size: 1.5em;
 }
 #reconversion-img-titles-decoration {
   height: 5px;
@@ -68,16 +67,18 @@
   height: 90px;
   width: 90px;
 }
-@media screen and (max-width: 770px) {
-  #reconversion-img-titles {
-    left: 5%;
-  }
-}
 @media screen and (max-width: 640px) {
   #reconversion-img-container {
     height: 200px;
   }
-  #reconversion-img-titles {
+  #reconversion-title {
+
+  }
+  #reconversion-img-titles-decoration {
     display: none;
+  }
+  #reconversion-hashtag {
+    left: 20%;
+    bottom: 5%;
   }
 }

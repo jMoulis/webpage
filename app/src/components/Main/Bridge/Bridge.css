@@ -13,7 +13,7 @@
 #bridge p:nth-last-of-type(1) {
   color: black;
   font-family: 'Roboto', sans-serif;
-  font-size: 1.25em;
+  font-size: 1.25vw;
   margin-bottom: 1em;
   text-align: center;
 }
@@ -22,4 +22,9 @@
   width: 50px;
   background-color: #ffd500;
   margin: 1em;
+}
+@media screen and (max-width: 1024px) {
+  #bridge p:nth-last-of-type(1) {
+    font-size: 4vw;
+  }
 }

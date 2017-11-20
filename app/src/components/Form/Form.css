@@ -11,12 +11,12 @@
 }
 #contact-form-modal {
   position: relative;
-  margin-top: 1em;
+  /* margin-top: 1em;*/
   background-color: #0017ec;
   border-radius: .5em;
-  width: 50%;
-  height: 65%;
-  box-shadow: 1px 1px 20px 2px #000;
+  width: 100%;
+  height: 100%%;
+  /* box-shadow: 1px 1px 20px 2px #000;*/
 }
 #contact-form-header-title {
   display: flex;
@@ -31,7 +31,7 @@
 }
 #contact-form-header-title p {
   font-family: 'Roboto', sans-serif;
-  font-size: 0.75em;
+  font-size: 3vw;
   color: #fff;
 }
 #contact-form {
@@ -125,6 +125,11 @@
     width: 85%;
   }
   .textarea-form {
+    height: 100%;
+  }
+}
+@media screen and (max-width: 320px) {
+  #contact-form-modal {
     height: 100%;
   }
 }

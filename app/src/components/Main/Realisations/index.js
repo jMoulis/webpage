@@ -13,25 +13,23 @@ import RealisationCard from './realisationCard';
  * Code
  */
 
-const Realisations = (props) => (
-  <div id="realisations">
-    <h3 id="techno-title">&lt; dernières réalisations &gt;</h3>
+const Realisations = props => (
+  <section id="realisations">
+    <h2 id="techno-title">&lt; dernières réalisations &gt;</h2>
     <div id="realisations-card-wrapper">
       {
         props.realisations.map((realisation, index) => (
-          <RealisationCard key={index} data={realisation}/>
+          <RealisationCard key={index} data={realisation} />
         ))
       }
     </div>
-  </div>
+  </section>
 );
 
-/* Standard propTypes declaration structure
- *
- * Realisations.propTypes = {
- * item: PropTypes.string.isRequired,
- * };
- */
+
+Realisations.propTypes = {
+  realisations: PropTypes.array.isRequired,
+};
 
 
 /*

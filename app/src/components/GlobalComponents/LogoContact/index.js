@@ -14,7 +14,7 @@ import ButtonContact from 'src/containers/GlobalComponents/ButtonContact';
 
 const LogoContact = () => (
   <div className="links">
-    <span>Contact</span>
+    <span>Suivez-moi</span>
     <ul>
       <li>
         <div className="links-list-item-group">

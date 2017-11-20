@@ -2,13 +2,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 2em;
 }
 #techno {
   display: flex;
   justify-content: space-around;
   width: 80%;
   position: relative;
+  margin-bottom: 0.5em;
 }
 #techno-decoration {
   position: absolute;
@@ -24,11 +24,10 @@
 .techno-card-list {
   color: black;
   font-family: 'Roboto', sans-serif;
-  line-height: 200%;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   #techno-card-wrapper {
-    margin: 2em 0;
+
   }
   #techno {
     width: 100%;

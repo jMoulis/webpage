@@ -17,7 +17,7 @@ const Reconversion = () => (
   <div id="reconversion-wrapper">
     <Img />
     <div id="reconversion">
-      <h3 id="reconversion-title">&lt; une reconversion totale &gt;</h3>
+      <h2 id="reconversion-title">&lt; une reconversion totale &gt;</h2>
       <div id="reconversion-description">
         <p id="reconversion-intro">
           Après de nombreuses années en tant qu&apos;entrepeneur, responsable national réseau,
@@ -25,7 +25,7 @@ const Reconversion = () => (
         </p>
         <div id="reconversion-reason-wrapper">
           <div className="reconversion-reason">
-            <h4>marre</h4>
+            <h3>marre</h3>
             <span>...</span>
             <ul>
               <li>Des costumes-cravates</li>
@@ -36,7 +36,7 @@ const Reconversion = () => (
           </div>
           <div id="reconversion-reason-decoration" className="shake" />
           <div className="reconversion-reason">
-            <h4>je suis</h4>
+            <h3>je suis</h3>
             <span>...</span>
             <ul>
               <li>Un solution provider</li>

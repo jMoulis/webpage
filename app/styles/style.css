@@ -7,32 +7,40 @@ body {
 }
 h1 {
   font-family: 'Unica One', cursive;
-  font-size: 3em;
   text-transform: uppercase;
   letter-spacing: .1em;
   padding-top: .5em;
+  text-align: center;
+  font-size: 6vw;
 }
 h2 {
-  font-size: 2em;
-  font-family: 'Roboto Slab', serif;
+  font-size: 4.5vw;
+  text-transform: uppercase;
+  font-family: 'Unica One', cursive;
+  text-align: center;
+  padding: 0.5em 0.2em;
 }
 h3 {
   text-transform: uppercase;
-  font-size: 2em;
-  font-family: 'Unica One', cursive;
+  font-family: 'Unica One', sans-serif;
+  font-size: 3vw;
   text-align: center;
-  padding-bottom: 1em;
+  padding: 0.25em 0;
 }
 h4 {
-  text-transform: uppercase;
-  font-family: 'Unica One', sans-serif;
-  font-size: 1.5em;
-  padding: 1em 0;
+  text-align: center;
+  font-size: 1.5vw;
+  padding: 0.5em 0;
 }
 h5 {
   text-align: center;
-  font-size: 1.5em;
-  padding: .25em;
+  font-size: 2vw;
+  padding: 0.35em;
+}
+ul {
+  font-size: 1.25vw;
+  line-height: 2vw;
+  text-align: center;
 }
 em {
   font-weight: bolder;
@@ -43,9 +51,6 @@ input::placeholder {
 textarea::placeholder {
   color: white;
 }
-.a-reset {
-  text-decoration: none;
-}
 figure {
   text-align: center;
   font-size: 1em;
@@ -54,6 +59,22 @@ figure {
 figcaption {
   color: black;
   font-family: 'Unica One', sans-serif;
+}
+section {
+  padding: 2em 0;
+}
+.text {
+  font-size: 3vw;
+  line-height: 1vw;
+}
+.subheading {
+  font-size: 5vw;
+  font-family: 'Roboto Slab', serif;
+  text-align: center;
+  width: 50%;
+}
+.a-reset {
+  text-decoration: none;
 }
 .shake:hover {
   animation: shake 1s linear;
@@ -70,5 +91,27 @@ figcaption {
   }
   40%, 60% {
     transform: translate3d(4px, 0, 0);
+  }
+}
+@media screen and (max-width: 1024px) {
+  ul {
+    font-size: 3.75vw;
+    line-height: 5vw;
+  }
+  h2 {
+    font-size: 6vw;
+  }
+  h3 {
+    font-size: 5vw;
+  }
+  h4 {
+    font-size: 4.5vw;
+  }
+  h5 {
+    font-size: 4vw;
+    line-height: 3vw;
+  }
+  section {
+    padding: 0.5em;
   }
 }

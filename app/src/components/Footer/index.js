@@ -27,7 +27,7 @@ const Footer = () => (
 
       <div className="shake footer-decoration" />
       <h1>Julien Moulis</h1>
-      <h2>Développeur Web Symfony - React</h2>
+      <span className="subheading">Développeur Web Symfony - React</span>
       <div className="shake footer-decoration" />
     </div>
     <div id="logo-wrapper">

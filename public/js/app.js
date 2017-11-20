@@ -34118,8 +34118,8 @@ var Footer = function Footer() {
         'Julien Moulis'
       ),
       _react2.default.createElement(
-        'h2',
-        null,
+        'span',
+        { className: 'subheading' },
         'D\xE9veloppeur Web Symfony - React'
       ),
       _react2.default.createElement('div', { className: 'shake footer-decoration' })
@@ -34492,7 +34492,7 @@ var LogoContact = function LogoContact() {
     _react2.default.createElement(
       'span',
       null,
-      'Contact'
+      'Suivez-moi'
     ),
     _react2.default.createElement(
       'ul',
@@ -34680,8 +34680,8 @@ var Img = function Img() {
         'julien moulis'
       ),
       _react2.default.createElement(
-        'h2',
-        null,
+        'span',
+        { className: 'subheading' },
         'D\xE9veloppeur Web Symfony - React'
       ),
       _react2.default.createElement('div', { id: 'header-img-titles-decoration', className: 'shake' })
@@ -34949,10 +34949,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var Realisations = function Realisations(props) {
   return _react2.default.createElement(
-    'div',
+    'section',
     { id: 'realisations' },
     _react2.default.createElement(
-      'h3',
+      'h2',
       { id: 'techno-title' },
       '< derni\xE8res r\xE9alisations >'
     ),
@@ -34966,23 +34966,20 @@ var Realisations = function Realisations(props) {
   );
 };
 
-/* Standard propTypes declaration structure
- *
- * Realisations.propTypes = {
- * item: PropTypes.string.isRequired,
- * };
- */
-
-/*
- * Export Default
- */
-
-
 /*
  * Local import
  */
 /*
  * Npm import
+ */
+
+
+Realisations.propTypes = {
+  realisations: _propTypes2.default.array.isRequired
+};
+
+/*
+ * Export Default
  */
 exports.default = Realisations;
 });
@@ -35026,7 +35023,7 @@ var RealisationCard = function RealisationCard(_ref) {
       _react2.default.createElement('i', { className: 'fa fa-desktop', 'aria-hidden': 'true' })
     ),
     _react2.default.createElement(
-      'h4',
+      'h3',
       { className: 'realisation-card-company' },
       data.company
     ),
@@ -35045,7 +35042,7 @@ var RealisationCard = function RealisationCard(_ref) {
       'div',
       { className: 'realisation-card-functionality' },
       _react2.default.createElement(
-        'span',
+        'h4',
         { className: 'realisation-card-functionality-title' },
         'Fonctionalit\xE9s principales:'
       ),
@@ -35193,7 +35190,7 @@ var Reconversion = function Reconversion() {
       'div',
       { id: 'reconversion' },
       _react2.default.createElement(
-        'h3',
+        'h2',
         { id: 'reconversion-title' },
         '< une reconversion totale >'
       ),
@@ -35212,7 +35209,7 @@ var Reconversion = function Reconversion() {
             'div',
             { className: 'reconversion-reason' },
             _react2.default.createElement(
-              'h4',
+              'h3',
               null,
               'marre'
             ),
@@ -35251,7 +35248,7 @@ var Reconversion = function Reconversion() {
             'div',
             { className: 'reconversion-reason' },
             _react2.default.createElement(
-              'h4',
+              'h3',
               null,
               'je suis'
             ),
@@ -35346,7 +35343,7 @@ var TechnoCard = function TechnoCard(_ref) {
     'article',
     { className: 'techno-card' },
     _react2.default.createElement(
-      'h4',
+      'h3',
       { className: 'techno-card-title' },
       techno.title
     ),
@@ -35414,7 +35411,7 @@ var Technos = function Technos() {
     'section',
     { id: 'techno-card-wrapper' },
     _react2.default.createElement(
-      'h3',
+      'h2',
       { id: 'techno-title' },
       '< deux environnements technologiques majeurs >'
     ),
@@ -36015,7 +36012,8 @@ exports.default = function (store) {
             (0, _axios2.default)({
               method: 'post',
               data: formData,
-              url: '/contact_management/web/api/contacts',
+              // url: '/contact_management/web/api/contacts',
+              url: 'http://localhost:8000/api/contacts',
               headers: {
                 'Content-type': 'application/x-www-form-urlencoded'
               }

@@ -1,12 +1,10 @@
 #header-img-container {
-  height: 500px;
+  height: 50vw;
   position: relative;
-  margin-bottom: 2em;
 }
 #header-img {
   height: 100%;
   background-image: url('/img/jul.jpg');
-  background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% auto;
 }
@@ -16,7 +14,7 @@
   align-items: center;
   position: absolute;
   top: 30%;
-  left: 5%;
+  left: -15vw;
 }
 #header-img-titles-decoration {
   height: 5px;
@@ -64,22 +62,23 @@
   width: 140px;
   left: 10px;
 }
-@media screen and (max-width: 770px) {
-  #header-img-titles {
-    left: 5%;
-  }
-}
-@media screen and (max-width: 640px) {
+
+@media screen and (max-width: 768px) {
   #header-img-container {
-    height: 200px;
+    height: 400px;
   }
   #header-img-titles {
-    display: none;
+    /*display: none;*/
   }
   #half-circle {
     left: 0;
   }
   #header-fifth-circle, #header-fourth-circle {
     display: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  #header-img-container {
+    height: 200px;
   }
 }

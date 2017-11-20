@@ -1,6 +1,6 @@
 #realisations {
-  padding: 2em;
   background-color: #e0e0e0;
+  text-align: center;
 }
 #realisations-card-wrapper {
   display: flex;
@@ -11,51 +11,52 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 2em;
+  margin: 2em;
   width: 30%;
 }
 .realisation-card-logo {
   color: gray;
   margin: 0.5em;
 }
-.realisation-card-location,
+
 .realisation-card-functionality-label,
 .realisation-card-techno,
 .realisation-card-functionality-title
  {
   color: black;
   font-family: 'Roboto', sans-serif;
-  font-size: 1em;
 }
 .realisation-card-functionality,
 .realisation-card-title {
-  margin: 1em;
+  margin: 0.5em;
   text-align: center;
   line-height: 1.3em;
 }
 .realisation-card-title {
   color: black;
   line-height: 1.25em;
+  font-size: 1.5vw;
+}
+.realisation-card-location {
+  font-size: 2vw;
 }
 #realisation-decoration {
   height: 5px;
   width: 50px;
   background-color: #0017ec;
 }
-.realisation-card-techno {
-  text-align: center;
-  line-height: 1.25em;
-}
-@media screen and (max-width: 768px) {
-  #realisations {
-    padding: 2em 0;
-  }
+
+@media screen and (max-width: 1024px) {
   #realisations-card-wrapper  {
     flex-direction: column;
     align-items: center;
   }
   .realisation-card {
-    margin: 1em 2em;
     width: 100%;
+    margin: 0.5em;
+  }
+  .realisation-card-title,
+  .realisation-card-location {
+    font-size: 4vw;
   }
 }

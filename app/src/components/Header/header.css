@@ -2,7 +2,7 @@
   display: flex;
 }
 #contact-nav {
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   background-color: #fff;
   height: 65px;
@@ -21,11 +21,12 @@
     color:  gray;
 }
 .contact-nav-info-item {
+  font-size: 2vw;
   padding: 0em .5em;
 }
 #contact-nav-info-item-star {
   color: #ffd500;
-  font-size: 2em;
+
 }
 #contact-nav-info-item-jobTitle {
   padding-right: 0;
@@ -38,11 +39,11 @@
 }
 
 @media screen and (max-width: 768px) {
-  #contact-nav-info {
-    font-size: 1em;
+  .contact-nav-info-item {
+    font-size: 2.5vw;
   }
   #contact-nav-info-item-location, #contact-nav-info-item-jobTitle {
-    display: none;
+
   }
   #contact-nav-contact {
     display: none;
@@ -52,9 +53,9 @@
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 375px) {
   #contact-nav-info {
-    font-size: 0.80em;
+
   }
   #contact-nav-info-item-location, #contact-nav-info-item-jobTitle {
     display: none;
@@ -63,6 +64,7 @@
     display: none;
   }
   .contact-nav-info-item {
+    font-size: 4vw;
     padding: 0 .3em;
   }
 }

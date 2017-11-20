@@ -15,7 +15,7 @@ import PropTypes from 'prop-types';
 
 const TechnoCard = ({ techno }) => (
   <article className="techno-card">
-    <h4 className="techno-card-title">{techno.title}</h4>
+    <h3 className="techno-card-title">{techno.title}</h3>
     <ul className="techno-card-list">
       {techno.details.map((detail, index) => <li className="techno-card-item" key={index}>{detail}</li>)}
     </ul>

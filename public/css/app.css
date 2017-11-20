@@ -100,6 +100,7 @@
 #footer-text p {
   line-height: 150%;
   text-align: center;
+  font-size: 2vw;
 }
 .footer-decoration {
   height: 5px;
@@ -153,6 +154,13 @@
     margin-left: 1em;
     line-height: 1.75em;
   }
+  #footer-text {
+    padding: 1em;
+    width: 100%;
+  }
+  #footer-text p {
+    font-size: 4vw;
+  }
 }
 #contact-form-wrapper {
   display: -webkit-box;
@@ -172,13 +180,12 @@
 }
 #contact-form-modal {
   position: relative;
-  margin-top: 1em;
+  /* margin-top: 1em;*/
   background-color: #0017ec;
   border-radius: .5em;
-  width: 50%;
-  height: 65%;
-  -webkit-box-shadow: 1px 1px 20px 2px #000;
-          box-shadow: 1px 1px 20px 2px #000;
+  width: 100%;
+  height: 100%%;
+  /* box-shadow: 1px 1px 20px 2px #000;*/
 }
 #contact-form-header-title {
   display: -webkit-box;
@@ -200,7 +207,7 @@
 }
 #contact-form-header-title p {
   font-family: 'Roboto', sans-serif;
-  font-size: 0.75em;
+  font-size: 3vw;
   color: #fff;
 }
 #contact-form {
@@ -323,6 +330,11 @@
     height: 100%;
   }
 }
+@media screen and (max-width: 320px) {
+  #contact-form-modal {
+    height: 100%;
+  }
+}
 .contact-mail-link {
   color:  #0017ec;
   font-family: 'Unica One', cursive;
@@ -334,7 +346,6 @@
   background-color: transparent;
   letter-spacing: .1em;
   font-size: 1em;
-  margin-right: 1em;
   cursor: pointer;
 }
 .contact-mail-link:hover {
@@ -393,14 +404,12 @@
           align-items: center;
 }
 #header-img-container {
-  height: 500px;
+  height: 50vw;
   position: relative;
-  margin-bottom: 2em;
 }
 #header-img {
   height: 100%;
   background-image: url('/img/jul.jpg');
-  background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% auto;
 }
@@ -417,7 +426,7 @@
           align-items: center;
   position: absolute;
   top: 30%;
-  left: 5%;
+  left: -15vw;
 }
 #header-img-titles-decoration {
   height: 5px;
@@ -465,17 +474,13 @@
   width: 140px;
   left: 10px;
 }
-@media screen and (max-width: 770px) {
-  #header-img-titles {
-    left: 5%;
-  }
-}
-@media screen and (max-width: 640px) {
+
+@media screen and (max-width: 768px) {
   #header-img-container {
-    height: 200px;
+    height: 400px;
   }
   #header-img-titles {
-    display: none;
+    /*display: none;*/
   }
   #half-circle {
     left: 0;
@@ -484,15 +489,19 @@
     display: none;
   }
 }
+@media screen and (max-width: 500px) {
+  #header-img-container {
+    height: 200px;
+  }
+}
 #contact-nav, #contact-nav-info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 #contact-nav {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -516,11 +525,12 @@
     color:  gray;
 }
 .contact-nav-info-item {
+  font-size: 2vw;
   padding: 0em .5em;
 }
 #contact-nav-info-item-star {
   color: #ffd500;
-  font-size: 2em;
+
 }
 #contact-nav-info-item-jobTitle {
   padding-right: 0;
@@ -533,11 +543,11 @@
 }
 
 @media screen and (max-width: 768px) {
-  #contact-nav-info {
-    font-size: 1em;
+  .contact-nav-info-item {
+    font-size: 2.5vw;
   }
   #contact-nav-info-item-location, #contact-nav-info-item-jobTitle {
-    display: none;
+
   }
   #contact-nav-contact {
     display: none;
@@ -547,9 +557,9 @@
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 375px) {
   #contact-nav-info {
-    font-size: 0.80em;
+
   }
   #contact-nav-info-item-location, #contact-nav-info-item-jobTitle {
     display: none;
@@ -558,6 +568,7 @@
     display: none;
   }
   .contact-nav-info-item {
+    font-size: 4vw;
     padding: 0 .3em;
   }
 }
@@ -583,7 +594,7 @@
 #bridge p:nth-last-of-type(1) {
   color: black;
   font-family: 'Roboto', sans-serif;
-  font-size: 1.25em;
+  font-size: 1.25vw;
   margin-bottom: 1em;
   text-align: center;
 }
@@ -592,6 +603,11 @@
   width: 50px;
   background-color: #ffd500;
   margin: 1em;
+}
+@media screen and (max-width: 1024px) {
+  #bridge p:nth-last-of-type(1) {
+    font-size: 4vw;
+  }
 }
 #competences {
   display: -webkit-box;
@@ -605,19 +621,16 @@
       -ms-flex-align: center;
           align-items: center;
   background-color: #ffd500;
-  padding: 3em;
-}
-#competences-summary, #competences-description  {
-  text-align: center;
-  width: 70%;
-  font-size: 1.25em;
+  padding: 1em;
 }
 #competences-summary {
-  line-height: 150%;
+  line-height: 5vw;
 }
 #competences-description {
+  text-align: center;
+  width: 70%;
+  font-size: 2vw;
   color: black;
-  font-size: 1.1em;
   font-family: 'Roboto', sans-serif;
   line-height: 1.35em;
 }
@@ -635,14 +648,15 @@
   color: #0017ec;
   font-weight: bolder;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   #competences-summary, #competences-description  {
     width: 100%;
+    font-size: 4vw;
   }
 }
 #realisations {
-  padding: 2em;
   background-color: #e0e0e0;
+  text-align: center;
 }
 #realisations-card-wrapper {
   display: -webkit-box;
@@ -663,45 +677,42 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0 2em;
+  margin: 2em;
   width: 30%;
 }
 .realisation-card-logo {
   color: gray;
   margin: 0.5em;
 }
-.realisation-card-location,
+
 .realisation-card-functionality-label,
 .realisation-card-techno,
 .realisation-card-functionality-title
  {
   color: black;
   font-family: 'Roboto', sans-serif;
-  font-size: 1em;
 }
 .realisation-card-functionality,
 .realisation-card-title {
-  margin: 1em;
+  margin: 0.5em;
   text-align: center;
   line-height: 1.3em;
 }
 .realisation-card-title {
   color: black;
   line-height: 1.25em;
+  font-size: 1.5vw;
+}
+.realisation-card-location {
+  font-size: 2vw;
 }
 #realisation-decoration {
   height: 5px;
   width: 50px;
   background-color: #0017ec;
 }
-.realisation-card-techno {
-  text-align: center;
-  line-height: 1.25em;
-}
-@media screen and (max-width: 768px) {
-  #realisations {
-    padding: 2em 0;
-  }
+
+@media screen and (max-width: 1024px) {
   #realisations-card-wrapper  {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -712,8 +723,12 @@
             align-items: center;
   }
   .realisation-card {
-    margin: 1em 2em;
     width: 100%;
+    margin: 0.5em;
+  }
+  .realisation-card-title,
+  .realisation-card-location {
+    font-size: 4vw;
   }
 }
 #reconversion-description {
@@ -749,6 +764,7 @@
   padding: 1em;
   line-height: 130%;
   text-align: center;
+  font-size: 2vw;
 }
 .reconversion-reason {
   display: -webkit-box;
@@ -787,7 +803,7 @@
   padding: .2em;
   color: black;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   #reconversion {
     padding: 2em 0;
   }
@@ -806,6 +822,10 @@
   }
   #fifth-circle, #fourth-circle {
     display: none;
+  }
+  #reconversion-intro {
+    font-size: 4vw;
+    padding: 0.25em;
   }
 }
 #reconversion-img-container {
@@ -843,7 +863,6 @@
 }
 #reconversion-img-titles h3 {
   color: white;
-  font-size: 1.5em;
 }
 #reconversion-img-titles-decoration {
   height: 5px;
@@ -888,17 +907,19 @@
   height: 90px;
   width: 90px;
 }
-@media screen and (max-width: 770px) {
-  #reconversion-img-titles {
-    left: 5%;
-  }
-}
 @media screen and (max-width: 640px) {
   #reconversion-img-container {
     height: 200px;
   }
-  #reconversion-img-titles {
+  #reconversion-title {
+
+  }
+  #reconversion-img-titles-decoration {
     display: none;
+  }
+  #reconversion-hashtag {
+    left: 20%;
+    bottom: 5%;
   }
 }
 #techno-card-wrapper {
@@ -912,7 +933,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 2em;
 }
 #techno {
   display: -webkit-box;
@@ -922,6 +942,7 @@
       justify-content: space-around;
   width: 80%;
   position: relative;
+  margin-bottom: 0.5em;
 }
 #techno-decoration {
   position: absolute;
@@ -938,11 +959,10 @@
 .techno-card-list {
   color: black;
   font-family: 'Roboto', sans-serif;
-  line-height: 200%;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   #techno-card-wrapper {
-    margin: 2em 0;
+
   }
   #techno {
     width: 100%;
@@ -1008,32 +1028,40 @@ table {
 }
 h1 {
   font-family: 'Unica One', cursive;
-  font-size: 3em;
   text-transform: uppercase;
   letter-spacing: .1em;
   padding-top: .5em;
+  text-align: center;
+  font-size: 6vw;
 }
 h2 {
-  font-size: 2em;
-  font-family: 'Roboto Slab', serif;
+  font-size: 4.5vw;
+  text-transform: uppercase;
+  font-family: 'Unica One', cursive;
+  text-align: center;
+  padding: 0.5em 0.2em;
 }
 h3 {
   text-transform: uppercase;
-  font-size: 2em;
-  font-family: 'Unica One', cursive;
+  font-family: 'Unica One', sans-serif;
+  font-size: 3vw;
   text-align: center;
-  padding-bottom: 1em;
+  padding: 0.25em 0;
 }
 h4 {
-  text-transform: uppercase;
-  font-family: 'Unica One', sans-serif;
-  font-size: 1.5em;
-  padding: 1em 0;
+  text-align: center;
+  font-size: 1.5vw;
+  padding: 0.5em 0;
 }
 h5 {
   text-align: center;
-  font-size: 1.5em;
-  padding: .25em;
+  font-size: 2vw;
+  padding: 0.35em;
+}
+ul {
+  font-size: 1.25vw;
+  line-height: 2vw;
+  text-align: center;
 }
 em {
   font-weight: bolder;
@@ -1062,9 +1090,6 @@ textarea::-ms-input-placeholder {
 textarea::placeholder {
   color: white;
 }
-.a-reset {
-  text-decoration: none;
-}
 figure {
   text-align: center;
   font-size: 1em;
@@ -1073,6 +1098,22 @@ figure {
 figcaption {
   color: black;
   font-family: 'Unica One', sans-serif;
+}
+section {
+  padding: 2em 0;
+}
+.text {
+  font-size: 3vw;
+  line-height: 1vw;
+}
+.subheading {
+  font-size: 5vw;
+  font-family: 'Roboto Slab', serif;
+  text-align: center;
+  width: 50%;
+}
+.a-reset {
+  text-decoration: none;
 }
 .shake:hover {
   -webkit-animation: shake 1s linear;
@@ -1112,6 +1153,28 @@ figcaption {
   40%, 60% {
     -webkit-transform: translate3d(4px, 0, 0);
             transform: translate3d(4px, 0, 0);
+  }
+}
+@media screen and (max-width: 1024px) {
+  ul {
+    font-size: 3.75vw;
+    line-height: 5vw;
+  }
+  h2 {
+    font-size: 6vw;
+  }
+  h3 {
+    font-size: 5vw;
+  }
+  h4 {
+    font-size: 4.5vw;
+  }
+  h5 {
+    font-size: 4vw;
+    line-height: 3vw;
+  }
+  section {
+    padding: 0.5em;
   }
 }
 

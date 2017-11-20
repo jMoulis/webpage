@@ -16,7 +16,7 @@ import technos from 'data/data';
 
 const Technos = () => (
   <section id="techno-card-wrapper">
-    <h3 id="techno-title">&lt; deux environnements technologiques majeurs &gt;</h3>
+    <h2 id="techno-title">&lt; deux environnements technologiques majeurs &gt;</h2>
     <div id="techno">
       {
         technos.map((techno, index) => <TechnoCard key={index} techno={techno} />)
