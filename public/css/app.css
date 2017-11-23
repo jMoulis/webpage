@@ -186,12 +186,9 @@
 }
 #contact-form-modal {
   position: relative;
-  /* margin-top: 1em;*/
   background-color: #0017ec;
-  border-radius: .5em;
   width: 100%;
-  height: 100%%;
-  /* box-shadow: 1px 1px 20px 2px #000;*/
+  height: 100%;
 }
 #contact-form-header-title {
   display: -webkit-box;
@@ -230,26 +227,27 @@
 }
 .input-form {
   width: 70%;
-  padding: 1em;
   border: 0;
-  border-bottom: 1px white solid;
-  background-color: transparent;
-  color: #fff;
-  font-size: 1.75vw;
+  border-bottom: 1px #fff solid;
 }
-.input-form:focus {
+.input-form:focus,
+.textarea-form {
   outline: 0;
 }
-.textarea-form {
+.input-form,
+.textarea-form,
+.btn {
+  font-size: 1vw;
+  color: #fff;
+  background-color: transparent;
   width: 70%;
+  padding: 1em;
+}
+.textarea-form {
   height: 150px;
   margin-top: 1em;
-  padding: 1em;
-  border: 1px white solid;
-  background-color: transparent;
   resize: none;
-  color: #fff;
-  font-size: 1.75vw;
+  border: 1px #fff solid;
 }
 #btn-group {
   margin-top: 1em;
@@ -262,10 +260,6 @@
   padding: 0.5em 1em;
   margin: 1em 2em;
   border: 1px white solid;
-  background-color: transparent;
-  cursor: pointer;
-  color: white;
-  font-size: 1.75vw;
 }
 .btn:hover,
 .btn:active,
@@ -273,13 +267,18 @@
   background-color: white;
   color: #0017EC;
 }
-
+.btn,
+.btn-close-modal {
+  cursor: pointer;
+}
 .btn-close-modal {
   position: absolute;
-  right: -2em;
-  top: -1em;
+  right: 2vw;
+  top: 1.5vw;
   border: none;
   color: #ffd500;
+  background-color: transparent;
+  font-size: 1.5vw;
 }
 .btn-close-modal:active,
 .btn-close-modal:focus {
@@ -290,8 +289,8 @@
 .btn-close-modal:hover {
   background-color: transparent;
   color: #e5bf00;
-  -webkit-animation: spin 1s linear;
-          animation: spin 1s linear;
+  -webkit-animation: spin 1s infinite linear;
+          animation: spin 1s infinite linear;
 }
 
 @-webkit-keyframes spin {
@@ -340,13 +339,17 @@
   .btn,
   .input-form,
   .textarea-form {
-    font-size: 4vw;
+    font-size: 3vw;
   }
   .input-form, .textarea-form {
     width: 85%;
   }
   .textarea-form {
     height: 100%;
+  }
+  .btn-close-modal {
+    font-size: 3vw;
+    right: 1.5vw;
   }
 }
 .contact-mail-link {

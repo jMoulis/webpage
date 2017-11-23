@@ -36,20 +36,20 @@ class Form extends React.Component {
               <h4>&lt; ! - -FULL - - &gt;</h4>
               <h3>&lt; contact &gt;</h3>
             </div>
-            <button className="btn btn-close-modal" type="button" onClick={hideModalContact} title="Cancel - close the modal">
+            <button className="btn-close-modal" type="button" onClick={hideModalContact} title="Cancel - close the modal">
               <i className="fa fa-times fa-2x" aria-hidden="true" />
             </button>
           </div>
           <form id="contact-form" method="post" onSubmit={this.handleSubmit}>
-            <input onChange={this.handleChange} className="input-form" type="text" placeholder="Prénom *" id="firstname" name="firstname" />
-            <input onChange={this.handleChange} className="input-form" type="text" placeholder="Nom *" id="lastname" name="lastname" />
-            <input onChange={this.handleChange} className="input-form" type="text" placeholder="Société *" id="company" name="company" />
-            <input onChange={this.handleChange} className="input-form" type="text" placeholder="Email *" id="email" name="email" />
-            <input onChange={this.handleChange} className="input-form" type="text" placeholder="Tel *" id="phone" name="phone" />
-            <textarea onChange={this.handleChange} className="textarea-form" placeholder="Message*" id="message" name="message" />
+            <input onChange={this.handleChange} className="input-form" type="text" placeholder="Prénom *" id="firstname" name="firstname" required />
+            <input onChange={this.handleChange} className="input-form" type="text" placeholder="Nom *" id="lastname" name="lastname" required />
+            <input onChange={this.handleChange} className="input-form" type="text" placeholder="Société" id="company" name="company" />
+            <input onChange={this.handleChange} className="input-form" type="email" placeholder="Email *" id="email" name="email" required />
+            <input onChange={this.handleChange} className="input-form" type="text" placeholder="Tel" id="phone" name="phone" />
+            <textarea onChange={this.handleChange} className="textarea-form" placeholder="Message*" id="message" name="message" required />
             <div id="btn-group">
               <button className="btn btn-cancel" type="button" onClick={hideModalContact} title="Cancel - close the modal">Annuler</button>
-              <button className="btn btn-send" type="submit" title="Envoyer le message">envoyer le message</button>
+              <button className="btn btn-send" type="submit" title="Envoyer le message">envoyer</button>
             </div>
           </form>
         </div>
