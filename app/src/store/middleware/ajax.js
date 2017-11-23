@@ -36,7 +36,7 @@ export default store => next => (action) => {
         method: 'post',
         data: formData,
         // url: '/contact_management/web/api/contacts',
-        url: 'http://localhost:8000/api/contacts',
+        url: '/api/contacts',
         headers: {
           'Content-type': 'application/x-www-form-urlencoded',
         },
