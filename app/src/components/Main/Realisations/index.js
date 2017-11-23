@@ -15,7 +15,7 @@ import RealisationCard from './realisationCard';
 
 const Realisations = props => (
   <section id="realisations">
-    <h2 id="techno-title">&lt; dernières réalisations &gt;</h2>
+    <h2 id="realisations-title">&lt; dernières réalisations &gt;</h2>
     <div id="realisations-card-wrapper">
       {
         props.realisations.map((realisation, index) => (

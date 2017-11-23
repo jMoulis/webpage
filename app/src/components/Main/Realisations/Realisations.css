@@ -42,7 +42,7 @@
 .realisation-card-location {
   font-size: 2vw;
 }
-#realisation-decoration {
+.realisation-decoration {
   height: 5px;
   width: 50px;
   background-color: #0017ec;

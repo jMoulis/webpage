@@ -18,7 +18,7 @@
 .footer-decoration {
   height: 5px;
   width: 50px;
-  background-color: yellow;
+  background-color: #ffd500;
   margin-top: 1em;
 }
 .footer-logo {
@@ -39,6 +39,15 @@
   margin-top: 2em;
   padding: 1em 0;
   background-color: #e0e0e0;
+  position: relative;
+}
+.scroll-up {
+  position: absolute;
+  top: -13px;
+  color: gray;
+}
+.scroll-up:hover {
+  color: black;
 }
 .title-footer {
   color: black;

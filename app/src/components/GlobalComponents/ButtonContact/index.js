@@ -24,7 +24,7 @@ class ButtonContact extends React.Component {
       return (
         <button className="contact-mail-link" title="Mail julien.moulis@moulis.me - modal-form" onClick={this.handleClick}>
           <i className="fa fa-envelope" aria-hidden="true" />
-          <span id="contact-mail-link-text"> contact</span>
+          <span className="contact-mail-link-text"> contact</span>
         </button>
       );
     }
