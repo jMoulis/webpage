@@ -15,7 +15,9 @@ import PropTypes from 'prop-types';
 
 const RealisationCard = ({ data }) => (
   <div className="realisation-card">
-    <span className="realisation-card-logo"><i className="fa fa-desktop" aria-hidden="true" /></span>
+    <span className="realisation-card-logo">
+      <i className="fa fa-desktop fa-3x" aria-hidden="true" />
+    </span>
     <h3 className="realisation-card-company">{data.company}</h3>
     <span className="realisation-card-location">{data.location}</span>
     <p className="realisation-card-title">{data.title}</p>
@@ -28,6 +30,7 @@ const RealisationCard = ({ data }) => (
         ))}
       </ul>
     </div>
+    <h4 className="realisation-card-functionality-title">Technologies utilisées:</h4>
     <ul className="realisation-card-techno">
       {data.technos.map((techno, index) => (
         <li key={index}>{techno}</li>

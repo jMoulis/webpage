@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2em;
   line-height: 150%;
 }
 .bridge-fa {
@@ -24,6 +23,11 @@
   margin: 1em;
 }
 @media screen and (max-width: 1024px) {
+  #bridge p:nth-last-of-type(1) {
+    font-size: 3vw;
+  }
+}
+@media screen and (max-width: 767px) {
   #bridge p:nth-last-of-type(1) {
     font-size: 4vw;
   }

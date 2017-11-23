@@ -2,7 +2,6 @@
  * Npm import
  */
 import React from 'react';
-import PropTypes from 'prop-types';
 
 /*
  * Local import
@@ -16,10 +15,10 @@ import Img from './image';
 const Reconversion = () => (
   <div id="reconversion-wrapper">
     <Img />
-    <div id="reconversion">
+    <section id="reconversion">
       <h2 id="reconversion-title">&lt; une reconversion totale &gt;</h2>
       <div id="reconversion-description">
-        <p id="reconversion-intro">
+        <p id="reconversion-intro" className="text">
           Après de nombreuses années en tant qu&apos;entrepeneur, responsable national réseau,
           ou encore animateur des ventes, un changement sérieux de vie m&apos;est apparu évident !
         </p>
@@ -47,7 +46,7 @@ const Reconversion = () => (
           </div>
         </div>
       </div>
-    </div>
+    </section>
   </div>
 );
 

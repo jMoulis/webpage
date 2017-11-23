@@ -14,13 +14,13 @@ import LogoContact from 'src/components/GlobalComponents/LogoContact';
 
 const Footer = () => (
   <footer id="footer">
-    <div id="footer-text">
-      <p>
+    <section id="footer-text">
+      <p className="text">
         C&apos;est ce parcours atypique qui m&apos;a enrichi de compétences,
         transversales, et qui fait de moi aujourd&apos;hui
         quelqu&apos;un de <em>rigoureux</em> ayant une <em>approche globale</em> des choses
       </p>
-      <p>
+      <p className="text">
         Je reviens aujourd&apos;hui à mes premiers amours en consacrant mon temps de travail
         à une réelle passion.
       </p>
@@ -29,7 +29,7 @@ const Footer = () => (
       <h1>Julien Moulis</h1>
       <span className="subheading">Développeur Web Symfony - React</span>
       <div className="shake footer-decoration" />
-    </div>
+    </section>
     <div id="logo-wrapper">
       <ul>
         <li className="logo-list-item">
@@ -40,18 +40,6 @@ const Footer = () => (
             <figcaption>Certifié Qualité opQuast</figcaption>
           </figure>
         </li>
-        {/*
-          <li className="logo-list-item">
-          <a target="_blank" rel="noopener noreferrer" href="http://symfony.com/" title="Symfony website - new page" hrefLang="en">
-            <img className="footer-logo" alt="Symfony" src="/img/symfony.png" />
-          </a>
-        </li>
-        <li className="logo-list-item">
-          <a target="_blank" rel="noopener noreferrer" href="https://reactjs.org/" title="React website - new page" hrefLang="en">
-            <img className="footer-logo" alt="React" src="/img/react.png" />
-          </a>
-        </li>
-        */}
         <li className="logo-list-item">
           <figure>
             <a target="_blank" rel="noopener noreferrer" href="https://oclock.io/" title="Ecole O'Clock - website - new page" hrefLang="fr">
@@ -66,15 +54,18 @@ const Footer = () => (
       </ul>
     </div>
     <section id="footer-footer">
-      <ul id="credits">
-        <li>Graphiste - <a href="http://goudolmuriel.com/" target="_blank" rel="noopener noreferrer" title="Muriel Goudol Directrice artistique - website - new page" hrefLang="fr">Muriel Goudol</a></li>
-        <li>Intégration - Moi (Il faut bien que je travaille)</li>
-        <li>Code Source-
-          <a target="_blank" rel="noopener noreferrer" href="https://github.com/jMoulis/webpage" title="Project GitHub - new page">
-            Repo GitHub
-          </a>
-        </li>
-      </ul>
+      <div id="credits">
+        <h5 className="title-footer">Crédits</h5>
+        <ul id="credits-list">
+          <li>Graphiste - <a href="http://goudolmuriel.com/" target="_blank" rel="noopener noreferrer" title="Muriel Goudol Directrice artistique - website - new page" hrefLang="fr">Muriel Goudol</a></li>
+          <li>Intégration - Moi (Il faut bien que je travaille)</li>
+          <li>Code Source-
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/jMoulis/webpage" title="Project GitHub - new page">
+              Repo GitHub
+            </a>
+          </li>
+        </ul>
+      </div>
       <LogoContact />
     </section>
   </footer>

@@ -13,6 +13,8 @@
   align-items: center;
   margin: 2em;
   width: 30%;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
 }
 .realisation-card-logo {
   color: gray;
@@ -55,8 +57,14 @@
     width: 100%;
     margin: 0.5em;
   }
+  .realisation-card:nth-child(even) {
+    border-top: 0.5px solid gray;
+    border-bottom: 0.5px solid gray;
+  }
   .realisation-card-title,
   .realisation-card-location {
     font-size: 4vw;
+    width: 70%;
   }
+
 }

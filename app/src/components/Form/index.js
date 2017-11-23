@@ -33,7 +33,7 @@ class Form extends React.Component {
         <div id="contact-form-modal">
           <div id="contact-form-header">
             <div id="contact-form-header-title">
-              <p>&lt; ! - -FULL - - &gt;</p>
+              <h4>&lt; ! - -FULL - - &gt;</h4>
               <h3>&lt; contact &gt;</h3>
             </div>
             <button className="btn btn-close-modal" type="button" onClick={hideModalContact} title="Cancel - close the modal">

@@ -14,7 +14,6 @@
   align-items: center;
   position: absolute;
   top: 30%;
-  left: -15vw;
 }
 #header-img-titles-decoration {
   height: 5px;
@@ -63,12 +62,12 @@
   left: 10px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   #header-img-container {
     height: 400px;
   }
   #header-img-titles {
-    /*display: none;*/
+    left: -4vw;
   }
   #half-circle {
     left: 0;
@@ -77,6 +76,7 @@
     display: none;
   }
 }
+
 @media screen and (max-width: 500px) {
   #header-img-container {
     height: 200px;

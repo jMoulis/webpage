@@ -1,10 +1,13 @@
 #reconversion-description {
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 80%;
 }
 #reconversion {
   background-color: #ffd500;
-  padding: 2em;
 }
 .reconversion-reason h4 {
   padding-bottom: 0;
@@ -22,10 +25,7 @@
   transform: rotate(45deg);
 }
 #reconversion-intro {
-  padding: 1em;
-  line-height: 130%;
-  text-align: center;
-  font-size: 2vw;
+  width: 80%;
 }
 .reconversion-reason {
   display: flex;
@@ -51,9 +51,6 @@
   color: black;
 }
 @media screen and (max-width: 1024px) {
-  #reconversion {
-    padding: 2em 0;
-  }
   #reconversion-description {
     width: 100%;
   }

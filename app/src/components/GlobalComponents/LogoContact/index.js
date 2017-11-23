@@ -14,13 +14,10 @@ import ButtonContact from 'src/containers/GlobalComponents/ButtonContact';
 
 const LogoContact = () => (
   <div className="links">
-    <span>Suivez-moi</span>
+    <h5 className="title-footer">Suivez-moi</h5>
     <ul>
       <li>
         <div className="links-list-item-group">
-          <span className="links-list-item">
-            <ButtonContact type="icon" />
-          </span>
           <a className="links-list-item" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/julien-moulis/" title="Profile LinkedIn - new page">
             <i className="fa fa-linkedin fa-2x" aria-hidden="true" />
           </a>

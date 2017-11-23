@@ -1,5 +1,4 @@
 .links {
-  text-align: center;
   color: black;
   font-family: 'Roboto', sans-serif;
 }
@@ -8,10 +7,9 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  flex-wrap: wrap;
 }
 .links-list-item {
-  padding: .5em;
+  padding-right: .5em;
 }
 .links-list-item {
   color: black;

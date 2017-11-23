@@ -11,10 +11,10 @@ h1 {
   letter-spacing: .1em;
   padding-top: .5em;
   text-align: center;
-  font-size: 6vw;
+  font-size: 4vw;
 }
 h2 {
-  font-size: 4.5vw;
+  font-size: 3vw;
   text-transform: uppercase;
   font-family: 'Unica One', cursive;
   text-align: center;
@@ -61,14 +61,15 @@ figcaption {
   font-family: 'Unica One', sans-serif;
 }
 section {
-  padding: 2em 0;
+  padding: 3em 0;
 }
 .text {
-  font-size: 3vw;
-  line-height: 1vw;
+  font-size: 1.5vw;
+  text-align: center;
+  line-height: 2vw;
 }
 .subheading {
-  font-size: 5vw;
+  font-size: 3vw;
   font-family: 'Roboto Slab', serif;
   text-align: center;
   width: 50%;
@@ -93,10 +94,13 @@ section {
     transform: translate3d(4px, 0, 0);
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 767px) {
   ul {
-    font-size: 3.75vw;
+    font-size: 4vw;
     line-height: 5vw;
+  }
+  h1 {
+    font-size: 6vw;
   }
   h2 {
     font-size: 6vw;
@@ -108,10 +112,46 @@ section {
     font-size: 4.5vw;
   }
   h5 {
+    font-size: 4.5vw;
+    line-height: 5vw;
+  }
+  section {
+    padding: 1em;
+  }
+  .subheading {
     font-size: 4vw;
+  }
+  .text {
+    font-size: 4vw;
+    line-height: 5vw;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  ul {
+    font-size: 3vw;
+    line-height: 5vw;
+  }
+  h1 {
+    font-size: 5vw;
+  }
+  h2 {
+    font-size: 5vw;
+  }
+  h3 {
+    font-size: 4vw;
+  }
+  h4 {
+    font-size: 3.5vw;
+  }
+  h5 {
+    font-size: 3.5vw;
     line-height: 3vw;
   }
   section {
-    padding: 0.5em;
+    padding: 1em;
+  }
+  .text {
+    font-size: 3vw;
+    line-height: 4vw;
   }
 }
