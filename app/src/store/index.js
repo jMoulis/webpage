@@ -19,7 +19,10 @@ if (window.devToolsExtension) {
 }
 // Enhancer ajax
 const ajaxEnhancer = applyMiddleware(ajax);
-const enhancers = compose(ajaxEnhancer, ...devTools);
+const enhancers = compose(
+  ajaxEnhancer,
+  ...devTools,
+);
 const store = createStore(reducer, enhancers);
 
 /*

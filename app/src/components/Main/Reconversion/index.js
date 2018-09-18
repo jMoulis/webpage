@@ -1,16 +1,6 @@
-/*
- * Npm import
- */
 import React from 'react';
 
-/*
- * Local import
- */
 import Img from './image';
-
-/*
- * Code
- */
 
 const Reconversion = () => (
   <div id="reconversion-wrapper">
@@ -19,8 +9,9 @@ const Reconversion = () => (
       <h2 id="reconversion-title">&lt; une reconversion totale &gt;</h2>
       <div id="reconversion-description">
         <p id="reconversion-intro" className="text">
-          Après de nombreuses années en tant qu&apos;entrepeneur, responsable national réseau,
-          ou encore animateur des ventes, un changement sérieux de vie m&apos;est apparu évident !
+          Après de nombreuses années en tant qu&apos;entrepeneur, responsable
+          national réseau, ou encore animateur des ventes, un changement sérieux
+          de vie m&apos;est apparu évident !
         </p>
         <div id="reconversion-reason-wrapper">
           <div className="reconversion-reason">
@@ -50,15 +41,4 @@ const Reconversion = () => (
   </div>
 );
 
-/* Standard propTypes declaration structure
- *
- * Reconversion.propTypes = {
- * item: PropTypes.string.isRequired,
- * };
- */
-
-
-/*
- * Export Default
- */
 export default Reconversion;

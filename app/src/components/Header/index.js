@@ -1,35 +1,18 @@
-/*
- * Npm import
- */
 import React from 'react';
 import PropTypes from 'prop-types';
 
-/*
- * Local import
- */
 import Contact from 'src/containers/Header/Contact';
 import Img from './Img';
 
-/*
- * Code
- */
-
-const Header = () => (
+const Header = ({ title }) => (
   <header>
     <Contact />
-    <Img />
+    <Img title={title} />
   </header>
 );
 
-/* Standard propTypes declaration structure
- *
- * Header.propTypes = {
- * item: PropTypes.string.isRequired,
- * };
- */
+Header.propTypes = {
+  title: PropTypes.string.isRequired,
+};
 
-
-/*
- * Export Default
- */
 export default Header;

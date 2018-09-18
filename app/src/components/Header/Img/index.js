@@ -4,21 +4,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-/*
- * Local import
- */
-
-
-/*
- * Code
- */
-
-const Img = () => (
+const Img = ({ title }) => (
   <div id="header-img-container">
     <div id="header-img" />
     <div id="header-img-titles">
       <h1>julien moulis</h1>
-      <span className="subheading">Développeur Web Symfony - React</span>
+      <span className="subheading">{title}</span>
       <div id="header-img-titles-decoration" className="shake" />
     </div>
     <div id="half-circle">
@@ -31,15 +22,8 @@ const Img = () => (
   </div>
 );
 
-/* Standard propTypes declaration structure
- *
- * Img.propTypes = {
- * item: PropTypes.string.isRequired,
- * };
- */
+Img.propTypes = {
+  title: PropTypes.string.isRequired,
+};
 
-
-/*
- * Export Default
- */
 export default Img;

@@ -19,15 +19,28 @@ const Contact = () => (
       <li id="contact-nav-info-item-star" className="contact-nav-info-item">
         <i className="fa fa-star-o" aria-hidden="true" />
       </li>
-      <li id="contact-nav-info-item-name" className="contact-nav-info-item">Julien Moulis</li>
-      <li id="contact-nav-info-item-jobTitle" className="contact-nav-info-item">Développeur Web</li>
-      <li id="contact-nav-info-item-location" className="contact-nav-info-item">région de Genève</li>
-      <li id="contact-nav-info-item-phoneNumber" className="contact-nav-info-item"><a href="tel:+33643390714" className="a-reset"> +33 6 43 39 07 14</a></li>
+      <li id="contact-nav-info-item-name" className="contact-nav-info-item">
+        Julien Moulis
+      </li>
+      <li id="contact-nav-info-item-jobTitle" className="contact-nav-info-item">
+        Développeur Web
+      </li>
+      <li id="contact-nav-info-item-location" className="contact-nav-info-item">
+        région de Genève
+      </li>
+      <li
+        id="contact-nav-info-item-phoneNumber"
+        className="contact-nav-info-item"
+      >
+        <a href="tel:+33643390714" className="a-reset">
+          {' '}
+          +33 6 43 39 07 14
+        </a>
+      </li>
     </ul>
     <ButtonContact type="btn" />
   </nav>
 );
-
 
 /*
  * Export Default

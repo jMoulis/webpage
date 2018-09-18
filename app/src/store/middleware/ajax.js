@@ -12,16 +12,20 @@ import { SEND_MAIL, sendMailSuccess } from 'src/store/reducer';
  * Code
  */
 
-
 /*
  * Middleware
  */
-export default store => next => (action) => {
+export default store => next => action => {
   // On écoute les actions qui nous intéressent
   switch (action.type) {
     case SEND_MAIL: {
       const {
-        firstname, lastname, company, email, phone, message,
+        firstname,
+        lastname,
+        company,
+        email,
+        phone,
+        message,
       } = store.getState();
 
       const formData = {
@@ -44,7 +48,7 @@ export default store => next => (action) => {
         .then(() => {
           store.dispatch(sendMailSuccess());
         })
-        .catch((error) => {
+        .catch(error => {
           console.log(error);
         });
       break;

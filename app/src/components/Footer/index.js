@@ -14,9 +14,9 @@ import HeaderFooter from './HeaderFooter';
  * Code
  */
 
-const Footer = () => (
+const Footer = ({ title }) => (
   <footer id="footer">
-    <HeaderFooter />
+    <HeaderFooter title={title} />
     <LogoFooter />
     <FootFooter />
   </footer>

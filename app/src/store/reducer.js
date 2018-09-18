@@ -1,15 +1,5 @@
-/*
- * Npm Import
- */
+import { realisations } from 'data/data';
 
-/*
- * Local Import
- */
- import { realisations }  from 'data/data';
-
-/*
- * Types
- */
 export const DISPLAY_MODAL_CONTACT = 'DISPLAY_MODAL_CONTACT';
 export const HIDE_MODAL_CONTACT = 'HIDE_MODAL_CONTACT';
 export const SEND_MAIL = 'SEND_MAIL';
@@ -17,18 +7,13 @@ export const SEND_MAIL_SUCCESS = 'SEND_MAIL_SUCCESS';
 export const INPUT_CHANGE = 'INPUT_CHANGE';
 export const DISPLAY_ALERT = 'DISPLAY_ALERT';
 export const HIDE_ALERT = 'HIDE_ALERT';
-/*
- * State
-*/
+
 const initialState = {
   modalContact: false,
   realisations,
   alert: false,
 };
 
-/*
- * Reducer
- */
 const reducer = (state = initialState, action = {}) => {
   switch (action.type) {
     case DISPLAY_MODAL_CONTACT: {
